@@ -2186,3 +2186,68 @@ p {
     height: 40px;
   }
 }
+
+/* Estilos base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.app-container {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.main-content {
+  padding-top: 60px; /* altura del navbar */
+}
+
+/* Ajustes móviles mejorados */
+@media (max-width: 768px) {
+  #root {
+    padding: 0;
+    max-width: 100%;
+  }
+
+  .hero {
+    margin: 0;
+    padding-top: 60px;
+  }
+
+  .hero-content {
+    width: 90%;
+    margin: 1rem auto;
+    padding: 1.5rem;
+  }
+
+  .services-section,
+  .about-section,
+  .articles-section {
+    padding: 2rem 1rem;
+  }
+
+  .navbar {
+    height: 60px;
+  }
+
+  .navbar-menu.active {
+    top: 60px;
+    max-height: calc(100vh - 60px);
+    overflow-y: auto;
+  }
+}
+
+/* Ajustes para pantallas muy pequeñas */
+@media (max-width: 480px) {
+  .hero-content {
+    width: 95%;
+    padding: 1rem;
+  }
+}

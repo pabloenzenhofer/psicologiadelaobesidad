@@ -100,206 +100,208 @@ function App() {
   };
 
   return (
-    <>
+    <div className="app-container">
       <Navbar />
-      <div className="hero">
-        {videos.map((video, index) => (
-          <video
-            key={index}
-            autoPlay
-            muted
-            loop
-            className={`hero-background ${activeVideo === index ? 'fade-in' : 'fade-out'}`}
-          >
-            <source src={video.src} type="video/mp4" />
-          </video>
-        ))}
-        <img src={logo} alt="Logo" className="hero-logo floating" />
-        <div className="hero-content">
-          <h1>Bienvenido a Psicología de la Obesidad</h1>
-          <p className="hero-description">
-            Construyamos juntos el equilibrio que buscás para tu mente y tu cuerpo
-          </p>
-          <div className="hero-buttons">
-            <button 
-              className="primary-button schedule-button"
-              onClick={handleScheduleClick}
+      <main className="main-content">
+        <div className="hero">
+          {videos.map((video, index) => (
+            <video
+              key={index}
+              autoPlay
+              muted
+              loop
+              className={`hero-background ${activeVideo === index ? 'fade-in' : 'fade-out'}`}
             >
-              Agendar Sesión
-            </button>
-            <button 
-              className="secondary-button"
-              onClick={scrollToAbout}
-            >
-              Saber más
-            </button>
-          </div>
-        </div>
-      </div>
-      
-      <section id="nosotros" className="about-section">
-        <div className="about-container">
-          <div className="about-image-container">
-            <img src={fotopablo} alt="Pablo" className="about-image" />
-          </div>
-          <div className="about-content">
-            <h2>Sobre Nosotros</h2>
-            <p className="about-quote">
-              "La psicología de la obesidad es un puente entre la mente y el cuerpo, 
-              donde cada paso hacia adelante es un paso hacia el autoconocimiento y la salud integral."
+              <source src={video.src} type="video/mp4" />
+            </video>
+          ))}
+          <img src={logo} alt="Logo" className="hero-logo floating" />
+          <div className="hero-content">
+            <h1>Bienvenido a Psicología de la Obesidad</h1>
+            <p className="hero-description">
+              Construyamos juntos el equilibrio que buscás para tu mente y tu cuerpo
             </p>
-            <p className="about-description">
-              Especialista en psicología de la obesidad, dedicada a ayudar a las personas 
-              a encontrar una relación saludable con su cuerpo y mente.
-            </p>
-            <button 
-              className="primary-button schedule-button"
-              onClick={handleScheduleClick}
-            >
-              Agenda tu Primera Sesión
-            </button>
-          </div>
-        </div>
-      </section>
-      
-      <section id="diferencial" className="diferencial-section">
-        <div className="diferencial-container">
-          <h2>Hacemos la Diferencia</h2>
-          <div className="diferencial-content">
-            <div className="diferencial-features">
-              <div className="diferencial-feature">
-                <span className="feature-icon">💝</span>
-                <h3>Servicio Cálido y Profesional</h3>
-                <p>Atención personalizada y empática, respaldada por profesionales especializados</p>
-              </div>
-              <div className="diferencial-feature">
-                <span className="feature-icon">📱</span>
-                <h3>Integración Tecnológica</h3>
-                <p>Apps de seguimiento y recursos interactivos para potenciar tu proceso</p>
-              </div>
-              <div className="diferencial-feature">
-                <span className="feature-icon">������</span>
-                <h3>Documentos Colaborativos</h3>
-                <p>Herramientas compartidas para un seguimiento efectivo de tu progreso</p>
-              </div>
-              <div className="diferencial-feature">
-                <span className="feature-icon">🤖</span>
-                <h3>Asistencia con IA</h3>
-                <p>Tecnología de vanguardia para complementar tu tratamiento</p>
-              </div>
+            <div className="hero-buttons">
+              <button 
+                className="primary-button schedule-button"
+                onClick={handleScheduleClick}
+              >
+                Agendar Sesión
+              </button>
+              <button 
+                className="secondary-button"
+                onClick={scrollToAbout}
+              >
+                Saber más
+              </button>
             </div>
           </div>
         </div>
-      </section>
-      
-      <section id="servicios" className="services-section">
-        <div className="services-container">
-          <h2>Nuestros Servicios</h2>
-          <p className="services-intro">
-            Ofrecemos un abordaje integral y personalizado para acompañarte en tu camino hacia el bienestar
-          </p>
-          <div className="services-grid">
-            {services.map((service, index) => (
-              <div key={index} className="service-card">
-                <div className="service-icon">{service.icon}</div>
-                <h3>{service.title}</h3>
-                <p>{service.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section id="questionnaire" className="questionnaire-section">
-        <div className="questionnaire-container">
-          <h2>Evaluación Inicial</h2>
-          <p className="questionnaire-description">
-            Completá nuestro cuestionario de evaluación y recibí una respuesta personalizada 
-            para comenzar tu proceso de transformación
-          </p>
-          <div className="questionnaire-features">
-            <div className="feature">
-              <span className="feature-icon">⏱️</span>
-              <p>Solo 5 minutos</p>
+        
+        <section id="nosotros" className="about-section">
+          <div className="about-container">
+            <div className="about-image-container">
+              <img src={fotopablo} alt="Pablo" className="about-image" />
             </div>
-            <div className="feature">
-              <span className="feature-icon">📝</span>
-              <p>Respuesta personalizada</p>
-            </div>
-            <div className="feature">
-              <span className="feature-icon">���</span>
-              <p>100% confidencial</p>
+            <div className="about-content">
+              <h2>Sobre Nosotros</h2>
+              <p className="about-quote">
+                "La psicología de la obesidad es un puente entre la mente y el cuerpo, 
+                donde cada paso hacia adelante es un paso hacia el autoconocimiento y la salud integral."
+              </p>
+              <p className="about-description">
+                Especialista en psicología de la obesidad, dedicada a ayudar a las personas 
+                a encontrar una relación saludable con su cuerpo y mente.
+              </p>
+              <button 
+                className="primary-button schedule-button"
+                onClick={handleScheduleClick}
+              >
+                Agenda tu Primera Sesión
+              </button>
             </div>
           </div>
-          <button 
-            className="primary-button questionnaire-button"
-            onClick={handleQuestionnaireClick}
-          >
-            Comenzar Evaluación
-          </button>
-        </div>
-      </section>
-
-      <section id="articles" className="articles-section">
-        <div className="articles-container">
-          <h2>Artículos de Interés</h2>
-          <p className="articles-intro">
-            Explora nuestros recursos y aprende más sobre psicología y bienestar integral
-          </p>
-          <div className="articles-grid">
-            {articles.map((article, index) => (
-              <div key={index} className="article-card">
-                <div className="article-category">{article.category}</div>
-                <h3>{article.title}</h3>
-                <p>{article.description}</p>
-                <div className="article-footer">
-                  <span className="read-time">🕒 {article.readTime}</span>
-                  <button className="read-more">Leer más</button>
+        </section>
+        
+        <section id="diferencial" className="diferencial-section">
+          <div className="diferencial-container">
+            <h2>Hacemos la Diferencia</h2>
+            <div className="diferencial-content">
+              <div className="diferencial-features">
+                <div className="diferencial-feature">
+                  <span className="feature-icon">💝</span>
+                  <h3>Servicio Cálido y Profesional</h3>
+                  <p>Atención personalizada y empática, respaldada por profesionales especializados</p>
+                </div>
+                <div className="diferencial-feature">
+                  <span className="feature-icon">📱</span>
+                  <h3>Integración Tecnológica</h3>
+                  <p>Apps de seguimiento y recursos interactivos para potenciar tu proceso</p>
+                </div>
+                <div className="diferencial-feature">
+                  <span className="feature-icon"></span>
+                  <h3>Documentos Colaborativos</h3>
+                  <p>Herramientas compartidas para un seguimiento efectivo de tu progreso</p>
+                </div>
+                <div className="diferencial-feature">
+                  <span className="feature-icon">🤖</span>
+                  <h3>Asistencia con IA</h3>
+                  <p>Tecnología de vanguardia para complementar tu tratamiento</p>
                 </div>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section id="careers" className="careers-section">
-        <div className="careers-container">
-          <h2>Trabajá con Nosotros</h2>
-          <p className="careers-description">
-            ¿Eres profesional de psicología, nutrición, medicina, entrenamiento físico, 
-            prácticas corporales, prácticas meditativas? ¿Te interesa sumarte a un grupo 
-            de trabajo? Te estamos esperando
-          </p>
-          <div className="careers-benefits">
-            <div className="benefit-card">
-              <span className="benefit-icon">🌱</span>
-              <h3>Crecimiento Profesional</h3>
-              <p>Desarrollo continuo y capacitación en nuevas tecnologías</p>
-            </div>
-            <div className="benefit-card">
-              <span className="benefit-icon">🤝</span>
-              <h3>Trabajo Colaborativo</h3>
-              <p>Formá parte de un equipo interdisciplinario innovador</p>
-            </div>
-            <div className="benefit-card">
-              <span className="benefit-icon">⚡</span>
-              <h3>Innovación</h3>
-              <p>Utilizamos las últimas herramientas y metodologías</p>
             </div>
           </div>
-          <button 
-            className="primary-button careers-button"
-            onClick={handleApplyClick}
-          >
-            Envianos tu CV
-          </button>
-        </div>
-      </section>
+        </section>
+        
+        <section id="servicios" className="services-section">
+          <div className="services-container">
+            <h2>Nuestros Servicios</h2>
+            <p className="services-intro">
+              Ofrecemos un abordaje integral y personalizado para acompañarte en tu camino hacia el bienestar
+            </p>
+            <div className="services-grid">
+              {services.map((service, index) => (
+                <div key={index} className="service-card">
+                  <div className="service-icon">{service.icon}</div>
+                  <h3>{service.title}</h3>
+                  <p>{service.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
-      <PaymentMethods />
-      <ChatBot />
-      <WhatsAppButton />
-    </>
+        <section id="questionnaire" className="questionnaire-section">
+          <div className="questionnaire-container">
+            <h2>Evaluación Inicial</h2>
+            <p className="questionnaire-description">
+              Completá nuestro cuestionario de evaluación y recibí una respuesta personalizada 
+              para comenzar tu proceso de transformación
+            </p>
+            <div className="questionnaire-features">
+              <div className="feature">
+                <span className="feature-icon">⏱️</span>
+                <p>Solo 5 minutos</p>
+              </div>
+              <div className="feature">
+                <span className="feature-icon">📝</span>
+                <p>Respuesta personalizada</p>
+              </div>
+              <div className="feature">
+                <span className="feature-icon"></span>
+                <p>100% confidencial</p>
+              </div>
+            </div>
+            <button 
+              className="primary-button questionnaire-button"
+              onClick={handleQuestionnaireClick}
+            >
+              Comenzar Evaluación
+            </button>
+          </div>
+        </section>
+
+        <section id="articles" className="articles-section">
+          <div className="articles-container">
+            <h2>Artículos de Interés</h2>
+            <p className="articles-intro">
+              Explora nuestros recursos y aprende más sobre psicología y bienestar integral
+            </p>
+            <div className="articles-grid">
+              {articles.map((article, index) => (
+                <div key={index} className="article-card">
+                  <div className="article-category">{article.category}</div>
+                  <h3>{article.title}</h3>
+                  <p>{article.description}</p>
+                  <div className="article-footer">
+                    <span className="read-time">🕒 {article.readTime}</span>
+                    <button className="read-more">Leer más</button>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section id="careers" className="careers-section">
+          <div className="careers-container">
+            <h2>Trabajá con Nosotros</h2>
+            <p className="careers-description">
+              ¿Eres profesional de psicología, nutrición, medicina, entrenamiento físico, 
+              prácticas corporales, prácticas meditativas? ¿Te interesa sumarte a un grupo 
+              de trabajo? Te estamos esperando
+            </p>
+            <div className="careers-benefits">
+              <div className="benefit-card">
+                <span className="benefit-icon">🌱</span>
+                <h3>Crecimiento Profesional</h3>
+                <p>Desarrollo continuo y capacitación en nuevas tecnologías</p>
+              </div>
+              <div className="benefit-card">
+                <span className="benefit-icon">🤝</span>
+                <h3>Trabajo Colaborativo</h3>
+                <p>Formá parte de un equipo interdisciplinario innovador</p>
+              </div>
+              <div className="benefit-card">
+                <span className="benefit-icon">⚡</span>
+                <h3>Innovación</h3>
+                <p>Utilizamos las últimas herramientas y metodologías</p>
+              </div>
+            </div>
+            <button 
+              className="primary-button careers-button"
+              onClick={handleApplyClick}
+            >
+              Envianos tu CV
+            </button>
+          </div>
+        </section>
+
+        <PaymentMethods />
+        <ChatBot />
+        <WhatsAppButton />
+      </main>
+    </div>
   )
 }
 
