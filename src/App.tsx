@@ -103,7 +103,7 @@ function App() {
     <div className="app-container">
       <Navbar />
       <main className="main-content">
-        <div className="hero">
+        <section className="hero">
           {videos.map((video, index) => (
             <video
               key={index}
@@ -115,28 +115,22 @@ function App() {
               <source src={video.src} type="video/mp4" />
             </video>
           ))}
-          <img src={logo} alt="Logo" className="hero-logo floating" />
           <div className="hero-content">
             <h1>Bienvenido a Psicología de la Obesidad</h1>
             <p className="hero-description">
               Construyamos juntos el equilibrio que buscás para tu mente y tu cuerpo
             </p>
             <div className="hero-buttons">
-              <button 
-                className="primary-button schedule-button"
-                onClick={handleScheduleClick}
-              >
+              <button className="primary-button" onClick={handleScheduleClick}>
                 Agendar Sesión
               </button>
-              <button 
-                className="secondary-button"
-                onClick={scrollToAbout}
-              >
+              <button className="secondary-button" onClick={scrollToAbout}>
                 Saber más
               </button>
             </div>
           </div>
-        </div>
+          <img src={logo} alt="Logo" className="hero-logo floating" />
+        </section>
         
         <section id="nosotros" className="about-section">
           <div className="about-container">
@@ -298,9 +292,9 @@ function App() {
         </section>
 
         <PaymentMethods />
-        <ChatBot />
-        <WhatsAppButton />
       </main>
+      <ChatBot />
+      <WhatsAppButton />
     </div>
   )
 }
