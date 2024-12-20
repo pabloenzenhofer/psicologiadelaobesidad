@@ -19,11 +19,10 @@ import PaymentMethods from './components/PaymentMethods'
 
 function App() {
   const [activeVideo, setActiveVideo] = useState(0)
-  const [activeFaq, setActiveFaq] = useState<number | null>(null)
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setActiveVideo((current) => (current === 8 ? 0 : current + 1));
+      setActiveVideo((current) => (current === 9 ? 0 : current + 1));
     }, 2000);  // Transición cada 2 segundos
 
     return () => clearInterval(interval);
@@ -38,7 +37,8 @@ function App() {
     { src: mindfuleating, opacity: 0 },
     { src: mujergym, opacity: 0 },
     { src: mindfulness, opacity: 0 },
-    { src: mujerejercicio, opacity: 0 }
+    { src: mujerejercicio, opacity: 0 },
+    { src: frutas, opacity: 0 }
   ]
 
   const services = [
@@ -79,10 +79,6 @@ function App() {
       category: "Autoestima"
     }
   ];
-
-  const toggleFaq = (index: number) => {
-    setActiveFaq(activeFaq === index ? null : index)
-  }
 
   const handleScheduleClick = () => {
     window.open('https://calendly.com/psicologiadelaobesidad/agendarsesion?month=2024-12', '_blank')
