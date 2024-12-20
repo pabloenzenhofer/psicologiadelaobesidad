@@ -129,7 +129,12 @@ function App() {
               </button>
             </div>
           </div>
-          <img src={logo} alt="Logo" className="hero-logo floating" />
+          <img 
+            src={logo} 
+            alt="Logo" 
+            className="hero-logo"
+            style={{ bottom: '20px' }}
+          />
         </section>
         
         <section id="nosotros" className="about-section">
@@ -187,16 +192,13 @@ function App() {
           </div>
         </section>
         
-        <section id="servicios" className="services-section">
+        <section className="services-section">
           <div className="services-container">
             <h2>Nuestros Servicios</h2>
-            <p className="services-intro">
-              Ofrecemos un abordaje integral y personalizado para acompañarte en tu camino hacia el bienestar
-            </p>
             <div className="services-grid">
               {services.map((service, index) => (
                 <div key={index} className="service-card">
-                  <div className="service-icon">{service.icon}</div>
+                  <span className="service-icon">{service.icon}</span>
                   <h3>{service.title}</h3>
                   <p>{service.description}</p>
                 </div>
@@ -293,8 +295,8 @@ function App() {
 
         <PaymentMethods />
       </main>
-      <ChatBot />
       <WhatsAppButton />
+      <ChatBot />
     </div>
   )
 }

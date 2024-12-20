@@ -178,3 +178,89 @@ html, body {
     width: 100%;
   }
 }
+
+/* Botones flotantes */
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 998;
+}
+
+.chatbot-button {
+  position: fixed;
+  bottom: 90px; /* Ajustado para que no se superponga con WhatsApp */
+  right: 20px;
+  z-index: 998;
+}
+
+/* Ajuste del logo flotante */
+.hero-logo {
+  position: absolute;
+  width: 120px; /* Reducido el tamaño */
+  height: auto;
+  z-index: 1;
+  animation: floating 3s ease-in-out infinite;
+  bottom: 20px; /* Ajustado para que no se superponga */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Ajustes de servicios */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+.service-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  text-align: center;
+}
+
+.service-card h3 {
+  font-size: 1.2rem; /* Reducido */
+  margin: 1rem 0;
+}
+
+.service-card p {
+  font-size: 0.9rem; /* Reducido */
+  line-height: 1.4;
+}
+
+/* Ajustes móviles */
+@media (max-width: 768px) {
+  .hero-content {
+    margin-bottom: 80px; /* Espacio para el logo */
+  }
+
+  .service-card {
+    padding: 1rem;
+  }
+
+  .service-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .service-card p {
+    font-size: 0.85rem;
+  }
+
+  .whatsapp-button {
+    bottom: 10px;
+    right: 10px;
+  }
+
+  .chatbot-button {
+    bottom: 80px;
+    right: 10px;
+  }
+
+  .hero-logo {
+    width: 100px;
+    bottom: 10px;
+  }
+}

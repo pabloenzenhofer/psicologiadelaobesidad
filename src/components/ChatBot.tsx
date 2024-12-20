@@ -52,13 +52,24 @@ const ChatBot = () => {
     }
   }
 
+  const toggleChat = () => {
+    setIsOpen(!isOpen)
+  }
+
   return (
-    <div className="chatbot-container">
+    <div className={`chatbot-container ${isOpen ? 'open' : ''}`}>
+      <button 
+        className="chatbot-button"
+        onClick={toggleChat}
+        aria-label="Chatbot"
+      >
+        Chatbot IA
+      </button>
       {isOpen && (
         <div className="chatbot-window">
           <div className="chatbot-header">
             <h3>Asistente Virtual IA</h3>
-            <button onClick={() => setIsOpen(false)} className="close-button">×</button>
+            <button onClick={toggleChat} className="close-button">×</button>
           </div>
           <div className="chatbot-messages">
             {messages.map((msg, index) => (
@@ -90,15 +101,6 @@ const ChatBot = () => {
           </form>
         </div>
       )}
-      <button 
-        className="chatbot-button"
-        onClick={() => setIsOpen(true)}
-        aria-label="Abrir chat con asistente virtual"
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M12 2C6.48 2 2 6.48 2 12c0 5.52 4.48 10 10 10s10-4.48 10-10c0-5.52-4.48-10-10-10zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-3.31 0-6 2.69-6 6 0 1.66.67 3.16 1.76 4.24l-1.45 1.45c-.1.1-.15.22-.15.35v.71c0 .28.22.5.5.5h4.7c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10h-3.3l.86-.86c.19-.19.29-.44.29-.71 0-.89-.36-1.69-.95-2.27C8.3 11.47 8 10.77 8 10c0-2.21 1.79-4 4-4s4 1.79 4 4-1.79 4-4 4z"/>
-        </svg>
-      </button>
     </div>
   )
 }
