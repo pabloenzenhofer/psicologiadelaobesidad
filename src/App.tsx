@@ -7,6 +7,7 @@ import Diferencial from './sections/Diferencial'
 import Articles from './sections/Articles'
 import PaymentMethods from './sections/PaymentMethods'
 import WhatsAppButton from './components/WhatsAppButton'
+import Evaluation from './sections/Evaluation'
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Services />
         <Diferencial />
         <Articles />
+        <Evaluation />
         <PaymentMethods />
       </main>
       <WhatsAppButton />

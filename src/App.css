@@ -7,6 +7,9 @@
   --text-light: #FFFFFF;
   --font-heading: 'Poppins', sans-serif;
   --font-body: 'Inter', sans-serif;
+  --border-radius-lg: 24px;
+  --border-radius-md: 16px;
+  --border-radius-sm: 12px;
 }
 
 /* Reset global */
@@ -81,7 +84,7 @@ html, body {
   margin: 0 auto;
   padding: 1.5rem 4rem;
   background: rgba(26, 27, 38, 0.85);
-  border-radius: 16px;
+  border-radius: var(--border-radius-md);
   backdrop-filter: blur(12px);
   display: flex;
   flex-direction: column;
@@ -237,6 +240,9 @@ html, body {
 .services-section {
   background: var(--light-bg);
   padding: 6rem 2rem;
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  margin: 2rem;
 }
 
 .services-section h2 {
@@ -257,7 +263,7 @@ html, body {
 .service-card {
   background: var(--dark-bg);
   padding: 2rem;
-  border-radius: 24px;
+  border-radius: var(--border-radius-md);
   transition: all 0.3s ease;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
   color: var(--text-light);
@@ -273,16 +279,20 @@ html, body {
   padding: 3rem 2rem;
   min-height: auto;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  margin-bottom: 3rem;
+  margin: 2rem;
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
 }
 
 .diferencial-section h2 {
   color: var(--text-light);
   font-size: 2.8rem;
   font-weight: 600;
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
   text-align: center;
+  width: 100%;
 }
 
 .diferencial-grid {
@@ -291,36 +301,45 @@ html, body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
+  align-items: stretch;
+  width: 100%;
 }
 
 .diferencial-card {
   background: rgba(255, 255, 255, 0.05);
   padding: 2.25rem;
-  border-radius: 24px;
+  border-radius: var(--border-radius-md);
   border: 1px solid rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(12px);
-  height: 300px; /* Altura fija para todas las tarjetas */
+  height: auto;
+  min-height: 300px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1.5rem;
 }
 
 .diferencial-icon {
   font-size: 2.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
 }
 
 .diferencial-card h3 {
   color: var(--text-light);
   font-size: 1.4rem;
   font-weight: 600;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
+  width: 100%;
 }
 
 .diferencial-card p {
   color: var(--text-light);
-  font-size: 1.1rem;
-  line-height: 1.6;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0;
+  flex-grow: 1;
+  width: 100%;
 }
 
 /* Ajustes móviles para Diferencial */
@@ -365,6 +384,9 @@ html, body {
   background: var(--light-bg);
   padding: 6rem 2rem;
   text-align: center;
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  margin: 2rem;
 }
 
 .articles-section h2 {
@@ -396,7 +418,7 @@ html, body {
 .article-card {
   background: var(--dark-bg);
   padding: 2rem;
-  border-radius: 24px;
+  border-radius: var(--border-radius-md);
   color: var(--text-light);
   display: flex;
   flex-direction: column;
@@ -484,6 +506,9 @@ html, body {
   background: var(--dark-bg);
   padding: 3rem 2rem;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  margin: 2rem;
 }
 
 .payment-container {
@@ -597,6 +622,9 @@ html, body {
   display: flex;
   align-items: center;
   margin-bottom: 3rem;
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  margin: 2rem;
 }
 
 .about-container {
@@ -615,7 +643,7 @@ html, body {
   height: 400px;
   max-height: 400px;
   overflow: hidden;
-  border-radius: 24px;
+  border-radius: var(--border-radius-md);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
@@ -623,7 +651,7 @@ html, body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 24px;
+  border-radius: var(--border-radius-md);
   transition: transform 0.3s ease;
 }
 
@@ -634,7 +662,7 @@ html, body {
 .about-content {
   background: rgba(255, 255, 255, 0.05);
   padding: 2.25rem;
-  border-radius: 24px;
+  border-radius: var(--border-radius-md);
   border: 1px solid rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(12px);
   height: 400px;
@@ -756,5 +784,96 @@ html, body {
   .hero-buttons {
     flex-direction: column;
     gap: 1rem;
+  }
+}
+
+/* Ajustes móviles */
+@media (max-width: 768px) {
+  .services-section,
+  .diferencial-section,
+  .about-section,
+  .articles-section,
+  .payment-methods {
+    margin: 1rem;
+    border-radius: var(--border-radius-md);
+  }
+}
+
+/* Sección Evaluación */
+.evaluation-section {
+  background: var(--dark-bg);
+  padding: 4rem 2rem;
+  text-align: center;
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.evaluation-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.evaluation-section h2 {
+  color: var(--text-light);
+  font-size: 2.8rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.evaluation-description {
+  color: var(--text-light);
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.evaluation-button {
+  background: var(--primary-color);
+  color: var(--dark-bg);
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  box-shadow: 0 4px 15px rgba(0, 230, 230, 0.3);
+}
+
+.evaluation-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 230, 230, 0.4);
+  background: #33EBEB;
+}
+
+/* Ajustes móviles */
+@media (max-width: 768px) {
+  .evaluation-section {
+    padding: 3rem 1.5rem;
+    margin: 1rem;
+  }
+
+  .evaluation-section h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .evaluation-description {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .evaluation-button {
+    width: 100%;
+    max-width: 300px;
+    padding: 0.875rem 2rem;
   }
 }
