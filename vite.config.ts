@@ -7,5 +7,6 @@ export default defineConfig({
   base: '/psicologiadelaobesidad/',
   build: {
     outDir: 'docs',
+    emptyOutDir: true,
   }
 })
