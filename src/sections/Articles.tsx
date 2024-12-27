@@ -3,16 +3,10 @@ const Articles = () => {
   const articles = [
     {
       title: "¿Por qué hay personas que logran perder peso y mantenerlo, mientras otras no?",
-      description: "¿Alguna vez te preguntaste por qué algunas personas pueden regular su peso y otras no? ¿Existen diferencias psicológicas que influyen en este proceso? ¡La psicología nos dice que sí!",
+      description: "¿Existen diferencias psicológicas que influyen en este proceso? ¡La psicología nos dice que sí!",
       readTime: "10 min",
       category: "Psicología",
       url: `${BASE_URL}/articulos/perder-peso-y-mantenerlo.html`
-    },
-    {
-      title: "Mindful Eating y Bienestar Emocional",
-      description: "Descubre cómo la alimentación consciente puede transformar tu relación con la comida.",
-      readTime: "5 min",
-      category: "Mindfulness"
     },
     {
       title: "El Impacto de las Emociones en la Alimentación",
