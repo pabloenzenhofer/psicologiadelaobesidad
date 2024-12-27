@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Por qué hay personas que logran perder peso y mantenerlo, mientras otras no?</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #00E6E6;
+            --dark-bg: #1A1B26;
+            --light-bg: #FFFFFF;
+            --text-dark: #1A1B26;
+            --text-light: #666666;
+            --font-heading: 'Poppins', sans-serif;
+            --font-body: 'Inter', sans-serif;
+        }
+
+        body {
+            font-family: var(--font-body);
+            line-height: 1.6;
+            color: var(--text-dark);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: var(--light-bg);
+        }
+
+        .article-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .category {
+            display: inline-block;
+            background: var(--primary-color);
+            color: var(--dark-bg);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-family: var(--font-heading);
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        h2 {
+            font-family: var(--font-heading);
+            font-size: 1.8rem;
+            margin: 3rem 0 1.5rem;
+            color: var(--dark-bg);
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            color: var(--text-dark);
+        }
+
+        .intro {
+            font-size: 1.3rem;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+        }
+
+        ul {
+            margin-bottom: 1.5rem;
+            padding-left: 2rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        .conclusion {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 12px;
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1.5rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .intro {
+                font-size: 1.1rem;
+            }
+        }
+
+        /* Estilos para el logo */
+        .site-logo {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            width: 80px;
+            height: auto;
+            z-index: 100;
+        }
+
+        /* Ajuste móvil para el logo */
+        @media (max-width: 768px) {
+            .site-logo {
+                position: relative;
+                top: 0;
+                left: 0;
+                margin: 1rem auto;
+                display: block;
+            }
+        }
+
+        /* Estilos para el Call to Action */
+        .call-to-action-section {
+            background: rgba(26, 27, 38, 0.05);
+            padding: 3rem 2rem;
+            margin: 3rem -2rem -2rem;
+            text-align: center;
+            color: var(--text-dark);
+            border-radius: 16px;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .cta-container {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .cta-container h2 {
+            color: var(--text-dark);
+            margin-bottom: 0.8rem;
+            font-family: var(--font-heading);
+            font-size: 1.6rem;
+        }
+
+        .cta-container p {
+            color: var(--text-dark);
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+            opacity: 0.8;
+        }
+
+        .cta-button {
+            background: var(--primary-color);
+            color: var(--dark-bg);
+            border: none;
+            padding: 0.8rem 2rem;
+            font-size: 0.9rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: var(--font-heading);
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            box-shadow: 0 2px 8px rgba(0, 230, 230, 0.2);
+            text-transform: none;
+            min-width: 180px;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(0, 230, 230, 0.3);
+            background: #33EBEB;
+        }
+
+        /* Ajuste móvil para el CTA */
+        @media (max-width: 768px) {
+            .call-to-action-section {
+                padding: 2rem 1.5rem;
+                margin: 2rem -1.5rem -1.5rem;
+            }
+
+            .cta-container h2 {
+                font-size: 1.4rem;
+            }
+
+            .cta-container p {
+                font-size: 0.9rem;
+            }
+
+            .cta-button {
+                width: 100%;
+                max-width: 250px;
+                padding: 0.7rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <img src="/psicologiadelaobesidad/assets/logo.png" alt="Logo Psicología de la Obesidad" class="site-logo">
+    
+    <article>
+        <header class="article-header">
+            <span class="category">Psicología</span>
+            <h1>¿Por qué hay personas que logran perder peso y mantenerlo, mientras otras no?</h1>
+            <p class="intro">
+                ¿Alguna vez te preguntaste por qué algunas personas pueden regular su peso y otras no? 
+                ¿Existen diferencias psicológicas que influyen en este proceso?
+                ¡La psicología nos dice que sí! Hay factores clave que marcan la diferencia.
+            </p>
+        </header>
+
+        <section>
+            <h2>1. Baja tolerancia al hambre</h2>
+            <p>
+                Las personas que logran mantener un peso saludable también sienten deseos compulsivos de comer, 
+                pero no se detienen tanto en estos pensamientos. Por otro lado, quienes tienen dificultades para 
+                regular su alimentación tienden a percibir el hambre como una emergencia, sobrevalorando las 
+                sensaciones normales del cuerpo y cediendo a la compulsión con más frecuencia de lo que permite 
+                una alimentación equilibrada.
+            </p>
+        </section>
+
+        <section>
+            <h2>2. Pensar que no es justo tener que esforzarse</h2>
+            <p>
+                Cuidar la alimentación y mantener un peso estable requiere esfuerzo, algo que las personas 
+                exitosas en este aspecto aceptan sin cuestionar demasiado. Sin embargo, quienes enfrentan 
+                dificultades suelen enfocarse en lo injusto que es no poder comer lo que desean, subestimando 
+                el esfuerzo que también hacen otras personas.
+            </p>
+            <p>
+                Un dato interesante: muchas personas delgadas aseguran que no hacen esfuerzos, pero si se les 
+                pregunta si cambiarían su alimentación en ausencia de consecuencias, admiten que sí lo harían.
+            </p>
+        </section>
+
+        <section>
+            <h2>3. Usar la comida como consuelo</h2>
+            <p>
+                Cuando las personas con una relación saludable con la comida atraviesan momentos de estrés o 
+                tristeza, suelen perder el apetito. En cambio, quienes tienen dificultades para controlar su 
+                peso recurren a la comida como consuelo o distracción.
+            </p>
+            <p>
+                Esto puede aliviar momentáneamente emociones negativas como el aburrimiento o la angustia, pero 
+                a largo plazo genera más problemas, incluyendo autocrítica, disminución de confianza y percepción 
+                de falta de control.
+            </p>
+        </section>
+
+        <section>
+            <h2>4. Confundir el hambre con las ganas de comer</h2>
+            <p>
+                Una habilidad clave en quienes logran mantener un peso saludable es distinguir entre hambre real 
+                y ganas de comer.
+            </p>
+            <ul>
+                <li><strong>Hambre real:</strong> Sensación de vacío en el estómago, retorcijones, ruidos 
+                estomacales y cansancio, señalando una necesidad fisiológica.</li>
+                <li><strong>Ganas de comer:</strong> Responde a un deseo, no a una necesidad, y suele enfocarse 
+                en alimentos específicos.</li>
+                <li><strong>Deseo compulsivo:</strong> Un impulso intenso hacia ciertos alimentos, generalmente 
+                altos en carbohidratos o grasas, asociado a conflictos emocionales o búsqueda de placer inmediato.</li>
+            </ul>
+            <p>
+                Aprender a identificar estas diferencias es fundamental para construir una relación más saludable 
+                con la comida.
+            </p>
+        </section>
+
+        <section>
+            <h2>5. Falta de conciencia sobre lo que se come</h2>
+            <p>
+                Quienes logran mantener su peso tienen claridad sobre su consumo alimenticio. En cambio, las 
+                personas con dificultades suelen autoengañarse, evitando prestar atención a lo que comen para 
+                no sentirse mal, lo cual refuerza un ciclo de estrés y angustia.
+            </p>
+        </section>
+
+        <section>
+            <h2>6. Sentirse impotente ante el aumento de peso</h2>
+            <p>
+                Para algunas personas, ganar peso no representa una catástrofe. Saben que pueden retomar sus 
+                hábitos y recuperar el equilibrio. Por el contrario, otras ven el aumento de peso como algo 
+                irreversible, lo que las lleva a abandonar sus objetivos.
+            </p>
+        </section>
+
+        <section class="conclusion">
+            <h2>Reflexión final: ¿Cómo son tus pensamientos?</h2>
+            <p>
+                ¿Te identificás más con los pensamientos de quienes logran mantener un peso saludable o con los 
+                de aquellos que tienen dificultades?
+            </p>
+            <p>
+                Tal vez veas el hambre como una emergencia, subestimes tu autocontrol, o sientas que no poder 
+                comer todo lo que querés es una injusticia. Sin embargo, la buena noticia es que estos patrones 
+                de pensamiento pueden cambiar.
+            </p>
+            <div class="call-to-action">
+                <h3>Transformá tu mentalidad</h3>
+                <p>
+                    Adoptar una mentalidad diferente, como la de las personas que logran sus objetivos de peso, 
+                    es posible. Aprender a pensar de manera más saludable es el primer paso para mejorar tu 
+                    relación con la comida y alcanzar tus metas.
+                </p>
+            </div>
+        </section>
+
+        <section class="call-to-action-section">
+            <div class="cta-container">
+                <h2>¿Listo para transformar tu relación con la comida?</h2>
+                <p>Da el primer paso hacia una vida más saludable y equilibrada.</p>
+                <button 
+                    class="cta-button"
+                    onclick="window.open('https://calendly.com/psicologiadelaobesidad/agendarsesion?month=2024-12', '_blank')"
+                >
+                    Agendar Primera Sesión
+                </button>
+            </div>
+        </section>
+    </article>
+</body>
+</html> 
