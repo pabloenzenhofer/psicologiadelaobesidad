@@ -1,6 +1,13 @@
 const Articles = () => {
   const articles = [
     {
+      title: "¿Por qué hay personas que logran perder peso y mantenerlo, mientras otras no?",
+      description: "¿Alguna vez te preguntaste por qué algunas personas pueden regular su peso y otras no? ¿Existen diferencias psicológicas que influyen en este proceso? ¡La psicología nos dice que sí!",
+      readTime: "10 min",
+      category: "Psicología",
+      url: "/psicologiadelaobesidad/articulos/perder-peso-y-mantenerlo.html"
+    },
+    {
       title: "Mindful Eating y Bienestar Emocional",
       description: "Descubre cómo la alimentación consciente puede transformar tu relación con la comida.",
       readTime: "5 min",
@@ -11,14 +18,14 @@ const Articles = () => {
       description: "Entendiendo la conexión entre nuestras emociones y hábitos alimenticios.",
       readTime: "7 min",
       category: "Psicología"
-    },
-    {
-      title: "Construyendo una Relación Saludable con tu Cuerpo",
-      description: "Guía práctica para desarrollar una imagen corporal positiva.",
-      readTime: "6 min",
-      category: "Autoestima"
     }
   ]
+
+  const handleReadMore = (url?: string) => {
+    if (url) {
+      window.open(url, '_blank')
+    }
+  }
 
   return (
     <section id="articles" className="articles-section">
@@ -35,7 +42,12 @@ const Articles = () => {
               <p>{article.description}</p>
               <div className="article-footer">
                 <span className="read-time">🕒 {article.readTime}</span>
-                <button className="read-more">Leer más</button>
+                <button 
+                  className="read-more"
+                  onClick={() => handleReadMore(article.url)}
+                >
+                  Leer más
+                </button>
               </div>
             </div>
           ))}
