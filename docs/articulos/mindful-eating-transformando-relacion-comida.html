@@ -1,0 +1,53 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+    :root {
+        --primary-color: #00E6E6;  /* Actualizado para coincidir */
+        --dark-bg: #1A1B26;
+        --light-bg: #FFFFFF;
+        --text-dark: #1A1B26;
+        --text-light: #666666;
+        --font-heading: 'Poppins', sans-serif;
+        --font-body: 'Inter', sans-serif;
+    }
+    /* ... resto de los estilos ... */
+
+    /* Agregar los estilos del call-to-action */
+    .call-to-action-section {
+        background: rgba(26, 27, 38, 0.05);
+        padding: 3rem 2rem;
+        margin: 3rem -2rem -2rem;
+        text-align: center;
+        color: var(--text-dark);
+        border-radius: 16px;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .cta-button {
+        background: var(--primary-color);
+        color: var(--dark-bg);
+        border: none;
+        padding: 1rem 2rem;
+        border-radius: 30px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: opacity 0.3s;
+    }
+
+    .cta-button:hover {
+        opacity: 0.9;
+    }
+</style>
+<section class="call-to-action-section">
+    <div class="cta-container">
+        <h2>¿Listo para transformar tu relación con la comida?</h2>
+        <p>Da el primer paso hacia una vida más saludable y equilibrada.</p>
+        <button 
+            class="cta-button"
+            onclick="window.open('https://calendly.com/psicologiadelaobesidad/agendarsesion?month=2024-12', '_blank')"
+        >
+            Agendar Primera Sesión
+        </button>
+    </div>
+</section> 

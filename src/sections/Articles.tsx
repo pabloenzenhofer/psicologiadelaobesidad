@@ -1,11 +1,12 @@
 const Articles = () => {
+  const BASE_URL = '/psicologiadelaobesidad'
   const articles = [
     {
       title: "¿Por qué hay personas que logran perder peso y mantenerlo, mientras otras no?",
       description: "¿Alguna vez te preguntaste por qué algunas personas pueden regular su peso y otras no? ¿Existen diferencias psicológicas que influyen en este proceso? ¡La psicología nos dice que sí!",
       readTime: "10 min",
       category: "Psicología",
-      url: "/psicologiadelaobesidad/articulos/perder-peso-y-mantenerlo.html"
+      url: `${BASE_URL}/articulos/perder-peso-y-mantenerlo.html`
     },
     {
       title: "Mindful Eating y Bienestar Emocional",
@@ -18,12 +19,19 @@ const Articles = () => {
       description: "Entendiendo la conexión entre nuestras emociones y hábitos alimenticios.",
       readTime: "7 min",
       category: "Psicología"
+    },
+    {
+      title: "Mindful Eating: Transformando la Relación con la Comida para una Vida Saludable",
+      description: "Descubre el poder de la meditación aplicada a la alimentación",
+      readTime: "5 min",
+      category: "Mindfulness",
+      url: `${BASE_URL}/articulos/mindful-eating-transformando-relacion-comida.html`
     }
   ]
 
   const handleReadMore = (url?: string) => {
     if (url) {
-      window.open(url, '_blank')
+      window.open(url, '_blank');
     }
   }
 
