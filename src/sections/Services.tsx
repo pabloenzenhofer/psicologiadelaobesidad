@@ -1,9 +1,12 @@
 const Services = () => {
+  const BASE_URL = '/psicologiadelaobesidad'
+  
   const services = [
     {
-      title: "Psicoterapia Individual",
-      description: "Acompañamiento personalizado para desarrollar una relación saludable con la alimentación y tu cuerpo.",
-      icon: "🧠"
+      title: "Atención online",
+      description: "Sesiones virtuales personalizadas desde la comodidad de tu hogar, con seguimiento continuo y apoyo profesional.",
+      icon: "🧠",
+      url: `${BASE_URL}/articulos/atencion-virtual.html`
     },
     {
       title: "Mindful Eating",

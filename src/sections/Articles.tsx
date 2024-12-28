@@ -12,7 +12,8 @@ const Articles = () => {
       title: "El Impacto de las Emociones en la Alimentación",
       description: "Entendiendo la conexión entre nuestras emociones y hábitos alimenticios.",
       readTime: "7 min",
-      category: "Psicología"
+      category: "Psicología",
+      url: `${BASE_URL}/articulos/impacto-emociones-y-alimentacion.html`
     },
     {
       title: "Mindful Eating: Transformando la Relación con la Comida para una Vida Saludable",
