@@ -1,60 +1,48 @@
 const Articles = () => {
   const BASE_URL = '/psicologiadelaobesidad'
+  
   const articles = [
     {
-      title: "¿Por qué hay personas que logran perder peso y mantenerlo, mientras otras no?",
-      description: "¿Existen diferencias psicológicas que influyen en este proceso? ¡La psicología nos dice que sí!",
-      readTime: "10 min",
-      category: "Psicología",
-      url: `${BASE_URL}/articulos/perder-peso-y-mantenerlo.html`
-    },
-    {
       title: "El Impacto de las Emociones en la Alimentación",
-      description: "Entendiendo la conexión entre nuestras emociones y hábitos alimenticios.",
-      readTime: "7 min",
+      description: "Descubre cómo las emociones influyen en nuestros hábitos alimenticios y aprende estrategias para manejarlas.",
       category: "Psicología",
       url: `${BASE_URL}/articulos/impacto-emociones-y-alimentacion.html`
     },
     {
-      title: "Mindful Eating: Transformando la Relación con la Comida para una Vida Saludable",
-      description: "Descubre el poder de la meditación aplicada a la alimentación",
-      readTime: "5 min",
+      title: "Mindful Eating: Transformando la Relación con la Comida",
+      description: "Explora cómo la alimentación consciente puede mejorar tu relación con la comida y tu bienestar general.",
       category: "Mindfulness",
       url: `${BASE_URL}/articulos/mindful-eating-transformando-relacion-comida.html`
+    },
+    {
+      title: "Medicina del Estilo de Vida",
+      description: "Conoce este enfoque innovador que combina la ciencia médica con cambios sostenibles en el estilo de vida.",
+      category: "Salud",
+      url: `${BASE_URL}/articulos/medicina-del-estilo-de-vida.html`
     }
   ]
 
-  const handleReadMore = (url?: string) => {
-    if (url) {
-      window.open(url, '_blank');
-    }
+  const handleArticleClick = (url: string) => {
+    window.open(url, '_blank')
   }
 
   return (
-    <section id="articles" className="articles-section">
-      <div className="articles-container">
-        <h2>Artículos de Interés</h2>
-        <p className="articles-intro">
-          Explora nuestros recursos y aprende más sobre psicología y bienestar integral
-        </p>
-        <div className="articles-grid">
-          {articles.map((article, index) => (
-            <div key={index} className="article-card">
-              <div className="article-category">{article.category}</div>
-              <h3>{article.title}</h3>
-              <p>{article.description}</p>
-              <div className="article-footer">
-                <span className="read-time">🕒 {article.readTime}</span>
-                <button 
-                  className="read-more"
-                  onClick={() => handleReadMore(article.url)}
-                >
-                  Leer más
-                </button>
-              </div>
-            </div>
-          ))}
-        </div>
+    <section className="articles-section" id="articulos">
+      <h2>Artículos</h2>
+      <div className="articles-grid">
+        {articles.map((article, index) => (
+          <div 
+            key={index} 
+            className="article-card"
+            onClick={() => handleArticleClick(article.url)}
+            style={{ cursor: 'pointer' }}
+          >
+            <span className="article-category">{article.category}</span>
+            <h3>{article.title}</h3>
+            <p>{article.description}</p>
+            <span className="read-more">Leer más →</span>
+          </div>
+        ))}
       </div>
     </section>
   )
