@@ -270,7 +270,10 @@ html, body {
   margin: 0 auto;
 }
 
-.service-card {
+/* Estilos base para todas las tarjetas */
+.service-card,
+.diferencial-card,
+.article-card {
   background: var(--dark-bg);
   padding: 2rem;
   border-radius: var(--border-radius-md);
@@ -282,27 +285,78 @@ html, body {
   align-items: center;
   text-align: center;
   gap: 1rem;
+  transform: translateY(0);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
 }
 
-.service-icon {
+/* Efecto hover para todas las tarjetas */
+.service-card:hover,
+.diferencial-card:hover,
+.article-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  border-color: var(--primary-color);
+  background: linear-gradient(
+    145deg,
+    rgba(26, 27, 38, 0.95),
+    rgba(26, 27, 38, 0.85)
+  );
+}
+
+/* Iconos */
+.service-icon,
+.diferencial-icon {
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  transition: transform 0.3s ease;
 }
 
-.service-card h3 {
-  color: var(--text-light);
-  width: 100%;
-  text-align: center;
-  margin-bottom: 0.5rem;
+.service-card:hover .service-icon,
+.diferencial-card:hover .diferencial-icon {
+  transform: scale(1.1);
 }
 
-.service-card p {
-  width: 100%;
-  text-align: center;
-  line-height: 1.5;
+/* Títulos */
+.service-card h3,
+.diferencial-card h3,
+.article-card h3 {
+  transition: color 0.3s ease;
+}
+
+.service-card:hover h3,
+.diferencial-card:hover h3,
+.article-card:hover h3 {
+  color: var(--primary-color);
+}
+
+/* Específico para article-card */
+.article-card .article-category {
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.article-card:hover .article-category {
+  transform: scale(1.05);
+  background-color: #33EBEB;
+}
+
+.article-card .read-more {
+  transition: all 0.3s ease;
+}
+
+.article-card:hover .read-more {
+  color: var(--primary-color);
+  transform: translateX(5px);
+}
+
+/* Mantener los estilos responsivos existentes */
+@media (max-width: 768px) {
+  .service-card,
+  .diferencial-card,
+  .article-card {
+    padding: 1.5rem;
+  }
 }
 
 /* Hacemos la diferencia */
@@ -862,10 +916,6 @@ html, body {
   border-radius: var(--border-radius-lg);
   overflow: hidden;
   margin: 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2rem;
 }
 
 .evaluation-content {
@@ -876,16 +926,17 @@ html, body {
 .evaluation-section h2 {
   color: var(--text-light);
   font-size: 2.8rem;
-  font-weight: 600;
   margin-bottom: 1.5rem;
 }
 
 .evaluation-description {
   color: var(--text-light);
+  opacity: 0.8;
   font-size: 1.2rem;
-  line-height: 1.6;
   margin-bottom: 2rem;
-  opacity: 0.9;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .evaluation-button {
@@ -1295,5 +1346,106 @@ html, body {
 
   .article-intro {
     font-size: 1.1rem;
+  }
+}
+
+/* Recursos Descargables */
+.resources-section {
+  background: var(--light-bg);
+  padding: 6rem 2rem;
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  margin: 2rem;
+}
+
+.resources-container {
+  max-width: calc(1200px * 0.75);
+  margin: 0 auto;
+}
+
+.resources-section h2 {
+  color: var(--dark-bg);
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.resources-intro {
+  color: var(--text-dark);
+  opacity: 0.8;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.resources-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.resource-card {
+  background: var(--dark-bg);
+  padding: 2rem;
+  border-radius: var(--border-radius-md);
+  transition: all 0.3s ease;
+  color: var(--text-light);
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transform: translateY(0);
+}
+
+.resource-card:hover {
+  transform: translateY(-10px);
+  border-color: var(--primary-color);
+  background: linear-gradient(145deg, rgba(26, 27, 38, 0.95), rgba(26, 27, 38, 0.85));
+}
+
+.resource-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.resource-card h3 {
+  color: var(--text-light);
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  transition: color 0.3s ease;
+}
+
+.resource-card:hover h3 {
+  color: var(--primary-color);
+}
+
+.download-button {
+  background: var(--primary-color);
+  color: var(--dark-bg);
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  margin-top: 1.5rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.download-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 230, 230, 0.3);
+}
+
+@media (max-width: 768px) {
+  .resources-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .resources-section {
+    padding: 3rem 1rem;
+    margin: 1rem;
+  }
+  
+  .resources-section h2 {
+    font-size: 2.2rem;
   }
 }

@@ -38,6 +38,17 @@ const Hero = () => {
     window.open('https://calendly.com/psicologiadelaobesidad/agendarsesion?month=2024-12', '_blank')
   }
 
+  const scrollToServices = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const servicesSection = document.getElementById('servicios');
+    if (servicesSection) {
+      servicesSection.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
+
   return (
     <section className="hero">
       {videos.map((video, index) => (
@@ -63,6 +74,7 @@ const Hero = () => {
           <a 
             href="#servicios"
             className="secondary-button"
+            onClick={scrollToServices}
           >
             Saber más
           </a>

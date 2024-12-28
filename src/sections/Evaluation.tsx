@@ -1,19 +1,17 @@
 const Evaluation = () => {
   return (
-    <section className="evaluation-section" id="evaluacion">
+    <section className="evaluation-section" id="evaluation">
       <div className="evaluation-content">
-        <h2>Evaluación</h2>
+        <h2>Evaluación Gratuita</h2>
         <p className="evaluation-description">
-          Realiza una breve evaluación para obtener una primera mirada sobre tus hábitos y recibir recomendaciones personalizadas.
+          Realiza una breve evaluación. Te enviaremos una primera mirada sobre tus hábitos y recomendaciones personalizadas.
         </p>
-        <a 
-          href="https://forms.gle/U7gXbgM9x7VvLjjHA" 
-          target="_blank" 
-          rel="noopener noreferrer" 
+        <button 
           className="evaluation-button"
+          onClick={() => window.open('https://forms.gle/Ld8TxZEPwNsXV7Jx9', '_blank')}
         >
           Comenzar Evaluación
-        </a>
+        </button>
       </div>
     </section>
   )
