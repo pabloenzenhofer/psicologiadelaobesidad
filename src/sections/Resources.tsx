@@ -1,18 +1,20 @@
 const Resources = () => {
-  const BASE_URL = '/psicologiadelaobesidad'
+  // Detectar si estamos en GitHub Pages o desarrollo local
+  const isGitHubPages = window.location.hostname.includes('github.io');
+  const BASE_URL = isGitHubPages ? '/psicologiadelaobesidad' : '';
   
   const resources = [
     {
       title: "Guía de Mindful Eating",
       description: "Aprende las bases de la alimentación consciente con ejercicios prácticos.",
       icon: "📘",
-      downloadUrl: `${BASE_URL}/resources/guia-mindful-eating.pdf`
+      downloadUrl: "https://linktr.ee/relajaciondiferencial"
     },
     {
       title: "Registro de Hábitos",
       description: "Plantilla para monitorear tus hábitos alimenticios y emocionales.",
       icon: "📝",
-      downloadUrl: `${BASE_URL}/resources/registro-habitos.pdf`
+      downloadUrl: "https://linktr.ee/relajaciondiferencial"
     },
     {
       title: "Relajación Diferencial",
@@ -23,7 +25,9 @@ const Resources = () => {
   ]
 
   const handleDownload = (url: string) => {
-    window.open(url, '_blank')
+    // Asegurarnos de que las URLs absolutas funcionen correctamente
+    const fullUrl = url.startsWith('http') ? url : `${BASE_URL}${url}`;
+    window.open(fullUrl, '_blank');
   }
 
   return (
@@ -40,9 +44,11 @@ const Resources = () => {
               className="resource-card"
               onClick={() => handleDownload(resource.downloadUrl)}
             >
-              <span className="resource-icon">{resource.icon}</span>
-              <h3>{resource.title}</h3>
-              <p>{resource.description}</p>
+              <div>
+                <span className="resource-icon">{resource.icon}</span>
+                <h3>{resource.title}</h3>
+                <p>{resource.description}</p>
+              </div>
               <button className="download-button">
                 Descargar
               </button>
