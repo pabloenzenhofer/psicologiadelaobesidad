@@ -4,7 +4,7 @@ const Services = () => {
   const services = [
     {
       title: "Atención online",
-      description: "Sesiones virtuales personalizadas desde la comodidad de tu hogar, con seguimiento continuo y apoyo profesional.",
+      description: "Terapia al alcance de todos, sin importar la ubicación geográfica. Apoyo profesional sin fronteras.",
       icon: "🧠",
       url: `${BASE_URL}/articulos/atencion-virtual.html`
     },
@@ -20,13 +20,24 @@ const Services = () => {
     }
   ]
 
+  const handleCardClick = (url?: string) => {
+    if (url) {
+      window.open(url, '_blank');
+    }
+  }
+
   return (
     <section className="services-section">
       <div className="services-container">
         <h2>Nuestros Servicios</h2>
         <div className="services-grid">
           {services.map((service, index) => (
-            <div key={index} className="service-card">
+            <div 
+              key={index} 
+              className="service-card"
+              onClick={() => handleCardClick(service.url)}
+              style={{ cursor: service.url ? 'pointer' : 'default' }}
+            >
               <span className="service-icon">{service.icon}</span>
               <h3>{service.title}</h3>
               <p>{service.description}</p>
