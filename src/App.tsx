@@ -1,7 +1,6 @@
 import './App.css?v=1'
 import Navbar from './components/Navbar'
 import Hero from './sections/Hero'
-import About from './sections/About'
 import Services from './sections/Services'
 import Diferencial from './sections/Diferencial'
 import Articles from './sections/Articles'
@@ -15,7 +14,6 @@ function App() {
       <Navbar />
       <main className="main-content">
         <Hero />
-        <About />
         <Services />
         <Diferencial />
         <Articles />

@@ -38,13 +38,6 @@ const Hero = () => {
     window.open('https://calendly.com/psicologiadelaobesidad/agendarsesion?month=2024-12', '_blank')
   }
 
-  const scrollToAbout = () => {
-    const aboutSection = document.getElementById('nosotros');
-    if (aboutSection) {
-      aboutSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  }
-
   return (
     <section className="hero">
       {videos.map((video, index) => (
@@ -67,9 +60,12 @@ const Hero = () => {
           <button className="primary-button" onClick={handleScheduleClick}>
             Agendar Sesión
           </button>
-          <button className="secondary-button" onClick={scrollToAbout}>
+          <a 
+            href="#servicios"
+            className="secondary-button"
+          >
             Saber más
-          </button>
+          </a>
         </div>
       </div>
       <img src={logo} alt="Logo" className="hero-logo" />

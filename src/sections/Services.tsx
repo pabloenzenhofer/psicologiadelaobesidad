@@ -11,7 +11,10 @@ const Services = () => {
     {
       title: "Mindful Eating",
       description: "Aprende a reconectar con tus señales de hambre y saciedad, desarrollando una relación consciente con la alimentación.",
-      icon: "🍃"
+      icon: "🍃",
+      url: `${BASE_URL}/articulos/mindfuleating.html`,
+      buttonText: "Unite gratis",
+      buttonUrl: "https://chat.whatsapp.com/Brzv3kkWfq45EdOFjuHxDx"
     },
     {
       title: "Talleres y Workshops",
@@ -27,7 +30,7 @@ const Services = () => {
   }
 
   return (
-    <section className="services-section">
+    <section className="services-section" id="servicios">
       <div className="services-container">
         <h2>Nuestros Servicios</h2>
         <div className="services-grid">
@@ -41,6 +44,17 @@ const Services = () => {
               <span className="service-icon">{service.icon}</span>
               <h3>{service.title}</h3>
               <p>{service.description}</p>
+              {service.buttonText && (
+                <button
+                  className="evaluation-button"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    window.open(service.buttonUrl, '_blank');
+                  }}
+                >
+                  {service.buttonText}
+                </button>
+              )}
             </div>
           ))}
         </div>

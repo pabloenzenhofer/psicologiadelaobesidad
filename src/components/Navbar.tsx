@@ -16,6 +16,14 @@ const Navbar = () => {
     setIsMenuOpen(false)
   }
 
+  const menuItems = [
+    { text: 'Inicio', href: '#inicio' },
+    { text: 'Servicios', href: '#servicios' },
+    { text: 'Enfoque', href: '#diferencial' },
+    { text: 'Artículos', href: '#articulos' },
+    { text: 'Evaluación', href: '#evaluacion' }
+  ]
+
   return (
     <nav className="navbar">
       <button 
@@ -39,9 +47,8 @@ const Navbar = () => {
       <div className={`navbar-menu mobile ${isMenuOpen ? 'open' : ''}`}>
         <ul>
           <li><a href="#inicio" onClick={closeMenu}>Inicio</a></li>
-          <li><a href="#nosotros" onClick={closeMenu}>Nosotros</a></li>
           <li><a href="#servicios" onClick={closeMenu}>Servicios</a></li>
-          <li><a href="#diferencial" onClick={closeMenu}>Diferencial</a></li>
+          <li><a href="#diferencial" onClick={closeMenu}>Enfoque</a></li>
           <li><a href="#articulos" onClick={closeMenu}>Artículos</a></li>
           <li><a href="#evaluacion" onClick={closeMenu}>Evaluación</a></li>
         </ul>
@@ -51,9 +58,8 @@ const Navbar = () => {
       <div className="navbar-container">
         <ul className="navbar-menu">
           <li><a href="#inicio">Inicio</a></li>
-          <li><a href="#nosotros">Nosotros</a></li>
           <li><a href="#servicios">Servicios</a></li>
-          <li><a href="#diferencial">Diferencial</a></li>
+          <li><a href="#diferencial">Enfoque</a></li>
           <li><a href="#articulos">Artículos</a></li>
           <li><a href="#evaluacion">Evaluación</a></li>
         </ul>
