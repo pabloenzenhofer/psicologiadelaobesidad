@@ -15,10 +15,10 @@ const Resources = () => {
       downloadUrl: `${BASE_URL}/resources/registro-habitos.pdf`
     },
     {
-      title: "Ejercicios de Meditación",
-      description: "Audio guías para practicar meditación y reducir la ansiedad.",
+      title: "Relajación Diferencial",
+      description: "Aprende Relajación Diferencial y otras técnicas de relajación con esta audioguía",
       icon: "🎧",
-      downloadUrl: `${BASE_URL}/resources/meditaciones.zip`
+      downloadUrl: "https://linktr.ee/relajaciondiferencial"
     }
   ]
 

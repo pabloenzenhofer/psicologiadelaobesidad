@@ -248,7 +248,7 @@ html, body {
 
 /* Servicios */
 .services-section {
-  background: var(--light-bg);
+  background: var(--dark-bg);
   padding: 6rem 2rem;
   border-radius: var(--border-radius-lg);
   overflow: hidden;
@@ -256,7 +256,7 @@ html, body {
 }
 
 .services-section h2 {
-  color: #1A1B26;
+  color: var(--text-light);
   font-size: 2.8rem;
   margin-bottom: 3rem;
   text-align: center;
