@@ -1267,6 +1267,17 @@ html, body {
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
 }
 
+/* Ajuste para móvil */
+@media (max-width: 768px) {
+  .whatsapp-button {
+    width: 60px !important;  /* Reducido otro 30% (de 84px a 60px) */
+    height: 60px !important; /* Reducido otro 30% (de 84px a 60px) */
+    padding: 12px;          /* Reducido proporcionalmente */
+    bottom: 15px;           /* Ajustado la posición */
+    right: 15px;           /* Ajustado la posición */
+  }
+}
+
 /* Estilos para el artículo detallado */
 .article-detail {
   background: var(--light-bg);
