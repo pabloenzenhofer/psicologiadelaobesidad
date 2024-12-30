@@ -1,14 +1,20 @@
 import { IoLogoWhatsapp } from 'react-icons/io5'
 
 const WhatsAppButton = () => {
-  return (
-    <div 
-      className="whatsapp-button" 
-      onClick={() => window.open('https://wa.me/59894045441', '_blank')}
-    >
-      <IoLogoWhatsapp size={60} color="#ffffff" />
-    </div>
-  )
-}
+  const phoneNumber = "541166808612";
+  const whatsappUrl = `https://wa.me/${phoneNumber}`;
 
-export default WhatsAppButton 
+  return (
+    <a 
+      href={whatsappUrl}
+      className="whatsapp-button"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Chatear por WhatsApp"
+    >
+      <IoLogoWhatsapp size={35} color="#ffffff" />
+    </a>
+  );
+};
+
+export default WhatsAppButton; 

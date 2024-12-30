@@ -11,6 +11,19 @@ import Prices from './sections/Prices'
 import PaymentMethods from './sections/PaymentMethods'
 import { Helmet } from 'react-helmet'
 
+const schemaData = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Psicología de la Obesidad",
+  "description": "Atención psicológica especializada en obesidad",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "Argentina"
+  },
+  "priceRange": "$$",
+  "service": "Terapia Psicológica Online"
+};
+
 function App() {
   return (
     <>
@@ -22,6 +35,9 @@ function App() {
         <meta property="og:description" content="Atención psicológica especializada en obesidad" />
         <meta property="og:image" content="/logo.png" />
         <link rel="canonical" href="https://psicologiadelaobesidad.github.io/psicologiadelaobesidad/" />
+        <script type="application/ld+json">
+          {JSON.stringify(schemaData)}
+        </script>
       </Helmet>
       <div className="app-container">
         <Navbar />
@@ -37,20 +53,6 @@ function App() {
         </main>
         <WhatsAppButton />
       </div>
-      <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "ProfessionalService",
-        "name": "Psicología de la Obesidad",
-        "description": "Atención psicológica especializada en obesidad",
-        "address": {
-          "@type": "PostalAddress",
-          "addressCountry": "Argentina"
-        },
-        "priceRange": "$$",
-        "service": "Terapia Psicológica Online"
-      }
-      </script>
     </>
   )
 }

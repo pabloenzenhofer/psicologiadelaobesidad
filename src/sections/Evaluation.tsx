@@ -1,17 +1,21 @@
+import { Link } from 'react-router-dom'
+
 const Evaluation = () => {
   return (
-    <section className="evaluation-section" id="evaluation">
+    <section className="evaluation-section">
       <div className="evaluation-content">
-        <h2>Evaluación Gratuita</h2>
+        <h2>Evaluación Inicial</h2>
         <p className="evaluation-description">
-          Realiza una breve evaluación. Te enviaremos una primera mirada sobre tus hábitos y recomendaciones personalizadas.
+          Comienza tu proceso con una evaluación personalizada. Entenderemos juntos tus necesidades y objetivos para crear un plan adaptado a ti.
         </p>
-        <button 
+        <a 
+          href="https://wa.me/541166808612"
           className="evaluation-button"
-          onClick={() => window.open('https://forms.gle/Ld8TxZEPwNsXV7Jx9', '_blank')}
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          Comenzar Evaluación
-        </button>
+          Agendar Evaluación
+        </a>
       </div>
     </section>
   )

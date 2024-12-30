@@ -1254,8 +1254,8 @@ html, body {
   bottom: 20px;
   right: 20px;
   z-index: 1000;
-  width: 60px !important;
-  height: 60px !important;
+  width: 60px;
+  height: 60px;
   background-color: #25D366;
   border-radius: 50%;
   display: flex;
@@ -1269,6 +1269,7 @@ html, body {
 .whatsapp-button:hover {
   transform: scale(1.05);
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+  background-color: #20BA5C;
 }
 
 .whatsapp-button img {
@@ -1363,7 +1364,7 @@ html, body {
 /* Recursos Descargables */
 .resources-section {
   background: var(--light-bg);
-  padding: 1rem 0.5rem;
+  padding: 4rem 2rem;
   border-radius: var(--border-radius-lg);
   margin: 0.5rem;
 }
@@ -1373,27 +1374,10 @@ html, body {
   margin: 0 auto;
 }
 
-.resources-section h2 {
-  color: var(--dark-bg);
-  font-size: 2.8rem;
-  margin-bottom: 1rem;
-  text-align: center;
-}
-
-.resources-intro {
-  color: var(--text-dark);
-  opacity: 0.8;
-  font-size: 1.2rem;
-  text-align: center;
-  margin-bottom: 3rem;
-}
-
 .resources-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
-  max-width: calc(1200px * 0.75);
-  margin: 0 auto;
 }
 
 .resource-card {
@@ -1402,25 +1386,26 @@ html, body {
   border-radius: var(--border-radius-md);
   color: var(--text-light);
   text-align: center;
-  cursor: pointer;
-  border: 1px solid rgba(255, 255, 255, 0.1);
   display: flex;
   flex-direction: column;
-  min-height: 400px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 350px;
   transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .resource-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
   border-color: var(--primary-color);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
 }
 
-.resource-card .resource-icon {
-  font-size: 3.5rem;
-  margin-bottom: 1.5rem;
+.resource-icon {
+  font-size: 2.5rem;
   color: var(--primary-color);
+  margin-bottom: 1rem;
 }
 
 .resource-card h3 {
@@ -1430,45 +1415,41 @@ html, body {
 }
 
 .resource-card p {
-  color: var(--text-light);
-  opacity: 0.8;
-  margin-bottom: 2rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
 }
 
 .download-button {
-  margin-top: auto;
   background: var(--primary-color);
   color: var(--dark-bg);
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
   border: none;
-  padding: 1rem 2rem;
-  border-radius: 25px;
   font-weight: 500;
+  cursor: pointer;
   transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
 }
 
 .download-button:hover {
-  transform: scale(1.05);
+  transform: translateY(-2px);
   box-shadow: 0 4px 15px rgba(0, 230, 230, 0.3);
+  background: #33EBEB;
 }
 
-/* Ajustes móviles para Recursos */
+/* Ajustes móviles */
 @media (max-width: 768px) {
   .resources-grid {
     grid-template-columns: 1fr;
-  }
-  
-  .resources-section {
-    padding: 3rem 1rem;
-    margin: 1rem;
-  }
-  
-  .resources-section h2 {
-    font-size: 2.2rem;
+    gap: 1.5rem;
   }
 
   .resource-card {
-    min-height: 350px;
-    padding: 1.5rem;
+    padding: 2rem;
+    min-height: auto;
   }
 }
 
