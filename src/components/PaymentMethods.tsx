@@ -10,7 +10,7 @@ const PaymentMethods = () => {
       <div className="payment-container">
         <h4>Medios de Pago</h4>
         <div className="payment-icons">
-          <div className="payment-icon">
+          <div className="payment-icon mercado">
             <img src={mercado} alt="MercadoPago" />
             <span>MercadoPago</span>
           </div>
@@ -22,7 +22,7 @@ const PaymentMethods = () => {
             <img src={global} alt="Global66" />
             <span>Global66</span>
           </div>
-          <div className="payment-icon">
+          <div className="payment-icon prex">
             <img src={prex} alt="Prex" />
             <span>Prex</span>
           </div>

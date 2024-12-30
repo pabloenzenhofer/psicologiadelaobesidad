@@ -13,7 +13,15 @@ const BASE_URL = isGitHubPages ? '/psicologiadelaobesidad' : '';
 const ChatBot = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [messages, setMessages] = useState<Array<{text: string, isUser: boolean}>>([{
-    text: "¡Hola! Soy PsicoBot, tu asistente en psicología de la obesidad. ¿En qué puedo ayudarte?",
+    text: `¡Hola! 😊 ¿En qué puedo ayudarte? Selecciona una opción o escribe tu consulta:
+
+❶ Enfoque de tratamiento
+❷ Costo de sesión
+❸ Sesiones online
+❹ Grupo mindful eating
+❺ Cómo empezar
+
+👆 Solo escribe el número o tu pregunta`,
     isUser: false
   }])
   const [inputText, setInputText] = useState('')
@@ -23,12 +31,27 @@ const ChatBot = () => {
     e.preventDefault()
     if (!inputText.trim()) return
 
+    // Manejar respuestas por número con respuestas más cortas y links
+    const numberResponse = {
+      "1": "Usamos terapias basadas en evidencia: TCC, ACT y DBT 🧠",
+      "2": "¿De qué país nos escribes? 💰",
+      "3": "Agenda tu sesión aquí: https://calendly.com/psicologiadelaobesidad 🌐",
+      "4": "¿Te gustaría unirte al grupo de WhatsApp sobre mindful eating? Escríbenos: https://wa.me/541166808612 🧘‍♀️",
+      "5": "Completa tu evaluación: https://forms.gle/Ld8TxZEPwNsXV7Jx9 🚀"
+    }[inputText.trim()]
+
     const userMessage = { text: inputText, isUser: true }
     setMessages(prev => [...prev, userMessage])
     setInputText('')
     setIsLoading(true)
 
     try {
+      if (numberResponse) {
+        setMessages(prev => [...prev, { text: numberResponse, isUser: false }])
+        setIsLoading(false)
+        return
+      }
+
       const response = await fetch(API_URL, {
         method: 'POST',
         headers: {
@@ -82,7 +105,7 @@ const ChatBot = () => {
             className="close-button"
             onClick={() => setIsOpen(false)}
           >
-            <IoClose size={24} />
+            <IoClose size={20} />
           </button>
         </div>
 
