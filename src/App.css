@@ -1365,7 +1365,6 @@ html, body {
   background: var(--light-bg);
   padding: 6rem 2rem;
   border-radius: var(--border-radius-lg);
-  overflow: hidden;
   margin: 2rem;
 }
 
@@ -1393,13 +1392,14 @@ html, body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
+  max-width: calc(1200px * 0.75);
+  margin: 0 auto;
 }
 
 .resource-card {
   background: var(--dark-bg);
-  padding: 2rem;
+  padding: 2.5rem;
   border-radius: var(--border-radius-md);
-  transition: all 0.3s ease;
   color: var(--text-light);
   text-align: center;
   cursor: pointer;
@@ -1407,19 +1407,20 @@ html, body {
   display: flex;
   flex-direction: column;
   min-height: 400px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
 
-.resource-card > div {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
+.resource-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  border-color: var(--primary-color);
 }
 
 .resource-card .resource-icon {
-  font-size: 3rem;
-  margin-bottom: 1rem;
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
 }
 
 .resource-card h3 {
@@ -1431,18 +1432,15 @@ html, body {
 .resource-card p {
   color: var(--text-light);
   opacity: 0.8;
-  margin: 0;
-  flex: 1;
+  margin-bottom: 2rem;
 }
 
 .download-button {
-  width: 100%;
-  max-width: 200px;
   margin-top: auto;
   background: var(--primary-color);
   color: var(--dark-bg);
   border: none;
-  padding: 0.8rem 1.5rem;
+  padding: 1rem 2rem;
   border-radius: 25px;
   font-weight: 500;
   transition: all 0.3s ease;
@@ -1472,4 +1470,155 @@ html, body {
     min-height: 350px;
     padding: 1.5rem;
   }
+}
+
+/* ChatBot Styles */
+.chatbot-container {
+  position: fixed;
+  bottom: 100px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.chatbot-toggle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  border: none;
+  color: var(--dark-bg);
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chatbot-toggle:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.chatbot-window {
+  position: absolute;
+  bottom: 80px;
+  right: 0;
+  width: 350px;
+  height: 500px;
+  background: var(--dark-bg);
+  border-radius: 12px;
+  overflow: hidden;
+  display: none;
+  flex-direction: column;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.chatbot-container.open .chatbot-window {
+  display: flex;
+}
+
+.chatbot-header {
+  padding: 1rem;
+  background: var(--primary-color);
+  color: var(--dark-bg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 500;
+}
+
+.chatbot-messages {
+  flex: 1;
+  padding: 1rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.message {
+  max-width: 80%;
+  padding: 0.8rem 1rem;
+  border-radius: 12px;
+  color: var(--text-light);
+  line-height: 1.4;
+}
+
+.message.user {
+  background: var(--primary-color);
+  color: var(--dark-bg);
+  align-self: flex-end;
+  border-bottom-right-radius: 4px;
+}
+
+.message.bot {
+  background: rgba(255, 255, 255, 0.1);
+  align-self: flex-start;
+  border-bottom-left-radius: 4px;
+}
+
+.chatbot-input {
+  padding: 1rem;
+  display: flex;
+  gap: 0.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.chatbot-input input {
+  flex: 1;
+  padding: 0.8rem 1.2rem;
+  border: none;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-light);
+  font-size: 0.95rem;
+}
+
+.chatbot-input input:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.chatbot-input button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background: var(--primary-color);
+  color: var(--dark-bg);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.chatbot-input button:hover {
+  transform: scale(1.05);
+}
+
+.chatbot-input button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.loading span {
+  animation: loading 1s infinite;
+  display: inline-block;
+}
+
+.loading span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.loading span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes loading {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 1; }
 }
