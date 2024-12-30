@@ -9,23 +9,49 @@ import Evaluation from './sections/Evaluation'
 import Resources from './sections/Resources'
 import Prices from './sections/Prices'
 import PaymentMethods from './sections/PaymentMethods'
+import { Helmet } from 'react-helmet'
 
 function App() {
   return (
-    <div className="app-container">
-      <Navbar />
-      <main className="main-content">
-        <Hero />
-        <Services />
-        <Diferencial />
-        <Articles />
-        <Evaluation />
-        <Resources />
-        <Prices />
-        <PaymentMethods />
-      </main>
-      <WhatsAppButton />
-    </div>
+    <>
+      <Helmet>
+        <title>Psicología de la Obesidad - Atención Psicológica Especializada</title>
+        <meta name="description" content="Atención psicológica especializada en obesidad. Sesiones online para toda Latinoamérica. Tratamiento profesional y personalizado." />
+        <meta name="keywords" content="psicología, obesidad, terapia online, salud mental, pérdida de peso, bienestar emocional" />
+        <meta property="og:title" content="Psicología de la Obesidad" />
+        <meta property="og:description" content="Atención psicológica especializada en obesidad" />
+        <meta property="og:image" content="/logo.png" />
+        <link rel="canonical" href="https://psicologiadelaobesidad.github.io/psicologiadelaobesidad/" />
+      </Helmet>
+      <div className="app-container">
+        <Navbar />
+        <main className="main-content">
+          <Hero />
+          <Services />
+          <Diferencial />
+          <Articles />
+          <Evaluation />
+          <Resources />
+          <Prices />
+          <PaymentMethods />
+        </main>
+        <WhatsAppButton />
+      </div>
+      <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "Psicología de la Obesidad",
+        "description": "Atención psicológica especializada en obesidad",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "Argentina"
+        },
+        "priceRange": "$$",
+        "service": "Terapia Psicológica Online"
+      }
+      </script>
+    </>
   )
 }
 

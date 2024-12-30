@@ -27,22 +27,25 @@ const Articles = () => {
   }
 
   return (
-    <section className="articles-section" id="articulos">
-      <h2>Artículos</h2>
-      <div className="articles-grid">
-        {articles.map((article, index) => (
-          <div 
-            key={index} 
-            className="article-card"
-            onClick={() => handleArticleClick(article.url)}
-            style={{ cursor: 'pointer' }}
-          >
-            <span className="article-category">{article.category}</span>
-            <h3>{article.title}</h3>
-            <p>{article.description}</p>
-            <span className="read-more">Leer más →</span>
-          </div>
-        ))}
+    <section id="articulos" className="articles-section" aria-labelledby="articles-title">
+      <div className="articles-container">
+        <h2 id="articles-title">Artículos</h2>
+        <p className="articles-intro">...</p>
+        <div className="articles-grid">
+          {articles.map((article, index) => (
+            <article className="article-card" key={index}>
+              <header>
+                <span className="article-category">{article.category}</span>
+                <h3>{article.title}</h3>
+              </header>
+              <p>{article.description}</p>
+              <footer className="article-footer">
+                <span className="read-time">...</span>
+                <button className="read-more" onClick={() => handleArticleClick(article.url)}>Leer más →</button>
+              </footer>
+            </article>
+          ))}
+        </div>
       </div>
     </section>
   )

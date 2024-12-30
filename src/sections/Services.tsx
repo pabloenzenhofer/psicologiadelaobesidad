@@ -30,18 +30,18 @@ const Services = () => {
   }
 
   return (
-    <section className="services-section" id="servicios">
+    <section id="servicios" className="services-section" aria-labelledby="services-title">
       <div className="services-container">
-        <h2>Nuestros Servicios</h2>
+        <h2 id="services-title">Nuestro Servicio</h2>
         <div className="services-grid">
           {services.map((service, index) => (
-            <div 
+            <article 
               key={index} 
               className="service-card"
               onClick={() => handleCardClick(service.url)}
               style={{ cursor: service.url ? 'pointer' : 'default' }}
             >
-              <span className="service-icon">{service.icon}</span>
+              <div className="service-icon">{service.icon}</div>
               <h3>{service.title}</h3>
               <p>{service.description}</p>
               {service.buttonText && (
@@ -55,7 +55,7 @@ const Services = () => {
                   {service.buttonText}
                 </button>
               )}
-            </div>
+            </article>
           ))}
         </div>
       </div>

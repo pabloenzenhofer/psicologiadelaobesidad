@@ -1,8 +1,8 @@
 const Prices = () => {
   return (
-    <section id="precios" className="prices-section">
+    <section id="precios" className="prices-section" aria-labelledby="prices-title">
       <div className="prices-container">
-        <h2>Precios y Cobertura</h2>
+        <h2 id="prices-title">Precios y Cobertura</h2>
         
         <div className="prices-intro">
           <p>
@@ -12,14 +12,14 @@ const Prices = () => {
         </div>
 
         <div className="prices-grid">
-          <div className="price-card main">
+          <article className="price-card main">
             <h3>Valor Internacional</h3>
             <div className="price">
               <span className="currency">U$S</span>
               <span className="amount">25</span>
               <span className="period">/sesión</span>
             </div>
-          </div>
+          </article>
 
           <div className="local-prices">
             <h3>Equivalencias Locales</h3>
