@@ -8,6 +8,7 @@ import PaymentMethods from './sections/PaymentMethods'
 import WhatsAppButton from './components/WhatsAppButton'
 import Evaluation from './sections/Evaluation'
 import Resources from './sections/Resources'
+import ChatBot from './components/ChatBot'
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <PaymentMethods />
       </main>
       <WhatsAppButton />
+      <ChatBot />
     </div>
   )
 }
