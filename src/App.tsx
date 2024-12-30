@@ -10,6 +10,7 @@ import Resources from './sections/Resources'
 import Prices from './sections/Prices'
 import PaymentMethods from './sections/PaymentMethods'
 import { Helmet } from 'react-helmet'
+import Analytics from './components/Analytics'
 
 const schemaData = {
   "@context": "https://schema.org",
@@ -27,6 +28,7 @@ const schemaData = {
 function App() {
   return (
     <>
+      <Analytics />
       <Helmet>
         <title>Psicología de la Obesidad - Atención Psicológica Especializada</title>
         <meta name="description" content="Atención psicológica especializada en obesidad. Sesiones online para toda Latinoamérica. Tratamiento profesional y personalizado." />
