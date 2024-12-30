@@ -1475,36 +1475,55 @@ html, body {
 /* ChatBot Styles */
 .chatbot-container {
   position: fixed;
-  bottom: 100px;
-  right: 20px;
+  bottom: 20px;
+  left: 20px;
   z-index: 1000;
 }
 
 .chatbot-toggle {
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
-  background: var(--primary-color);
-  border: none;
-  color: var(--dark-bg);
-  font-size: 1.5rem;
+  background: var(--dark-bg);
+  border: 2px solid var(--primary-color);
   cursor: pointer;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0;
+  overflow: hidden;
+}
+
+.chatbot-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  padding: 10px;
+}
+
+.chatbot-header-icon {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
 }
 
 .chatbot-toggle:hover {
   transform: scale(1.05);
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  border-color: #33EBEB;
+}
+
+.chatbot-toggle.open {
+  background: var(--primary-color);
+  border: none;
 }
 
 .chatbot-window {
   position: absolute;
   bottom: 80px;
-  right: 0;
+  left: 0;
   width: 350px;
   height: 500px;
   background: var(--dark-bg);
@@ -1621,4 +1640,33 @@ html, body {
 @keyframes loading {
   0%, 100% { opacity: 0.3; }
   50% { opacity: 1; }
+}
+
+.chatbot-header-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.chatbot-header-title svg {
+  color: var(--dark-bg);
+}
+
+/* Estilo para el botón de cerrar en el header */
+.chatbot-header .close-button {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0, 0, 0, 0.1);
+  color: var(--dark-bg);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.chatbot-header .close-button:hover {
+  background: rgba(0, 0, 0, 0.2);
 }

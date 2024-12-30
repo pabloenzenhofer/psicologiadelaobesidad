@@ -1,9 +1,14 @@
 import { useState } from 'react'
-import { IoClose, IoPaperPlaneOutline, IoChatbubbleEllipsesOutline } from 'react-icons/io5'
+import { IoClose, IoPaperPlaneOutline } from 'react-icons/io5'
+import chatbotImage from '../assets/chatbot.png'
 
 const API_URL = process.env.NODE_ENV === 'production' 
-  ? '/api/chat'  // Ajusta según tu URL de producción
-  : 'http://localhost:8080/api/chat';
+  ? 'https://tu-dominio.com/api/chat'  // URL de producción
+  : 'http://localhost:8080/api/chat';   // URL local
+
+// Detectar si estamos en GitHub Pages
+const isGitHubPages = window.location.hostname.includes('github.io');
+const BASE_URL = isGitHubPages ? '/psicologiadelaobesidad' : '';
 
 const ChatBot = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -56,14 +61,28 @@ const ChatBot = () => {
         onClick={() => setIsOpen(!isOpen)}
         aria-label={isOpen ? 'Cerrar chat' : 'Abrir chat'}
       >
-        {isOpen ? <IoClose /> : <IoChatbubbleEllipsesOutline size={30} />}
+        <img 
+          src={chatbotImage}
+          alt="ChatBot" 
+          className="chatbot-icon"
+        />
       </button>
 
       <div className="chatbot-window">
         <div className="chatbot-header">
-          <h3>Chat con PsicoBot</h3>
-          <button onClick={() => setIsOpen(false)}>
-            <IoClose />
+          <div className="chatbot-header-title">
+            <img 
+              src={chatbotImage}
+              alt="ChatBot" 
+              className="chatbot-header-icon"
+            />
+            <h3>Chat con PsicoBot</h3>
+          </div>
+          <button 
+            className="close-button"
+            onClick={() => setIsOpen(false)}
+          >
+            <IoClose size={24} />
           </button>
         </div>
 
