@@ -6,10 +6,10 @@ const Articles = () => {
   
   const articles = [
     {
-      title: "Adicción al azúcar: una discusión abierta en la ciencia",
-      description: "¿Es real esta adicción? El campo científico sigue dividido. Tres estudios clave nos ofrecen perspectivas diversas, puntos de convergencia y desacuerdo.",
+      title: "Obesidad y Depresión: ¿Qué Papel Juegan la Biología, la Cultura y la Sociedad?",
+      description: "Exploramos la compleja relación entre obesidad y depresión, analizando cómo los factores biológicos, culturales y sociales se entrelazan afectando la salud mental y física.",
       category: "Psicología",
-      url: `${BASE_URL}/articulos/adiccion-al-azucar.html`
+      url: `${BASE_URL}/articulos/obesidad-y-depresion.html`
     },
     {
       title: "El Impacto de las Emociones en la Alimentación",
