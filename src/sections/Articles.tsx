@@ -6,6 +6,12 @@ const Articles = () => {
   
   const articles = [
     {
+      title: "Adicción al azúcar: una discusión abierta en la ciencia",
+      description: "¿Es real esta adicción? El campo científico sigue dividido. Tres estudios clave nos ofrecen perspectivas diversas, puntos de convergencia y desacuerdo.",
+      category: "Psicología",
+      url: `${BASE_URL}/articulos/adiccion-al-azucar.html`
+    },
+    {
       title: "El Impacto de las Emociones en la Alimentación",
       description: "Descubre cómo las emociones influyen en nuestros hábitos alimenticios y aprende estrategias para manejarlas.",
       category: "Psicología",
@@ -31,13 +37,12 @@ const Articles = () => {
     }
   ]
 
-  const handleArticleClick = (article: { title: string, url: string }) => {
+  const trackArticleClick = (title: string) => {
     ReactGA.event({
       category: 'Content',
       action: 'Read Article',
-      label: article.title
+      label: title
     })
-    window.open(article.url, '_blank')
   }
 
   return (
@@ -46,20 +51,22 @@ const Articles = () => {
         <h2>Artículos</h2>
         <div className="articles-list">
           {articles.map((article, index) => (
-            <article 
-              key={index} 
+            <a 
+              key={index}
+              href={article.url}
               className="article-row"
-              onClick={() => handleArticleClick(article)}
+              onClick={() => trackArticleClick(article.title)}
+              style={{ textDecoration: 'none', color: 'inherit', cursor: 'pointer' }}
             >
               <div className="article-content">
                 <span className="article-category">{article.category}</span>
                 <h3>{article.title}</h3>
                 <p>{article.description}</p>
               </div>
-              <button className="read-more">
+              <div className="read-more">
                 <FaArrowRight />
-              </button>
-            </article>
+              </div>
+            </a>
           ))}
         </div>
       </div>
