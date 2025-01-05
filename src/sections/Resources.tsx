@@ -1,4 +1,5 @@
 import { FaHeadphones } from 'react-icons/fa'
+import ReactGA from 'react-ga4'
 
 const Resources = () => {
   // Detectar si estamos en GitHub Pages o desarrollo local
@@ -29,8 +30,13 @@ const Resources = () => {
     }
   ]
 
-  const handleDownload = (url: string) => {
-    window.open(url, '_blank');
+  const handleDownload = (resource: { title: string, downloadUrl: string }) => {
+    ReactGA.event({
+      category: 'Resources',
+      action: 'Download Resource',
+      label: resource.title
+    })
+    window.open(resource.downloadUrl, '_blank')
   }
 
   return (
@@ -45,7 +51,7 @@ const Resources = () => {
             <div 
               key={index} 
               className="resource-card"
-              onClick={() => handleDownload(resource.downloadUrl)}
+              onClick={() => handleDownload(resource)}
             >
               <div className="resource-icon">
                 {typeof resource.icon === 'string' ? resource.icon : resource.icon}

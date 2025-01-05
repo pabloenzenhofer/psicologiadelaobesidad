@@ -16,5 +16,8 @@ export default defineConfig({
       },
     },
     minify: 'esbuild',
-  }
+  },
+  server: {
+    open: true,
+  },
 })
