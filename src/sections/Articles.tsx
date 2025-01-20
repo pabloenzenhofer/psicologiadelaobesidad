@@ -6,6 +6,12 @@ const Articles = () => {
   
   const articles = [
     {
+      title: "¿Es bueno pesarse todos los días? Estrategias efectivas para un cambio saludable",
+      description: "¿Está bien pesarse todos los días? Te contaré por qué no es una estrategia que funciona. Descubre cómo transformar tu relación con la balanza y desarrollar hábitos más saludables.",
+      category: "Hábitos Saludables",
+      url: `${BASE_URL}/articulos/es-bueno-pesarse-todos-los-dias.html`
+    },
+    {
       title: "Obesidad y Depresión: ¿Qué Papel Juegan la Biología, la Cultura y la Sociedad?",
       description: "Exploramos la compleja relación entre obesidad y depresión, analizando cómo los factores biológicos, culturales y sociales se entrelazan afectando la salud mental y física.",
       category: "Psicología",
