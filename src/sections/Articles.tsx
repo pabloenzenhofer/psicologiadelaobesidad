@@ -40,6 +40,13 @@ const Articles = () => {
       description: "Aprende las claves psicológicas para lograr una pérdida de peso sostenible y mantener los resultados a largo plazo.",
       category: "Pérdida de Peso",
       url: `${BASE_URL}/articulos/perder-peso-y-mantenerlo.html`
+    },
+    {
+      title: "¿Qué es el Trastorno Evitativo/Restrictivo de la Ingestión de Alimentos (TERIA)?",
+      description: "Descubre qué es el TERIA, sus causas, síntomas y tratamientos. Un trastorno alimentario que va más allá de ser 'quisquilloso' con la comida.",
+      category: "Psicología",
+      url: `${BASE_URL}/articulos/que-es-el-trastorno-evitativo-restrictivo-de-la-ingestion-de-alimentos.html`,
+      date: "2024-03-19"
     }
   ]
 
