@@ -59,8 +59,8 @@ html, body {
   overflow: hidden;
   padding: 0;
   margin: 0;
-  left: 50%;
-  transform: translateX(-50%); /* Centrar el hero */
+  
+  
   background: var(--dark-bg);
 }
 
