@@ -1,29 +1,61 @@
 import './App.css?v=1'
 import Navbar from './components/Navbar'
 import Hero from './sections/Hero'
-import About from './sections/About'
 import Services from './sections/Services'
 import Diferencial from './sections/Diferencial'
 import Articles from './sections/Articles'
-import PaymentMethods from './sections/PaymentMethods'
 import WhatsAppButton from './components/WhatsAppButton'
 import Evaluation from './sections/Evaluation'
+import Resources from './sections/Resources'
+import Prices from './sections/Prices'
+import PaymentMethods from './sections/PaymentMethods'
+import { Helmet } from 'react-helmet'
+import Analytics from './components/Analytics'
+
+const schemaData = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Psicología de la Obesidad",
+  "description": "Atención psicológica especializada en obesidad",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "Argentina"
+  },
+  "priceRange": "$$",
+  "service": "Terapia Psicológica Online"
+};
 
 function App() {
   return (
-    <div className="app-container">
-      <Navbar />
-      <main className="main-content">
-        <Hero />
-        <About />
-        <Services />
-        <Diferencial />
-        <Articles />
-        <Evaluation />
-        <PaymentMethods />
-      </main>
-      <WhatsAppButton />
-    </div>
+    <>
+      <Analytics />
+      <Helmet>
+        <title>Psicología de la Obesidad - Atención Psicológica Especializada</title>
+        <meta name="description" content="Atención psicológica especializada en obesidad. Sesiones online para toda Latinoamérica. Tratamiento profesional y personalizado." />
+        <meta name="keywords" content="psicología, obesidad, terapia online, salud mental, pérdida de peso, bienestar emocional" />
+        <meta property="og:title" content="Psicología de la Obesidad" />
+        <meta property="og:description" content="Atención psicológica especializada en obesidad" />
+        <meta property="og:image" content="/logo.png" />
+        <link rel="canonical" href="https://psicologiadelaobesidad.github.io/psicologiadelaobesidad/" />
+        <script type="application/ld+json">
+          {JSON.stringify(schemaData)}
+        </script>
+      </Helmet>
+      <div className="app-container">
+        <Navbar />
+        <main className="main-content">
+          <Hero />
+          <Services />
+          <Diferencial />
+          <Articles />
+          <Evaluation />
+          <Resources />
+          <Prices />
+          <PaymentMethods />
+        </main>
+        <WhatsAppButton />
+      </div>
+    </>
   )
 }
 

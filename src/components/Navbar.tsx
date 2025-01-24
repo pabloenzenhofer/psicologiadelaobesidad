@@ -16,6 +16,16 @@ const Navbar = () => {
     setIsMenuOpen(false)
   }
 
+  const menuItems = [
+    { text: 'Inicio', href: '#inicio' },
+    { text: 'Servicios', href: '#servicios' },
+    { text: 'Enfoque', href: '#diferencial' },
+    { text: 'Artículos', href: '#articulos' },
+    { text: 'Evaluación', href: '#evaluation' },
+    { text: 'Recursos', href: '#recursos' },
+    { text: 'Medios de Pago', href: '#payment' }
+  ]
+
   return (
     <nav className="navbar">
       <button 
@@ -38,24 +48,24 @@ const Navbar = () => {
       {/* Menú móvil */}
       <div className={`navbar-menu mobile ${isMenuOpen ? 'open' : ''}`}>
         <ul>
-          <li><a href="#inicio" onClick={closeMenu}>Inicio</a></li>
-          <li><a href="#nosotros" onClick={closeMenu}>Nosotros</a></li>
-          <li><a href="#servicios" onClick={closeMenu}>Servicios</a></li>
-          <li><a href="#diferencial" onClick={closeMenu}>Diferencial</a></li>
-          <li><a href="#articulos" onClick={closeMenu}>Artículos</a></li>
-          <li><a href="#evaluacion" onClick={closeMenu}>Evaluación</a></li>
+          {menuItems.map((item, index) => (
+            <li key={index}>
+              <a href={item.href} onClick={closeMenu}>
+                {item.text}
+              </a>
+            </li>
+          ))}
         </ul>
       </div>
 
       {/* Menú desktop */}
       <div className="navbar-container">
         <ul className="navbar-menu">
-          <li><a href="#inicio">Inicio</a></li>
-          <li><a href="#nosotros">Nosotros</a></li>
-          <li><a href="#servicios">Servicios</a></li>
-          <li><a href="#diferencial">Diferencial</a></li>
-          <li><a href="#articulos">Artículos</a></li>
-          <li><a href="#evaluacion">Evaluación</a></li>
+          {menuItems.map((item, index) => (
+            <li key={index}>
+              <a href={item.href}>{item.text}</a>
+            </li>
+          ))}
         </ul>
       </div>
     </nav>

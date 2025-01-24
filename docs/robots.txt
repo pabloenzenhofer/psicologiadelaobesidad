@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://psicologiadelaobesidad.github.io/psicologiadelaobesidad/sitemap.xml 

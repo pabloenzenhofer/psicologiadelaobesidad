@@ -8,5 +8,16 @@ export default defineConfig({
   build: {
     outDir: 'docs',
     emptyOutDir: true,
-  }
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom'],
+        },
+      },
+    },
+    minify: 'esbuild',
+  },
+  server: {
+    open: true,
+  },
 })

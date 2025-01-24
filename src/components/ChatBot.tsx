@@ -1,104 +1,142 @@
-import { useState, useRef, useEffect } from 'react'
-import { generateResponse } from '../services/openai'
+import { useState } from 'react'
+import { IoClose, IoPaperPlaneOutline } from 'react-icons/io5'
+import chatbotImage from '../assets/chatbot.png'
 
-interface Message {
-  content: string
-  isUser: boolean
-}
+const API_URL = process.env.NODE_ENV === 'production' 
+  ? 'https://tu-dominio.com/api/chat'  // URL de producción
+  : 'http://localhost:8080/api/chat';   // URL local
+
+// Detectar si estamos en GitHub Pages
+const isGitHubPages = window.location.hostname.includes('github.io');
+const BASE_URL = isGitHubPages ? '/psicologiadelaobesidad' : '';
 
 const ChatBot = () => {
   const [isOpen, setIsOpen] = useState(false)
-  const [messages, setMessages] = useState<Message[]>([
-    {
-      content: "¡Hola! Soy tu asistente virtual especializado en psicología de la obesidad. Puedo responder tus preguntas sobre nuestros servicios, metodología y cualquier duda que tengas. ¿En qué puedo ayudarte?",
-      isUser: false
-    }
-  ])
-  const [inputMessage, setInputMessage] = useState('')
+  const [messages, setMessages] = useState<Array<{text: string, isUser: boolean}>>([{
+    text: `¡Hola! 😊 ¿En qué puedo ayudarte? Selecciona una opción o escribe tu consulta:
+
+❶ Enfoque de tratamiento
+❷ Costo de sesión
+❸ Sesiones online
+❹ Grupo mindful eating
+❺ Cómo empezar
+
+👆 Solo escribe el número o tu pregunta`,
+    isUser: false
+  }])
+  const [inputText, setInputText] = useState('')
   const [isLoading, setIsLoading] = useState(false)
-  const messagesEndRef = useRef<HTMLDivElement>(null)
-
-  const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" })
-  }
-
-  useEffect(() => {
-    scrollToBottom()
-  }, [messages])
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    if (!inputMessage.trim()) return
+    if (!inputText.trim()) return
 
-    // Agregar mensaje del usuario
-    const userMessage = { content: inputMessage, isUser: true }
+    // Manejar respuestas por número con respuestas más cortas y links
+    const numberResponse = {
+      "1": "Usamos terapias basadas en evidencia: TCC, ACT y DBT 🧠",
+      "2": "¿De qué país nos escribes? 💰",
+      "3": "Agenda tu sesión aquí: https://calendly.com/psicologiadelaobesidad 🌐",
+      "4": "¿Te gustaría unirte al grupo de WhatsApp sobre mindful eating? Escríbenos: https://wa.me/541166808612 🧘‍♀️",
+      "5": "Completa tu evaluación: https://forms.gle/Ld8TxZEPwNsXV7Jx9 🚀"
+    }[inputText.trim()]
+
+    const userMessage = { text: inputText, isUser: true }
     setMessages(prev => [...prev, userMessage])
-    setInputMessage('')
+    setInputText('')
     setIsLoading(true)
 
     try {
-      // Obtener respuesta de GPT
-      const response = await generateResponse(inputMessage)
-      const botMessage = { content: response, isUser: false }
-      setMessages(prev => [...prev, botMessage])
-    } catch (error) {
-      const errorMessage = {
-        content: "Lo siento, ha ocurrido un error. Por favor, intenta de nuevo.",
-        isUser: false
+      if (numberResponse) {
+        setMessages(prev => [...prev, { text: numberResponse, isUser: false }])
+        setIsLoading(false)
+        return
       }
-      setMessages(prev => [...prev, errorMessage])
+
+      const response = await fetch(API_URL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ message: inputText.trim() })
+      })
+
+      if (!response.ok) {
+        throw new Error(`Error ${response.status}: ${response.statusText}`)
+      }
+
+      const data = await response.json()
+      setMessages(prev => [...prev, { text: data.response, isUser: false }])
+    } catch (error) {
+      console.error('Error:', error)
+      setMessages(prev => [...prev, { 
+        text: "Lo siento, hubo un error al procesar tu mensaje.", 
+        isUser: false 
+      }])
     } finally {
       setIsLoading(false)
     }
   }
 
   return (
-    <div className="chatbot-container">
-      {isOpen && (
-        <div className="chatbot-window">
-          <div className="chatbot-header">
-            <h3>Asistente Virtual IA</h3>
-            <button onClick={() => setIsOpen(false)} className="close-button">×</button>
-          </div>
-          <div className="chatbot-messages">
-            {messages.map((msg, index) => (
-              <div
-                key={index}
-                className={`chat-message ${msg.isUser ? 'user-message' : 'bot-message'}`}
-              >
-                {msg.content}
-              </div>
-            ))}
-            {isLoading && (
-              <div className="bot-message loading">
-                <span>.</span><span>.</span><span>.</span>
-              </div>
-            )}
-            <div ref={messagesEndRef} />
-          </div>
-          <form onSubmit={handleSubmit} className="chatbot-input">
-            <input
-              type="text"
-              value={inputMessage}
-              onChange={(e) => setInputMessage(e.target.value)}
-              placeholder="Escribe tu pregunta..."
-              disabled={isLoading}
-            />
-            <button type="submit" disabled={isLoading}>
-              {isLoading ? '...' : 'Enviar'}
-            </button>
-          </form>
-        </div>
-      )}
+    <div className={`chatbot-container ${isOpen ? 'open' : ''}`}>
       <button 
-        className="chatbot-button"
-        onClick={() => setIsOpen(true)}
-        aria-label="Abrir chat con asistente virtual"
+        className="chatbot-toggle"
+        onClick={() => setIsOpen(!isOpen)}
+        aria-label={isOpen ? 'Cerrar chat' : 'Abrir chat'}
       >
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M12 2C6.48 2 2 6.48 2 12c0 5.52 4.48 10 10 10s10-4.48 10-10c0-5.52-4.48-10-10-10zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-3.31 0-6 2.69-6 6 0 1.66.67 3.16 1.76 4.24l-1.45 1.45c-.1.1-.15.22-.15.35v.71c0 .28.22.5.5.5h4.7c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10h-3.3l.86-.86c.19-.19.29-.44.29-.71 0-.89-.36-1.69-.95-2.27C8.3 11.47 8 10.77 8 10c0-2.21 1.79-4 4-4s4 1.79 4 4-1.79 4-4 4z"/>
-        </svg>
+        <img 
+          src={chatbotImage}
+          alt="ChatBot" 
+          className="chatbot-icon"
+        />
       </button>
+
+      <div className="chatbot-window">
+        <div className="chatbot-header">
+          <div className="chatbot-header-title">
+            <img 
+              src={chatbotImage}
+              alt="ChatBot" 
+              className="chatbot-header-icon"
+            />
+            <h3>Chat con PsicoBot</h3>
+          </div>
+          <button 
+            className="close-button"
+            onClick={() => setIsOpen(false)}
+          >
+            <IoClose size={20} />
+          </button>
+        </div>
+
+        <div className="chatbot-messages">
+          {messages.map((msg, index) => (
+            <div 
+              key={index} 
+              className={`message ${msg.isUser ? 'user' : 'bot'}`}
+            >
+              {msg.text}
+            </div>
+          ))}
+          {isLoading && (
+            <div className="message bot loading">
+              <span>.</span><span>.</span><span>.</span>
+            </div>
+          )}
+        </div>
+
+        <form onSubmit={handleSubmit} className="chatbot-input">
+          <input
+            type="text"
+            value={inputText}
+            onChange={(e) => setInputText(e.target.value)}
+            placeholder="Escribe tu mensaje..."
+          />
+          <button type="submit" disabled={isLoading}>
+            <IoPaperPlaneOutline />
+          </button>
+        </form>
+      </div>
     </div>
   )
 }
