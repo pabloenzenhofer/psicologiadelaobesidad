@@ -90,7 +90,7 @@ const Hero = () => {
     window.open('https://calendly.com/psicologiadelaobesidad/agendarsesion?month=2024-12', '_blank')
   }
 
-  const scrollToServices = (e: React.MouseEvent<HTMLAnchorElement>) => {
+  const scrollToServices = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     const servicesSection = document.getElementById('servicios');
     if (servicesSection) {
