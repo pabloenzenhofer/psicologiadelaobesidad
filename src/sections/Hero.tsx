@@ -21,61 +21,61 @@ const Hero = () => {
       src: salad, 
       opacity: 1,
       preload: "auto",
-      poster: "/thumbnails/salad.jpg"
+      poster: "/psicologiadelaobesidad/thumbnails/salad.jpg"
     },
     { 
-      src: mujerterapia, 
+      src: mujerterapia,
       opacity: 0,
       preload: "auto",
-      poster: "/thumbnails/mujerterapia.jpg"
+      poster: "/psicologiadelaobesidad/thumbnails/mujerterapia.jpg"
     },
     { 
       src: lluviafrutas, 
       opacity: 0,
       preload: "auto",
-      poster: "/thumbnails/lluviafrutas.jpg"
+      poster: "/psicologiadelaobesidad/thumbnails/lluviafrutas.jpg"
     },
     { 
       src: mujeres, 
       opacity: 0,
       preload: "auto",
-      poster: "/thumbnails/mujeres.jpg"
+      poster: "/psicologiadelaobesidad/thumbnails/mujeres.jpg"
     },
     { 
       src: gym, 
       opacity: 0,
       preload: "auto",
-      poster: "/thumbnails/gym.jpg"
+      poster: "/psicologiadelaobesidad/thumbnails/gym.jpg"
     },
     { 
       src: mindfuleating, 
       opacity: 0,
       preload: "auto",
-      poster: "/thumbnails/mindfuleating.jpg"
+      poster: "/psicologiadelaobesidad/thumbnails/mindfuleating.jpg"
     },
     { 
       src: mujergym, 
       opacity: 0,
       preload: "auto",
-      poster: "/thumbnails/mujergym.jpg"
+      poster: "/psicologiadelaobesidad/thumbnails/mujergym.jpg"
     },
     { 
       src: mindfulness, 
       opacity: 0,
       preload: "auto",
-      poster: "/thumbnails/mindfulness.jpg"
+      poster: "/psicologiadelaobesidad/thumbnails/mindfulness.jpg"
     },
     { 
       src: mujerejercicio, 
       opacity: 0,
       preload: "auto",
-      poster: "/thumbnails/mujerejercicio.jpg"
+      poster: "/psicologiadelaobesidad/thumbnails/mujerejercicio.jpg"
     },
     { 
       src: frutas, 
       opacity: 0,
       preload: "auto",
-      poster: "/thumbnails/frutas.jpg"
+      poster: "/psicologiadelaobesidad/thumbnails/frutas.jpg"
     }
   ]
 
