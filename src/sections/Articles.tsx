@@ -47,6 +47,20 @@ const Articles = () => {
       category: "Psicología",
       url: `${BASE_URL}/articulos/que-es-el-trastorno-evitativo-restrictivo-de-la-ingestion-de-alimentos.html`,
       date: "2024-03-19"
+    },
+    {
+      title: "La importancia de la detección temprana en los TCA",
+      description: "Aprende a identificar las señales tempranas de los trastornos de la conducta alimentaria y por qué es crucial actuar a tiempo.",
+      category: "Psicología",
+      url: `${BASE_URL}/articulos/importancia-deteccion-temprana-trastornos-conducta-alimentaria.html`,
+      date: "2024-03-20"
+    },
+    {
+      title: "Objetivos del Tratamiento de la Obesidad: Más Allá de los Números en la Báscula",
+      description: "Descubre por qué el tratamiento de la obesidad va más allá del peso corporal y cómo los cambios sostenibles en el estilo de vida transforman vidas.",
+      category: "Tratamiento",
+      url: `${BASE_URL}/articulos/objetivos-tratamiento-obesidad-mas-alla-numeros-bascula.html`,
+      date: "2024-03-21"
     }
   ]
 

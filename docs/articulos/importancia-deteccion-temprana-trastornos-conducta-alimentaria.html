@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/webp" href="/psicologiadelaobesidad/img/logo.webp" />
+    <title>Psicología de la Obesidad - Detección Temprana TCA</title>
+    <meta name="description" content="Aprende a identificar las señales tempranas de los trastornos de la conducta alimentaria (TCA) y por qué es crucial su detección temprana para una recuperación exitosa." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #00E6E6;
+            --dark-bg: #1A1B26;
+            --light-bg: #FFFFFF;
+            --text-dark: #1A1B26;
+            --text-light: #666666;
+            --font-heading: 'Poppins', sans-serif;
+            --font-body: 'Inter', sans-serif;
+        }
+
+        body {
+            font-family: var(--font-body);
+            line-height: 1.6;
+            color: var(--text-dark);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: var(--light-bg);
+        }
+
+        .article-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .category {
+            display: inline-block;
+            background: var(--primary-color);
+            color: var(--dark-bg);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-family: var(--font-heading);
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            text-align: center;
+        }
+
+        h2 {
+            font-family: var(--font-heading);
+            font-size: 1.8rem;
+            margin: 3rem 0 1.5rem;
+            color: var(--dark-bg);
+        }
+
+        h3 {
+            font-family: var(--font-heading);
+            font-size: 1.4rem;
+            margin: 2rem 0 1rem;
+            color: var(--dark-bg);
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            color: var(--text-dark);
+        }
+
+        .intro {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+        }
+
+        ul {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        .sources {
+            margin-top: 3rem;
+            padding: 1.5rem;
+            background: #f5f5f5;
+            border-radius: 8px;
+        }
+
+        .call-to-action-section {
+            background: rgba(26, 27, 38, 0.05);
+            padding: 3rem 2rem;
+            margin: 3rem -2rem -2rem;
+            text-align: center;
+            color: var(--text-dark);
+            border-radius: 16px;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .cta-button {
+            background: var(--primary-color);
+            color: var(--dark-bg);
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: opacity 0.3s;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 1.5rem;
+        }
+
+        .cta-button:hover {
+            opacity: 0.9;
+        }
+
+        .site-logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 60px;
+            height: auto;
+            z-index: 100;
+            cursor: pointer;
+            transition: opacity 0.3s ease;
+        }
+
+        .site-logo:hover {
+            opacity: 0.8;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 100;
+        }
+
+        .nav-link {
+            color: var(--dark-bg);
+            font-size: 1.5rem;
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .nav-link:hover {
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .site-logo {
+                position: relative;
+                top: 0;
+                left: 0;
+                margin: 1rem auto;
+                display: block;
+                width: 50px;
+            }
+
+            .navbar {
+                position: relative;
+                top: 0;
+                right: 0;
+                text-align: center;
+                margin: 1rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <img 
+        src="/psicologiadelaobesidad/assets/logo.png" 
+        alt="Logo Psicología de la Obesidad" 
+        class="site-logo"
+        onclick="window.location.href='/psicologiadelaobesidad/'"
+    />
+
+    <div class="container">
+        <nav class="navbar">
+            <a href="/psicologiadelaobesidad/" class="nav-link">
+                <i class="fas fa-home"></i>
+            </a>
+        </nav>
+    </div>
+
+    <article>
+        <div class="article-header">
+            <span class="category">Psicología</span>
+            <h1>La importancia de la detección temprana en los trastornos de la conducta alimentaria (TCA)</h1>
+            <p class="article-description">Aprende a identificar las señales tempranas de los TCA y por qué es crucial actuar a tiempo para una recuperación exitosa.</p>
+        </div>
+
+        <p>Los trastornos de la conducta alimentaria (TCA) son afecciones mentales graves que afectan tanto la salud física como emocional de quienes los padecen. Estas enfermedades, que incluyen la anorexia nerviosa, la bulimia nerviosa y el trastorno por atracón, tienen tasas alarmantes de morbilidad y mortalidad, y su detección temprana es crucial para prevenir complicaciones a largo plazo.</p>
+
+        <h2>¿Qué son los TCA y por qué es importante detectarlos temprano?</h2>
+
+        <p>Los TCA se caracterizan por patrones desadaptativos en la conducta alimentaria, acompañados de preocupaciones excesivas por el peso y la figura corporal. Aunque pueden afectar a personas de cualquier edad, sexo o estrato social, las mujeres jóvenes son las más vulnerables. La anorexia nerviosa tiene una de las tasas de mortalidad más altas entre los trastornos psiquiátricos, y los pacientes con bulimia nerviosa o trastorno por atracón también enfrentan riesgos significativos.</p>
+
+        <p>La detección temprana permite:</p>
+        <ul>
+            <li>Reducir el impacto físico y emocional del trastorno.</li>
+            <li>Evitar complicaciones severas como daños en el sistema cardiovascular, endocrino y óseo.</li>
+            <li>Incrementar la efectividad del tratamiento.</li>
+        </ul>
+
+        <h2>Criterios clave para identificar un TCA</h2>
+
+        <p>Es fundamental reconocer los signos y síntomas iniciales de los TCA, que pueden ser sutiles o manifestarse de diversas formas. Algunos de los más relevantes incluyen:</p>
+
+        <h3>Cambios drásticos en el peso</h3>
+        <p>Pérdida, ganancia o fluctuaciones significativas sin explicación aparente.</p>
+
+        <h3>Conductas alimentarias inusuales</h3>
+        <ul>
+            <li>Restricción extrema de alimentos o dietas muy estrictas.</li>
+            <li>Episodios recurrentes de atracones.</li>
+            <li>Uso excesivo de métodos compensatorios como vómitos autoinducidos, laxantes o ejercicio extremo.</li>
+        </ul>
+
+        <h3>Señales físicas</h3>
+        <ul>
+            <li>Intolerancia al frío, debilidad o fatiga constante.</li>
+            <li>Irregularidades menstruales o amenorrea en mujeres.</li>
+            <li>Pérdida de densidad ósea, cabello o daños dentales.</li>
+        </ul>
+
+        <h3>Señales emocionales y conductuales</h3>
+        <ul>
+            <li>Preocupación excesiva por la comida, el peso o la figura.</li>
+            <li>Aislamiento social, especialmente durante comidas.</li>
+            <li>Baja autoestima, depresión o ansiedad.</li>
+        </ul>
+
+        <p>En niños y adolescentes, la falta de ganancia de peso o estatura esperada también puede ser una alerta.</p>
+
+        <h2>¿Por qué acudir a un profesional?</h2>
+
+        <p>Los TCA son trastornos complejos que requieren un abordaje multidisciplinario. Un profesional de la salud puede realizar una evaluación exhaustiva que incluya:</p>
+
+        <ul>
+            <li><strong>Historia clínica y familiar:</strong> Identificar factores de riesgo genéticos, psicológicos y sociales.</li>
+            <li><strong>Evaluación física:</strong> Detectar anormalidades como bradicardia, anemias o desbalances electrolíticos.</li>
+            <li><strong>Diagnóstico psiquiátrico:</strong> Identificar comorbilidades como depresión o trastornos de ansiedad.</li>
+        </ul>
+
+        <p>Un tratamiento temprano puede incluir rehabilitación nutricional, terapia psicológica (como la terapia cognitivo-conductual) y apoyo familiar. En casos graves, puede ser necesaria la hospitalización.</p>
+
+        <h2>Consejos para familiares y amigos</h2>
+
+        <p>Si sospechas que alguien cercano puede estar desarrollando un TCA:</p>
+
+        <ul>
+            <li><strong>Mantén la calma:</strong> Evita juicios o críticas directas.</li>
+            <li><strong>Habla con empatía:</strong> Expresa tus preocupaciones desde el cariño y la comprensión.</li>
+            <li><strong>Motiva a buscar ayuda profesional:</strong> Acompaña a la persona en el proceso.</li>
+            <li><strong>Infórmate:</strong> Conocer más sobre los TCA te ayudará a brindar mejor apoyo.</li>
+        </ul>
+
+        <h2>Conclusión</h2>
+
+        <p>La detección temprana de los trastornos de la conducta alimentaria puede marcar la diferencia entre una recuperación exitosa y complicaciones severas. Si identificas signos de alerta en ti o en alguien más, no dudes en buscar ayuda profesional. Recuerda, los TCA no son una elección, pero la recuperación sí lo es.</p>
+
+        <div class="sources">
+            <h3>Referencias:</h3>
+            <p>Academy for Eating Disorders (2012). Puntos Críticos para un Reconocimiento Temprano y Manejo de Riesgos Médicos en el Cuidado de Individuos con Trastornos de la Conducta Alimentaria. Segunda edición.</p>
+        </div>
+    </article>
+
+    <div class="call-to-action-section">
+        <h2>¿Necesitas ayuda profesional?</h2>
+        <p>
+            Si identificas algunas de estas señales en ti o en alguien cercano, estamos aquí para ayudarte. La detección temprana es clave para una recuperación exitosa.
+        </p>
+        <a href="/psicologiadelaobesidad/#contacto" class="cta-button">Agenda una consulta</a>
+    </div>
+</body>
+</html> 

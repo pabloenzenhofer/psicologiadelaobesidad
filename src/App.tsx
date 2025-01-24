@@ -30,7 +30,8 @@ function App() {
     <>
       <Analytics />
       <Helmet>
-        <title>Psicología de la Obesidad - Atención Psicológica Especializada</title>
+        <title>Psicología de la Obesidad</title>
+        <link rel="icon" type="image/webp" href="/psicologiadelaobesidad/img/logo.webp" />
         <meta name="description" content="Atención psicológica especializada en obesidad. Sesiones online para toda Latinoamérica. Tratamiento profesional y personalizado." />
         <meta name="keywords" content="psicología, obesidad, terapia online, salud mental, pérdida de peso, bienestar emocional" />
         <meta property="og:title" content="Psicología de la Obesidad" />
