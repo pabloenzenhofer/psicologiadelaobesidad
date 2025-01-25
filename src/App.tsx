@@ -31,13 +31,13 @@ function App() {
       <Analytics />
       <Helmet>
         <title>Psicología de la Obesidad</title>
-        <link rel="icon" type="image/webp" href="/psicologiadelaobesidad/img/logo.webp" />
+        <link rel="icon" type="image/webp" href="./img/logo.webp" />
         <meta name="description" content="Atención psicológica especializada en obesidad. Sesiones online para toda Latinoamérica. Tratamiento profesional y personalizado." />
         <meta name="keywords" content="psicología, obesidad, terapia online, salud mental, pérdida de peso, bienestar emocional" />
         <meta property="og:title" content="Psicología de la Obesidad" />
         <meta property="og:description" content="Atención psicológica especializada en obesidad" />
-        <meta property="og:image" content="/logo.png" />
-        <link rel="canonical" href="https://psicologiadelaobesidad.github.io/psicologiadelaobesidad/" />
+        <meta property="og:image" content="./logo.png" />
+        <link rel="canonical" href="https://pabloenzenhofer.github.io/psicologiadelaobesidad/" />
         <script type="application/ld+json">
           {JSON.stringify(schemaData)}
         </script>
