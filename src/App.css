@@ -50,17 +50,15 @@ html, body {
 /* Hero section */
 .hero {
   position: relative;
-  width: 100vw; /* Cambiar a viewport width */
+  width: 100vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  padding: 0;
+  padding: 80px 0 0; /* Añadir padding-top para el logo */
   margin: 0;
-  
-  
   background: var(--dark-bg);
 }
 
@@ -82,6 +80,17 @@ html, body {
 
 .hero-background.fade-out {
   opacity: 0;
+}
+
+.hero-logo {
+  width: 100px;
+  height: auto;
+  margin-bottom: 2rem; /* Espacio entre el logo y el contenido */
+  z-index: 3;
+  position: relative; /* Cambiar de absolute a relative */
+  top: auto;
+  left: auto;
+  transform: none;
 }
 
 .hero-content {
@@ -162,17 +171,6 @@ html, body {
   transform: translateY(-2px);
   background: rgba(255, 255, 255, 0.1);
   border-color: #FFFFFF;
-}
-
-.hero-logo {
-  position: absolute;
-  top: 120px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100px;
-  height: auto;
-  z-index: 3;
-  margin: 0;
 }
 
 /* Animación de flotación tipo gota de agua */
