@@ -16,6 +16,14 @@ export default defineConfig({
       },
     },
     minify: 'esbuild',
+    html: {
+      minify: true,
+      inject: {
+        data: {
+          injectHead: false
+        }
+      }
+    }
   },
   server: {
     open: true,
