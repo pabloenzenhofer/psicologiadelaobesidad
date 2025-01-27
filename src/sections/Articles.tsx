@@ -6,10 +6,10 @@ const Articles = () => {
   
   const articles = [
     {
-      title: "¿Es bueno pesarse todos los días? Estrategias efectivas para un cambio saludable",
-      description: "¿Está bien pesarse todos los días? Te contaré por qué no es una estrategia que funciona. Descubre cómo transformar tu relación con la balanza y desarrollar hábitos más saludables.",
+      title: "Es bueno pesarse todos los días",
+      description: "Descubre por qué pesarse diariamente puede ser contraproducente y aprende estrategias más efectivas.",
       category: "Hábitos Saludables",
-      url: `${BASE_URL}/articulos/es-bueno-pesarse-todos-los-dias.html`
+      url: "./articulos/es-bueno-pesarse-todos-los-dias.html"
     },
     {
       title: "Obesidad y Depresión: ¿Qué Papel Juegan la Biología, la Cultura y la Sociedad?",
@@ -18,16 +18,16 @@ const Articles = () => {
       url: `${BASE_URL}/articulos/obesidad-y-depresion.html`
     },
     {
-      title: "El Impacto de las Emociones en la Alimentación",
-      description: "Descubre cómo las emociones influyen en nuestros hábitos alimenticios y aprende estrategias para manejarlas.",
+      title: "El impacto de las emociones en la alimentación",
+      description: "Comprende cómo las emociones influyen en nuestros hábitos alimenticios y aprende a gestionarlas.",
       category: "Psicología",
-      url: `${BASE_URL}/articulos/impacto-emociones-y-alimentacion.html`
+      url: "./articulos/impacto-emociones-y-alimentacion.html"
     },
     {
-      title: "Mindful Eating: Transformando la Relación con la Comida",
-      description: "Explora cómo la alimentación consciente puede mejorar tu relación con la comida y tu bienestar general.",
+      title: "Mindful Eating: Transformando la relación con la comida",
+      description: "Aprende a comer conscientemente y mejora tu relación con la alimentación.",
       category: "Mindfulness",
-      url: `${BASE_URL}/articulos/mindful-eating-transformando-relacion-comida.html`
+      url: "./articulos/mindful-eating-transformando-relacion-comida.html"
     },
     {
       title: "Medicina del Estilo de Vida",

@@ -1,24 +1,25 @@
 import { Link } from 'react-router-dom'
 
-const Evaluation = () => {
+export default function Evaluation() {
   return (
-    <section className="evaluation-section">
+    <section className="evaluation-section" id="evaluacion">
       <div className="evaluation-content">
         <h2>Evaluación Inicial</h2>
         <p className="evaluation-description">
-          Comienza tu proceso con una evaluación personalizada. Entenderemos juntos tus necesidades y objetivos para crear un plan adaptado a ti.
+          Realiza una evaluación completa de tu situación actual. 
+          Te brindaremos una devolución personalizada para ayudarte 
+          a entender mejor tu relación con la alimentación y definir 
+          el mejor camino para alcanzar tus objetivos.
         </p>
         <a 
-          href="https://wa.me/541166808612"
+          href="https://forms.gle/V4Jh8qz9vHJ9TSZP9" 
+          target="_blank" 
+          rel="noopener noreferrer" 
           className="evaluation-button"
-          target="_blank"
-          rel="noopener noreferrer"
         >
-          Agendar Evaluación
+          Comenzá tu evaluación gratis
         </a>
       </div>
     </section>
   )
-}
-
-export default Evaluation 
+} 

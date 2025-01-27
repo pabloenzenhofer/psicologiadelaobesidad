@@ -1,16 +1,20 @@
 const Services = () => {
+  // Detectar si estamos en GitHub Pages o en desarrollo local
+  const isGitHubPages = window.location.hostname.includes('github.io');
+  const basePath = isGitHubPages ? '/psicologiadelaobesidad' : '';
+
   const services = [
     {
       title: "Atención online",
       description: "Terapia al alcance de todos, sin importar la ubicación geográfica. Apoyo profesional sin fronteras.",
       icon: "🧠",
-      url: "articulos/atencion-virtual.html"
+      url: `${basePath}/articulos/atencion-virtual.html`
     },
     {
       title: "Mindful Eating",
       description: "Aprende a reconectar con tus señales de hambre y saciedad, desarrollando una relación consciente con la alimentación.",
       icon: "🍃",
-      url: "articulos/mindfuleating.html",
+      url: `${basePath}/articulos/mindfuleating.html`,
       buttonText: "Unite gratis",
       buttonUrl: "https://chat.whatsapp.com/Brzv3kkWfq45EdOFjuHxDx"
     },
@@ -23,7 +27,8 @@ const Services = () => {
 
   const handleCardClick = (url?: string) => {
     if (url) {
-      window.open(url, '_blank');
+      // Usar window.location.href en lugar de window.open para navegación interna
+      window.location.href = url;
     }
   }
 
