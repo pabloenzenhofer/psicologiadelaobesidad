@@ -12,7 +12,7 @@ export default function Evaluation() {
           el mejor camino para alcanzar tus objetivos.
         </p>
         <a 
-          href="https://forms.gle/V4Jh8qz9vHJ9TSZP9" 
+          href="https://forms.gle/156i6oqm6kMotTXVA" 
           target="_blank" 
           rel="noopener noreferrer" 
           className="evaluation-button"
