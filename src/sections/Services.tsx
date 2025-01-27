@@ -1,7 +1,7 @@
 const Services = () => {
   // Detectar si estamos en GitHub Pages o en desarrollo local
   const isGitHubPages = window.location.hostname.includes('github.io');
-  const basePath = isGitHubPages ? '/psicologiadelaobesidad' : '';
+  const basePath = isGitHubPages ? 'https://pabloenzenhofer.github.io/psicologiadelaobesidad' : '';
 
   const services = [
     {
