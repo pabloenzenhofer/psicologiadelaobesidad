@@ -1,18 +1,16 @@
 const Services = () => {
-  const BASE_URL = '/psicologiadelaobesidad'
-  
   const services = [
     {
       title: "Atención online",
       description: "Terapia al alcance de todos, sin importar la ubicación geográfica. Apoyo profesional sin fronteras.",
       icon: "🧠",
-      url: "https://pabloenzenhofer.github.io/psicologiadelaobesidad/articulos/atencion-virtual.html"
+      url: "../articulos/atencion-virtual.html"
     },
     {
       title: "Mindful Eating",
       description: "Aprende a reconectar con tus señales de hambre y saciedad, desarrollando una relación consciente con la alimentación.",
       icon: "🍃",
-      url: "https://pabloenzenhofer.github.io/psicologiadelaobesidad/articulos/mindfuleating.html",
+      url: "./articulos/mindfuleating.html",
       buttonText: "Unite gratis",
       buttonUrl: "https://chat.whatsapp.com/Brzv3kkWfq45EdOFjuHxDx"
     },
@@ -23,6 +21,12 @@ const Services = () => {
     }
   ]
 
+  const handleCardClick = (url?: string) => {
+    if (url) {
+      window.open(url, '_blank');
+    }
+  }
+
   return (
     <section id="servicios" className="services-section" aria-labelledby="services-title">
       <div className="services-container">
@@ -30,12 +34,11 @@ const Services = () => {
         <div className="services-grid">
           {services.map((service, index) => (
             service.url ? (
-              <a 
+              <div 
                 key={index}
-                href={service.url}
-                target="_blank"
-                rel="noopener noreferrer"
                 className="service-card"
+                onClick={() => handleCardClick(service.url)}
+                style={{ cursor: service.url ? 'pointer' : 'default' }}
               >
                 <div className="service-icon">{service.icon}</div>
                 <h3>{service.title}</h3>
@@ -51,7 +54,7 @@ const Services = () => {
                     {service.buttonText}
                   </button>
                 )}
-              </a>
+              </div>
             ) : (
               <div 
                 key={index}
