@@ -4,13 +4,13 @@ const Services = () => {
       title: "Atención online",
       description: "Terapia al alcance de todos, sin importar la ubicación geográfica. Apoyo profesional sin fronteras.",
       icon: "🧠",
-      url: "../../articulos/atencion-virtual.html"
+      url: "articulos/atencion-virtual.html"
     },
     {
       title: "Mindful Eating",
       description: "Aprende a reconectar con tus señales de hambre y saciedad, desarrollando una relación consciente con la alimentación.",
       icon: "🍃",
-      url: "../../articulos/mindfuleating.html",
+      url: "articulos/mindfuleating.html",
       buttonText: "Unite gratis",
       buttonUrl: "https://chat.whatsapp.com/Brzv3kkWfq45EdOFjuHxDx"
     },
