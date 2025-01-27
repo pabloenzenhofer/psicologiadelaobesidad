@@ -1,16 +1,28 @@
 const Services = () => {
+  const getBaseUrl = () => {
+    if (typeof window !== 'undefined') {
+      // Si estamos en el dominio de GitHub Pages
+      if (window.location.hostname === 'pabloenzenhofer.github.io') {
+        return '/psicologiadelaobesidad';
+      }
+      // Si estamos en el dominio personalizado o localhost
+      return '';
+    }
+    return '';
+  };
+
   const services = [
     {
       title: "Atención online",
       description: "Terapia al alcance de todos, sin importar la ubicación geográfica. Apoyo profesional sin fronteras.",
       icon: "🧠",
-      url: "/articulos/atencion-virtual.html"
+      url: `${getBaseUrl()}/articulos/atencion-virtual.html`
     },
     {
       title: "Mindful Eating",
       description: "Aprende a reconectar con tus señales de hambre y saciedad, desarrollando una relación consciente con la alimentación.",
       icon: "🍃",
-      url:  "/articulos/mindfuleating.html",
+      url: `${getBaseUrl()}/articulos/mindfuleating.html`,
       buttonText: "Unite gratis",
       buttonUrl: "https://chat.whatsapp.com/Brzv3kkWfq45EdOFjuHxDx"
     },

@@ -15,7 +15,7 @@ const Articles = () => {
       title: "Obesidad y Depresión: ¿Qué Papel Juegan la Biología, la Cultura y la Sociedad?",
       description: "Exploramos la compleja relación entre obesidad y depresión, analizando cómo los factores biológicos, culturales y sociales se entrelazan afectando la salud mental y física.",
       category: "Psicología",
-      url: `${BASE_URL}/articulos/obesidad-y-depresion.html`
+      url: "./articulos/obesidad-y-depresion.html"
     },
     {
       title: "El impacto de las emociones en la alimentación",
@@ -33,33 +33,33 @@ const Articles = () => {
       title: "Medicina del Estilo de Vida",
       description: "Conoce este enfoque innovador que combina la ciencia médica con cambios sostenibles en el estilo de vida.",
       category: "Salud",
-      url: `${BASE_URL}/articulos/medicina-del-estilo-de-vida.html`
+      url: "./articulos/medicina-del-estilo-de-vida.html"
     },
     {
       title: "Perder Peso y Mantenerlo: Un Enfoque Psicológico",
       description: "Aprende las claves psicológicas para lograr una pérdida de peso sostenible y mantener los resultados a largo plazo.",
       category: "Pérdida de Peso",
-      url: `${BASE_URL}/articulos/perder-peso-y-mantenerlo.html`
+      url: "./articulos/perder-peso-y-mantenerlo.html"
     },
     {
-      title: "¿Qué es el Trastorno Evitativo/Restrictivo de la Ingestión de Alimentos (TERIA)?",
-      description: "Descubre qué es el TERIA, sus causas, síntomas y tratamientos. Un trastorno alimentario que va más allá de ser 'quisquilloso' con la comida.",
+      title: "¿Qué es el trastorno evitativo restrictivo?",
+      description: "Descubre qué es el TERIA, sus causas, síntomas y tratamientos. Un trastorno alimentario poco conocido.",
       category: "Psicología",
-      url: `${BASE_URL}/articulos/que-es-el-trastorno-evitativo-restrictivo-de-la-ingestion-de-alimentos.html`,
+      url: "./articulos/que-es-el-trastorno-evitativo-restrictivo-de-la-ingestion-de-alimentos.html",
       date: "2024-03-19"
     },
     {
       title: "La importancia de la detección temprana en los TCA",
       description: "Aprende a identificar las señales tempranas de los trastornos de la conducta alimentaria y por qué es crucial actuar a tiempo.",
       category: "Psicología",
-      url: `${BASE_URL}/articulos/importancia-deteccion-temprana-trastornos-conducta-alimentaria.html`,
+      url: "./articulos/importancia-deteccion-temprana-trastornos-conducta-alimentaria.html",
       date: "2024-03-20"
     },
     {
       title: "Objetivos del Tratamiento de la Obesidad: Más Allá de los Números en la Báscula",
       description: "Descubre por qué el tratamiento de la obesidad va más allá del peso corporal y cómo los cambios sostenibles en el estilo de vida transforman vidas.",
       category: "Tratamiento",
-      url: `${BASE_URL}/articulos/objetivos-tratamiento-obesidad-mas-alla-numeros-bascula.html`,
+      url: "./articulos/objetivos-tratamiento-obesidad-mas-alla-numeros-bascula.html",
       date: "2024-03-21"
     }
   ]

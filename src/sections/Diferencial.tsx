@@ -1,26 +1,32 @@
 const Diferencial = () => {
-  // Detectar si estamos en GitHub Pages o en desarrollo local
-  const isGitHubPages = window.location.hostname.includes('github.io');
-  const basePath = isGitHubPages ? '/psicologiadelaobesidad' : '';
-  
+  const getBaseUrl = () => {
+    if (typeof window !== 'undefined') {
+      if (window.location.hostname === 'pabloenzenhofer.github.io') {
+        return '/psicologiadelaobesidad';
+      }
+      return '';
+    }
+    return '';
+  };
+
   const diferenciales = [
     {
       title: "Medicina del estilo de vida y construcción de hábitos",
       description: "Es un enfoque innovador que busca prevenir y tratar enfermedades crónicas a través de cambios sostenibles en los hábitos diarios.",
       icon: "🎯",
-      url: `${basePath}/articulos/medicina-del-estilo-de-vida.html`
+      url: `${getBaseUrl()}/articulos/medicina-del-estilo-de-vida.html`
     },
     {
       title: "Psicología basada en la evidencia",
       description: "Utilizamos métodos respaldados por investigación y evidencia científica.",
       icon: "🧠",
-      url: `${basePath}/articulos/psicologia-basada-en-evidencia.html`
+      url: `${getBaseUrl()}/articulos/psicologia-basada-en-evidencia.html`
     },
     {
       title: "Integración tecnológica",
       description: "Potenciamos nuestras intervenciones con herramientas tecnológicas avanzadas.",
       icon: "💻",
-      url: `${basePath}/articulos/integracion-tecnologica.html`
+      url: `${getBaseUrl()}/articulos/integracion-tecnologica.html`
     }
   ]
 
