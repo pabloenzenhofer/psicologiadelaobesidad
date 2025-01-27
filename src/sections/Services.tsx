@@ -4,7 +4,7 @@ const Services = () => {
       title: "Atención online",
       description: "Terapia al alcance de todos, sin importar la ubicación geográfica. Apoyo profesional sin fronteras.",
       icon: "🧠",
-      url: "../articulos/atencion-virtual.html"
+      url: "https://pabloenzenhofer.github.io/psicologiadelaobesidad/articulos/atencion-virtual.html"
     },
     {
       title: "Mindful Eating",
