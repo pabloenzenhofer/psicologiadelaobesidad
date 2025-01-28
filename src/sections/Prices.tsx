@@ -1,6 +1,6 @@
 const Prices = () => {
   return (
-    <section id="precios" className="prices-section" aria-labelledby="prices-title">
+    <section id="prices" className="prices-section" aria-labelledby="prices-title">
       <div className="prices-container">
         <h2 id="prices-title">Precios y Cobertura</h2>
         

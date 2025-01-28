@@ -23,6 +23,7 @@ const Navbar = () => {
     { text: 'Artículos', href: '#articulos' },
     { text: 'Evaluación', href: '#evaluacion' },
     { text: 'Recursos', href: '#recursos' },
+    { text: 'Precios', href: '#prices' },
     { text: 'Medios de Pago', href: '#payment-methods' }
   ]
 
