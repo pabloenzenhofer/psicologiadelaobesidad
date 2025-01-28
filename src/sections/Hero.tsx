@@ -102,7 +102,7 @@ const Hero = () => {
   };
 
   return (
-    <header className="hero">
+    <header id="hero" className="hero">
       <LazyImage
         src={logo}
         alt="Logo Psicología de la Obesidad"

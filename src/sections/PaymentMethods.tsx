@@ -23,7 +23,7 @@ const PaymentMethods = () => {
   }
 
   return (
-    <section className="payment-methods">
+    <section className="payment-methods" id="payment-methods">
       <div className="payment-container">
         <h4>Medios de Pago</h4>
         <div className="payment-icons">

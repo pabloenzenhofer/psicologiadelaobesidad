@@ -17,13 +17,13 @@ const Navbar = () => {
   }
 
   const menuItems = [
-    { text: 'Inicio', href: '#inicio' },
+    { text: 'Inicio', href: '#hero' },
     { text: 'Servicios', href: '#servicios' },
     { text: 'Enfoque', href: '#diferencial' },
     { text: 'Artículos', href: '#articulos' },
-    { text: 'Evaluación', href: '#evaluation' },
+    { text: 'Evaluación', href: '#evaluacion' },
     { text: 'Recursos', href: '#recursos' },
-    { text: 'Medios de Pago', href: '#payment' }
+    { text: 'Medios de Pago', href: '#payment-methods' }
   ]
 
   return (
