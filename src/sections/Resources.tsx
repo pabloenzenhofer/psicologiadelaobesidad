@@ -14,20 +14,7 @@ const Resources = () => {
       downloadUrl: "https://drive.google.com/file/d/1PiwRa1yL35IFKYFz1tyMKV2NJembnpQw/view",
       buttonText: "Escuchar"
     },
-    {
-      title: "Registro de Hábitos",
-      description: "Plantilla para monitorear tus hábitos alimenticios y emocionales.",
-      icon: "📝",
-       
-      buttonText: "Descargar"
-    },
-    {
-      title: "Relajación Diferencial",
-      description: "Aprende Relajación Diferencial y otras técnicas de relajación con esta audioguía",
-      icon: "🎧",
-       
-      buttonText: "Escuchar"
-    }
+    
   ]
 
   const handleDownload = (resource: { title: string, downloadUrl: string }) => {
