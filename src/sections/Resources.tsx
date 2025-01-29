@@ -18,14 +18,14 @@ const Resources = () => {
       title: "Registro de Hábitos",
       description: "Plantilla para monitorear tus hábitos alimenticios y emocionales.",
       icon: "📝",
-      downloadUrl: "https://linktr.ee/relajaciondiferencial",
+       
       buttonText: "Descargar"
     },
     {
       title: "Relajación Diferencial",
       description: "Aprende Relajación Diferencial y otras técnicas de relajación con esta audioguía",
       icon: "🎧",
-      downloadUrl: "https://linktr.ee/relajaciondiferencial",
+       
       buttonText: "Escuchar"
     }
   ]
