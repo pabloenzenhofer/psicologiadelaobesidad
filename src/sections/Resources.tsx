@@ -14,6 +14,13 @@ const Resources = () => {
       downloadUrl: "https://drive.google.com/file/d/1PiwRa1yL35IFKYFz1tyMKV2NJembnpQw/view",
       buttonText: "Escuchar"
     },
+    {
+      title: "Relajación Diferencial",
+      description: "Aprende técnicas de respiración y relajación para reducir el estrés y la ansiedad",
+      icon: <FaHeadphones />,
+      downloadUrl: "https://linktr.ee/relajaciondiferencial",
+      buttonText: "Escuchar"
+    }
     
   ]
 
