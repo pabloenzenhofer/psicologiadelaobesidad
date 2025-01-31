@@ -12,6 +12,13 @@ const Articles = () => {
       url: "./articulos/es-bueno-pesarse-todos-los-dias.html"
     },
     {
+      title: "Adicción al Azúcar: Entendiendo y Superando el Desafío",
+      description: "Descubre cómo la adicción al azúcar afecta tu salud y aprende estrategias efectivas para superarla.",
+      category: "Hábitos Saludables",
+      url: "./articulos/adiccion-al-azucar.html",
+      
+    },
+    {
       title: "Obesidad y Depresión: ¿Qué Papel Juegan la Biología, la Cultura y la Sociedad?",
       description: "Exploramos la compleja relación entre obesidad y depresión, analizando cómo los factores biológicos, culturales y sociales se entrelazan afectando la salud mental y física.",
       category: "Psicología",
