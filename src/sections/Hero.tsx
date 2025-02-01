@@ -104,13 +104,13 @@ const Hero = () => {
   return (
     <header id="hero" className="hero">
       <LazyImage
-        src={logo}
-        alt="Logo Psicología de la Obesidad"
-        width={120}
-        height={120}
-        priority={true}
-        className="hero-logo"
-      />
+  src="/assets/logo.png"
+  alt="Logo Psicología de la Obesidad"
+  width={120}
+  height={120}
+  priority={true}
+  className="hero-logo"
+  />
       <div className="hero-content">
         <h1>Psicología Especializada en Obesidad</h1>
         <p className="hero-description">
