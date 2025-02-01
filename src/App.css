@@ -1,25 +1,43 @@
 @font-face {
   font-family: 'Inter';
-  src: url('./assets/fonts/Inter/Inter_18pt-Regular.ttf') format('truetype');
+  src: url('/assets/fonts/Inter/Inter-Regular.ttf') format('truetype');
   font-weight: 400;
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Inter';
-  src: url('./assets/fonts/Inter/Inter_18pt-SemiBold.ttf') format('truetype');
+  src: url('/assets/fonts/Inter/Inter-SemiBold.ttf') format('truetype');
   font-weight: 600;
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Poppins';
-  src: url('./assets/fonts/Poppins/Poppins-Regular.ttf') format('truetype');
+  src: url('/assets/fonts/Poppins/Poppins-Regular.ttf') format('truetype');
   font-weight: 400;
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Poppins';
-  src: url('./assets/fonts/Poppins/Poppins-SemiBold.ttf') format('truetype');
+  src: url('/assets/fonts/Poppins/Poppins-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/assets/fonts/Poppins/Poppins-SemiBold.ttf') format('truetype');
   font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/assets/fonts/Poppins/Poppins-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-display: swap;
 }
 
 /* Variables globales */
@@ -34,21 +52,6 @@
 --border-radius-lg: 24px;
 --border-radius-md: 16px;
 --border-radius-sm: 12px;
-}
-
-/* Variables globales */
-
-:root {
-  --primary-color: #00E6E6;
-  --dark-bg: #1A1B26;
-  --light-bg: #FFFFFF;
-  --text-dark: #1A1B26;
-  --text-light: #FFFFFF;
-  --font-heading: 'Poppins', sans-serif;
-  --font-body: 'Inter', sans-serif;
-  --border-radius-lg: 24px;
-  --border-radius-md: 16px;
-  --border-radius-sm: 12px;
 }
 
 /* Reset global */
