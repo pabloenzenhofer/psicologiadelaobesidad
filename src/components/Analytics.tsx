@@ -1,32 +1,38 @@
 import { useEffect } from 'react'
-import ReactGA from 'react-ga4'
 
-const TRACKING_ID = "G-BHRW70D73W" // ID de medición de Google Analytics
+declare global {
+  interface Window {
+    dataLayer: any[]
+    gtag: (...args: any[]) => void
+  }
+}
 
-const Analytics = () => {
+export default function Analytics() {
   useEffect(() => {
-    ReactGA.initialize(TRACKING_ID)
-    ReactGA.send("pageview")
+    // Crear el script de GA4
+    const script1 = document.createElement('script')
+    script1.src = 'https://www.googletagmanager.com/gtag/js?id=G-Q8K08RBF0M'
+    script1.async = true
+
+    // Crear el script de configuración
+    const script2 = document.createElement('script')
+    script2.innerHTML = `
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-Q8K08RBF0M');
+    `
+
+    // Agregar los scripts al documento
+    document.head.appendChild(script1)
+    document.head.appendChild(script2)
+
+    // Cleanup al desmontar
+    return () => {
+      document.head.removeChild(script1)
+      document.head.removeChild(script2)
+    }
   }, [])
 
   return null
 }
-
-export default Analytics
-
-export function GoogleAnalyticsScript() {
-  return (
-    <>
-      {/* Google Analytics 4 */}
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-BHRW70D73W"></script>
-      <script>
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-BHRW70D73W');
-        `}
-      </script>
-    </>
-  )
-} 
