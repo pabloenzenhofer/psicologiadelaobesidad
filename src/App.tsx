@@ -6,6 +6,7 @@ import Navbar from './components/Navbar'
 import Hero from './sections/Hero'
 import WhatsAppButton from './components/WhatsAppButton'
 import Analytics from './components/Analytics'
+import { Analytics as VercelAnalytics } from '@vercel/analytics/react'  // Vercel Analytics
 import { Helmet } from 'react-helmet'
 
 // Imports lazy (carga diferida)
@@ -34,6 +35,7 @@ function App() {
   return (
     <>
       <Analytics />
+      <VercelAnalytics /> {/* Vercel Analytics */}
       <Helmet>
         <title>Psicología de la Obesidad</title>
         <link rel="icon" type="image/webp" href="./img/logo.webp" />
