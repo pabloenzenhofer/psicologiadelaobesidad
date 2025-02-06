@@ -1,3 +1,19 @@
 User-agent: *
 Allow: /
-Sitemap: https://psicologiadelaobesidad.github.io/psicologiadelaobesidad/sitemap.xml 
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*.json$
+Disallow: /*.xml$
+Disallow: /*.txt$
+Disallow: /*?*
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+
+# Permitir explícitamente el sitemap
+Allow: /sitemap.xml
+
+# Ubicación del sitemap
+Sitemap: https://psiconutriciononline.com/sitemap.xml
+
+# Configuraciones adicionales
+Crawl-delay: 10 
