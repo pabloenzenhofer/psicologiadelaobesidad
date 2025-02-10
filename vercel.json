@@ -22,34 +22,46 @@
           "value": "DENY"
         },
         {
-          "key": "X-XSS-Protection",
-          "value": "1; mode=block"
-        },
-        {
           "key": "Referrer-Policy",
           "value": "strict-origin-when-cross-origin"
         },
         {
+          "key": "X-DNS-Prefetch-Control",
+          "value": "on"
+        },
+        {
           "key": "Strict-Transport-Security",
-          "value": "max-age=31536000; includeSubDomains; preload"
+          "value": "max-age=31536000; includeSubDomains"
         },
         {
           "key": "Permissions-Policy",
-          "value": "accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()"
+          "value": "camera=(), microphone=(), geolocation=()"
         },
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self'; script-src 'self' https://*.google-analytics.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://*.google-analytics.com; frame-ancestors 'none';"
+          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval';"
         },
         {
-          "key": "Cross-Origin-Opener-Policy",
-          "value": "same-origin"
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
         },
         {
-          "key": "Cross-Origin-Embedder-Policy",
-          "value": "require-corp"
+          "key": "X-Content-Security-Policy",
+          "value": "default-src 'self'"
         }
       ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "http://psiconutriciononline.com/:path*",
+      "destination": "https://psiconutriciononline.com/:path*",
+      "permanent": true
+    },
+    {
+      "source": "https://www.psiconutriciononline.com/:path*",
+      "destination": "https://psiconutriciononline.com/:path*",
+      "permanent": true
     }
   ]
 }
