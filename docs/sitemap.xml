@@ -1,10 +1,121 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Página principal -->
   <url>
-    <loc>https://psicologiadelaobesidad.github.io/psicologiadelaobesidad/</loc>
-    <lastmod>2024-03-19</lastmod>
+     <loc>https://psicologiadelaobesidad.vercel.app/</loc>
+    <lastmod>2024-03-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://psiconutriciononline.com/img/logo.webp</image:loc>
+      <image:title>Logo Psiconutrición Online</image:title>
+    </image:image>
   </url>
-  <!-- Agregar más URLs si hay más páginas -->
-</urlset> 
+ <!-- Artículos principales -->
+  <url>
+     <loc>https://psicologiadelaobesidad.vercel.app/articulos/...</loc>
+    <lastmod>2024-03-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://psiconutriciononline.com/articulos/mindful-eating</loc>
+    <lastmod>2024-03-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://psiconutriciononline.com/articulos/medicina-estilo-vida-construccion-habitos</loc>
+    <lastmod>2024-03-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+   <url>
+    <loc>https://psiconutriciononline.com/articulos/psicologia-basada-evidencia</loc>
+    <lastmod>2024-03-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://psiconutriciononline.com/articulos/integracion-tecnologica</loc>
+    <lastmod>2024-03-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+
+  <!-- Artículos -->
+  <url>
+    <loc>https://psiconutriciononline.com/articulos/es-bueno-pesarse-todos-los-dias</loc>
+    <lastmod>2024-03-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://psiconutriciononline.com/articulos/adiccion-al-azucar</loc>
+    <lastmod>2024-03-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://psiconutriciononline.com/articulos/obesidad-y-depresion</loc>
+    <lastmod>2024-03-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://psiconutriciononline.com/articulos/impacto-emociones-y-alimentacion</loc>
+    <lastmod>2024-03-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://psiconutriciononline.com/articulos/mindful-eating-transformando-relacion-comida</loc>
+    <lastmod>2024-03-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://psiconutriciononline.com/articulos/medicina-del-estilo-de-vida</loc>
+    <lastmod>2024-03-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://psiconutriciononline.com/articulos/perder-peso-y-mantenerlo</loc>
+    <lastmod>2024-03-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://psiconutriciononline.com/articulos/que-es-el-trastorno-evitativo-restrictivo-de-la-ingestion-de-alimentos</loc>
+    <lastmod>2024-03-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://psiconutriciononline.com/articulos/importancia-deteccion-temprana-trastornos-conducta-alimentaria</loc>
+    <lastmod>2024-03-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://psiconutriciononline.com/articulos/objetivos-tratamiento-obesidad-mas-alla-numeros-bascula</loc>
+    <lastmod>2024-03-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>
