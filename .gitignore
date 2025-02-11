@@ -50,3 +50,5 @@ target/
 ### Application properties with sensitive data ###
 src/main/resources/application-local.properties
 src/main/resources/application-local.properties
+
+.vercel
