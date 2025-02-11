@@ -6,6 +6,12 @@
       "use": "@vercel/static-build"
     }
   ],
+  "routes": [
+    {
+      "src": "/sitemap.xml",
+      "dest": "/public/sitemap.xml"
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",
