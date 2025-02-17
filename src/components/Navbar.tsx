@@ -16,19 +16,29 @@ const Navbar = () => {
     setIsMenuOpen(false)
   }
 
+  const getBaseUrl = () => {
+    if (typeof window !== 'undefined') {
+      if (window.location.hostname === 'pabloenzenhofer.github.io') {
+        return '/psicologiadelaobesidad';
+      }
+      return '';
+    }
+    return '';
+  };
+
   const menuItems = [
-    { text: 'Inicio', href: '#hero' },
-    { text: 'Servicios', href: '#servicios' },
-    { text: 'Enfoque', href: '#diferencial' },
-    { text: 'Artículos', href: '#articulos' },
-    { text: 'Evaluación', href: '#evaluacion' },
-    { text: 'Recursos', href: '#recursos' },
-    { text: 'Precios', href: '#prices' },
-    { text: 'Medios de Pago', href: '#payment-methods' }
+    { text: 'Inicio', href: `${getBaseUrl()}/#hero` },
+    { text: 'Servicios', href: `${getBaseUrl()}/#servicios` },
+    { text: 'Enfoque', href: `${getBaseUrl()}/#diferencial` },
+    { text: 'Artículos', href: `${getBaseUrl()}/#articulos` },
+    { text: 'Evaluación', href: `${getBaseUrl()}/#evaluacion` },
+    { text: 'Recursos', href: `${getBaseUrl()}/#recursos` },
+    { text: 'Precios', href: `${getBaseUrl()}/#prices` },
+    { text: 'Medios de Pago', href: `${getBaseUrl()}/#payment-methods` }
   ]
 
   return (
-    <nav className="navbar">
+    <nav className="main-navbar">
       <button 
         className="menu-button" 
         onClick={() => setIsMenuOpen(!isMenuOpen)}
