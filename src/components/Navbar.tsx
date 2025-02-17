@@ -17,13 +17,8 @@ const Navbar = () => {
   }
 
   const getBaseUrl = () => {
-    if (typeof window !== 'undefined') {
-      if (window.location.hostname === 'pabloenzenhofer.github.io') {
-        return '/psicologiadelaobesidad';
-      }
-      return '';
-    }
-    return '';
+    // Simplificar para usar rutas relativas
+    return window?.location.hostname === 'pabloenzenhofer.github.io' ? '/psicologiadelaobesidad' : '';
   };
 
   const menuItems = [
