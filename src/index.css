@@ -69,7 +69,7 @@ button:focus-visible {
 
 @font-face {
     font-family: 'Inter';
-    src: url('/psicologiadelaobesidad/assets/fonts/Inter/Inter-Regular.ttf') format('truetype');
+    src: url('../assets/fonts/Inter/Inter-Regular.ttf') format('truetype');
     font-weight: 400;
 }
 
@@ -81,7 +81,7 @@ button:focus-visible {
 
 @font-face {
     font-family: 'Inter';
-    src: url('/psicologiadelaobesidad/assets/fonts/Inter/Inter-SemiBold.ttf') format('truetype');
+    src: url('../assets/fonts/Inter/Inter-SemiBold.ttf') format('truetype');
     font-weight: 600;
 }
 
