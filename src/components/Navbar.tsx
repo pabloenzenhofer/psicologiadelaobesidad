@@ -22,7 +22,11 @@ const Navbar = () => {
       if (window.location.hostname === 'pabloenzenhofer.github.io') {
         return '/psicologiadelaobesidad';
       }
-      // Si estamos en Vercel o desarrollo local
+      // Si estamos en Vercel
+      if (window.location.hostname.includes('vercel.app')) {
+        return '';
+      }
+      // Desarrollo local
       return '';
     }
     return '';

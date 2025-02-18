@@ -4,7 +4,7 @@ import react from '@vitejs/plugin-react'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/psicologiadelaobesidad/',
+  base: process.env.GITHUB_ACTIONS ? '/psicologiadelaobesidad/' : '/',
   build: {
     rollupOptions: {
       output: {
@@ -15,14 +15,6 @@ export default defineConfig({
       external: ['@vercel/analytics/react']
     },
     minify: 'esbuild',
-    html: {
-      minify: true,
-      inject: {
-        data: {
-          injectHead: false
-        }
-      }
-    }
   },
   server: {
     port: 5174,
