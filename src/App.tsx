@@ -1,21 +1,65 @@
-// src/App.tsx - VERSIÓN MÍNIMA PARA DEBUGGING
-import React from 'react'
+import './App.css?v=1'
+import { lazy, Suspense } from 'react'
+
+// Imports críticos (carga inmediata)
+import Navbar from './components/Navbar'
+import Hero from './sections/Hero'
+import WhatsAppButton from './components/WhatsAppButton'
+import Analytics from './components/Analytics'
+import { Analytics as VercelAnalytics } from '@vercel/analytics/react'
+import { Helmet } from 'react-helmet'
+
+// Imports lazy (carga diferida)
+const Services = lazy(() => import('./sections/Services'))
+const Diferencial = lazy(() => import('./sections/Diferencial'))
+const Articles = lazy(() => import('./sections/Articles'))
+const Evaluation = lazy(() => import('./sections/Evaluation'))
+const Resources = lazy(() => import('./sections/Resources'))
+const Prices = lazy(() => import('./sections/Prices'))
+const PaymentMethods = lazy(() => import('./sections/PaymentMethods'))
+
+const schemaData = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Psicología de la Obesidad",
+  "description": "Atención psicológica especializada en obesidad",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "Argentina"
+  },
+  "priceRange": "$$",
+  "service": "Terapia Psicológica Online"
+};
 
 function App() {
   return (
-    <div style={{ 
-      padding: '20px', 
-      color: 'white', 
-      background: '#1A1B26', 
-      minHeight: '100vh',
-      fontFamily: 'Arial, sans-serif'
-    }}>
-      <h1>🚀 Test - Psicología de la Obesidad</h1>
-      <p>✅ Si puedes ver esto, React está funcionando correctamente.</p>
-      <p>📅 Fecha: {new Date().toLocaleDateString()}</p>
-      <p>⏰ Hora: {new Date().toLocaleTimeString()}</p>
-      <p>🔧 Build: {process.env.NODE_ENV}</p>
-    </div>
+    <>
+      <Analytics />
+      <VercelAnalytics />
+      <Helmet>
+        <title>Psicología de la Obesidad</title>
+        <link rel="icon" type="image/png" href="/logo.png" />
+        <meta name="description" content="Atención psicológica especializada en obesidad" />
+        <meta name="keywords" content="psicologia, obesidad, terapia online, salud mental" />
+        <meta property="og:title" content="Psicología de la Obesidad" />
+        <meta property="og:description" content="Atención psicológica especializada en obesidad" />
+        <script type="application/ld+json">
+          {JSON.stringify(schemaData)}
+        </script>
+      </Helmet>
+      <Navbar />
+      <Hero />
+      <WhatsAppButton />
+      <Suspense fallback={<div style={{ padding: '20px', color: 'white' }}>Loading...</div>}>
+        <Services />
+        <Diferencial />
+        <Articles />
+        <Evaluation />
+        <Resources />
+        <Prices />
+        <PaymentMethods />
+      </Suspense>
+    </>
   )
 }
 
