@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import logo from '../assets/logo.png'
+import logo from '../assets/LOGO.png'
 import salad from '../assets/Salad.mp4'
 import gym from '../assets/gym.mp4'
 import mujerterapia from '../assets/mujerterapia.mp4'

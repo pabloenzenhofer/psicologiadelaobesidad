@@ -35,7 +35,7 @@ function App() {
   return (
     <>
       <Analytics />
-      <VercelAnalytics /> {/* Vercel Analytics */}
+      <VercelAnalytics />
       <Helmet>
         <title>Psicología de la Obesidad</title>
         <link rel="icon" type="image/png" href="/logo.png" />
@@ -47,10 +47,14 @@ function App() {
           {JSON.stringify(schemaData)}
         </script>
       </Helmet>
+      <div style={{ padding: '20px', color: 'white', background: '#1A1B26', minHeight: '100vh' }}>
+        <h1>Test - Psicología de la Obesidad</h1>
+        <p>Si puedes ver esto, React está funcionando correctamente.</p>
+      </div>
       <Navbar />
       <Hero />
       <WhatsAppButton />
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<div style={{ padding: '20px', color: 'white' }}>Loading...</div>}>
         <Services />
         <Diferencial />
         <Articles />
