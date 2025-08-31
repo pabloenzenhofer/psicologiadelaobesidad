@@ -1,26 +1,16 @@
+// vercel.json - VERSIÓN COMPATIBLE
 {
   "version": 2,
   "builds": [
     {
       "src": "package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "dist"
-      }
+      "use": "@vercel/static-build"
     }
   ],
-  "routes": [
+  "rewrites": [
     {
-      "src": "/assets/(.*)",
-      "dest": "/assets/$1"
-    },
-    {
-      "src": "/thumbnails/(.*)",
-      "dest": "/thumbnails/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ],
   "headers": [

@@ -1,0 +1,3 @@
+[33mb6ab5a4[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m fix: implement minimal debugging version - simplified App.tsx to basic React component - simplified vite.config.ts for better compatibility - relaxed TypeScript configuration - simplified vercel.json for SPA routing
+[33m65c5b26[m fix: debug white screen issue - fix logo import case sensitivity - update index.html with correct URLs - improve vercel.json routing - add test div to App.tsx for debugging
+[33m86ef2ee[m fix: update configuration for Vercel deployment - fix base path in vite config - update vercel.json with proper SPA routing - fix asset paths in Hero component - simplify Navbar routing logic - add _redirects file for SPA support
