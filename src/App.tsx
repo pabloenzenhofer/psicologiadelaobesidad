@@ -38,11 +38,14 @@ function App() {
       <VercelAnalytics /> {/* Vercel Analytics */}
       <Helmet>
         <title>Psicología de la Obesidad</title>
-        <link rel="icon" type="image/webp" href="./img/logo.webp" />
+        <link rel="icon" type="image/png" href="/logo.png" />
         <meta name="description" content="Atención psicológica especializada en obesidad" />
         <meta name="keywords" content="psicologia, obesidad, terapia online, salud mental" />
         <meta property="og:title" content="Psicología de la Obesidad" />
         <meta property="og:description" content="Atención psicológica especializada en obesidad" />
+        <script type="application/ld+json">
+          {JSON.stringify(schemaData)}
+        </script>
       </Helmet>
       <Navbar />
       <Hero />

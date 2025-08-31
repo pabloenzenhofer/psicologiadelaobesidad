@@ -21,61 +21,61 @@ const Hero = () => {
       src: salad, 
       opacity: 1,
       preload: "auto",
-      poster: "./thumbnails/salad.jpg"
+      poster: "/thumbnails/salad.jpg"
     },
     { 
       src: mujerterapia,
       opacity: 0,
       preload: "auto",
-      poster: "./thumbnails/mujerterapia.jpg"
+      poster: "/thumbnails/mujerterapia.jpg"
     },
     { 
       src: lluviafrutas, 
       opacity: 0,
       preload: "auto",
-      poster: "./thumbnails/lluviafrutas.jpg"
+      poster: "/thumbnails/lluviafrutas.jpg"
     },
     { 
       src: mujeres, 
       opacity: 0,
       preload: "auto",
-      poster: "./thumbnails/mujeres.jpg"
+      poster: "/thumbnails/mujeres.jpg"
     },
     { 
       src: gym, 
       opacity: 0,
       preload: "auto",
-      poster: "./thumbnails/gym.jpg"
+      poster: "/thumbnails/gym.jpg"
     },
     { 
       src: mindfuleating, 
       opacity: 0,
       preload: "auto",
-      poster: "./thumbnails/mindfuleating.jpg"
+      poster: "/thumbnails/mindfuleating.jpg"
     },
     { 
       src: mujergym, 
       opacity: 0,
       preload: "auto",
-      poster: "./thumbnails/mujergym.jpg"
+      poster: "/thumbnails/mujergym.jpg"
     },
     { 
       src: mindfulness, 
       opacity: 0,
       preload: "auto",
-      poster: "./thumbnails/mindfulness.jpg"
+      poster: "/thumbnails/mindfulness.jpg"
     },
     { 
       src: mujerejercicio, 
       opacity: 0,
       preload: "auto",
-      poster: "./thumbnails/mujerejercicio.jpg"
+      poster: "/thumbnails/mujerejercicio.jpg"
     },
     { 
       src: frutas, 
       opacity: 0,
       preload: "auto",
-      poster: "./thumbnails/frutas.jpg"
+      poster: "/thumbnails/frutas.jpg"
     }
   ]
 

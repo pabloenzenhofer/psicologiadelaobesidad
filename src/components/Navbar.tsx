@@ -16,31 +16,15 @@ const Navbar = () => {
     setIsMenuOpen(false)
   }
 
-  const getBaseUrl = () => {
-    if (typeof window !== 'undefined') {
-      // Si estamos en GitHub Pages
-      if (window.location.hostname === 'pabloenzenhofer.github.io') {
-        return '/psicologiadelaobesidad';
-      }
-      // Si estamos en Vercel
-      if (window.location.hostname.includes('vercel.app')) {
-        return '';
-      }
-      // Desarrollo local
-      return '';
-    }
-    return '';
-  };
-
   const menuItems = [
-    { text: 'Inicio', href: `${getBaseUrl()}/#hero` },
-    { text: 'Servicios', href: `${getBaseUrl()}/#servicios` },
-    { text: 'Enfoque', href: `${getBaseUrl()}/#diferencial` },
-    { text: 'Artículos', href: `${getBaseUrl()}/#articulos` },
-    { text: 'Evaluación', href: `${getBaseUrl()}/#evaluacion` },
-    { text: 'Recursos', href: `${getBaseUrl()}/#recursos` },
-    { text: 'Precios', href: `${getBaseUrl()}/#prices` },
-    { text: 'Medios de Pago', href: `${getBaseUrl()}/#payment-methods` }
+    { text: 'Inicio', href: '/#hero' },
+    { text: 'Servicios', href: '/#servicios' },
+    { text: 'Enfoque', href: '/#diferencial' },
+    { text: 'Artículos', href: '/#articulos' },
+    { text: 'Evaluación', href: '/#evaluacion' },
+    { text: 'Recursos', href: '/#recursos' },
+    { text: 'Precios', href: '/#prices' },
+    { text: 'Medios de Pago', href: '/#payment-methods' }
   ]
 
   return (
