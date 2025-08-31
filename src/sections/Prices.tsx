@@ -26,11 +26,11 @@ const Prices = () => {
             <div className="local-prices-grid">
               <div className="price-card local">
                 <div className="country">Argentina</div>
-                <div className="price">$25.000</div>
+                <div className="price">$30.000</div>
               </div>
               <div className="price-card local">
                 <div className="country">Chile</div>
-                <div className="price">$30.000</div>
+                <div className="price">$27.500</div>
               </div>
               <div className="price-card local">
                 <div className="country">Perú</div>
@@ -38,7 +38,7 @@ const Prices = () => {
               </div>
               <div className="price-card local">
                 <div className="country">Uruguay</div>
-                <div className="price">$1.300</div>
+                <div className="price">$1.250</div>
               </div>
             </div>
           </div>
