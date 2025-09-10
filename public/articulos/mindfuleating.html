@@ -151,6 +151,24 @@
             box-shadow: 0 6px 20px rgba(0, 230, 230, 0.4);
             background: #33EBEB;
         }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 3rem;
+            padding: 0.8rem 1.5rem;
+            background: var(--primary-color);
+            color: var(--dark-bg);
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .back-link:hover {
+            background: var(--dark-bg);
+            color: var(--light-bg);
+            transform: translateY(-2px);
+        }
     </style>
 </head>
 <body>
@@ -225,6 +243,8 @@
                 </button>
             </div>
         </section>
+
+        <a href="../index.html" class="back-link">← Volver al inicio</a>
     </article>
 
    
