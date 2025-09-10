@@ -120,6 +120,24 @@
             opacity: 0.9;
         }
 
+        .back-link {
+            display: inline-block;
+            margin-top: 3rem;
+            padding: 0.8rem 1.5rem;
+            background: var(--primary-color);
+            color: var(--dark-bg);
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .back-link:hover {
+            background: var(--dark-bg);
+            color: var(--light-bg);
+            transform: translateY(-2px);
+        }
+
         .site-logo {
             position: absolute;
             top: 20px;
@@ -251,6 +269,8 @@
             </p>
             <a href="/psicologiadelaobesidad/#contacto" class="cta-button">Agenda una consulta</a>
         </div>
+
+        <a href="../index.html" class="back-link">← Volver al inicio</a>
     </article>
 </body>
 </html> 
