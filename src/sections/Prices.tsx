@@ -30,7 +30,7 @@ const Prices = () => {
               </div>
               <div className="price-card local">
                 <div className="country">Chile</div>
-                <div className="price">$27.500</div>
+                <div className="price">$30.000</div>
               </div>
               <div className="price-card local">
                 <div className="country">Perú</div>
