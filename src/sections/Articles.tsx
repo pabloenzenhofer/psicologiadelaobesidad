@@ -68,6 +68,13 @@ const Articles = () => {
       category: "Tratamiento",
       url: "./articulos/objetivos-tratamiento-obesidad-mas-alla-numeros-bascula.html",
       date: "2024-03-21"
+    },
+    {
+      title: "5 Mitos Sobre los Atracones Que la Ciencia Ha Derribado (y Que Necesitas Conocer)",
+      description: "Descubre los 5 mitos más comunes sobre los atracones que la ciencia ha derribado. Aprende la verdad sobre la alimentación descontrolada y cómo superarla.",
+      category: "Psicología",
+      url: "./articulos/5-mitos-atracones-ciencia-derribado.html",
+      date: "2024-12-19"
     }
   ]
 
