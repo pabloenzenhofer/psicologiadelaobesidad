@@ -143,7 +143,7 @@ html, body {
 .hero-logo {
   width: 100px;
   height: auto;
-  margin-bottom: 2rem;
+  margin: 0 auto 2rem;
   z-index: 3;
   position: relative;
   display: block;
@@ -895,7 +895,9 @@ html, body {
 /* Ajuste para pantallas muy grandes */
 @media (min-width: 1440px) {
   .hero-logo {
-    left: calc((100vw - 1440px) / 2 + 40px);
+    position: relative;
+    left: auto;
+    margin: 0 auto 2rem;
   }
 }
 
