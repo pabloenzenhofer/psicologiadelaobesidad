@@ -6,7 +6,7 @@ const Articles = () => {
   
   const articles = [
     {
-      title: "Es bueno pesarse todos los días",
+      title: "¿Es bueno pesarse todos los días?",
       description: "Descubre por qué pesarse diariamente puede ser contraproducente y aprende estrategias más efectivas.",
       category: "Hábitos Saludables",
       url: "./articulos/es-bueno-pesarse-todos-los-dias.html"
@@ -75,6 +75,13 @@ const Articles = () => {
       category: "Psicología",
       url: "./articulos/5-mitos-atracones-ciencia-derribado.html",
       date: "2024-12-19"
+    },
+    {
+      title: "¿Comes en \"piloto automático\"? Descubre el Mindful Eating y reconcíliate con la comida",
+      description: "Aprende a comer conscientemente, descubre los 7 tipos de hambre y transforma tu relación con la alimentación sin dietas restrictivas.",
+      category: "Mindfulness",
+      url: "./articulos/mindful-eating-piloto-automatico.html",
+      date: "2024-12-20"
     }
   ]
 
