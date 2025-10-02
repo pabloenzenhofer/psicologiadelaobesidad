@@ -16,7 +16,7 @@ const Prices = () => {
             <h3>Valor Internacional</h3>
             <div className="price">
               <span className="currency">U$S</span>
-              <span className="amount">30</span>
+              <span className="amount">35</span>
               <span className="period">/sesión</span>
             </div>
           </article>
@@ -26,19 +26,19 @@ const Prices = () => {
             <div className="local-prices-grid">
               <div className="price-card local">
                 <div className="country">Argentina</div>
-                <div className="price">$30.000</div>
+                <div className="price">$35.000</div>
               </div>
               <div className="price-card local">
                 <div className="country">Chile</div>
-                <div className="price">$30.000</div>
+                <div className="price">$33.500</div>
               </div>
               <div className="price-card local">
                 <div className="country">Perú</div>
-                <div className="price">$110</div>
+                <div className="price">$120</div>
               </div>
               <div className="price-card local">
                 <div className="country">Uruguay</div>
-                <div className="price">$1.250</div>
+                <div className="price">$1.4000</div>
               </div>
             </div>
           </div>
