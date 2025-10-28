@@ -2169,7 +2169,7 @@ html, body {
   }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1200px) and (min-width: 769px) {
   .packs-grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
