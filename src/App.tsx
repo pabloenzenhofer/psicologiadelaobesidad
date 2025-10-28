@@ -53,10 +53,10 @@ function App() {
       <Suspense fallback={<div style={{ padding: '20px', color: 'white' }}>Loading...</div>}>
         <Services />
         <Diferencial />
+        <Prices />
         <Articles />
         <Evaluation />
         <Resources />
-        <Prices />
         <PaymentMethods />
       </Suspense>
     </>

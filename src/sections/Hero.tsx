@@ -101,27 +101,98 @@ const Hero = () => {
     }
   };
 
+  const scrollToSection = (sectionId: string) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
+
+  const menuCards = [
+    {
+      id: 'servicios',
+      title: 'Servicios',
+      description: 'Conoce nuestros servicios de terapia psicológica especializada en obesidad',
+      icon: '🛠️',
+      action: () => scrollToSection('servicios')
+    },
+    {
+      id: 'diferencial',
+      title: 'Enfoque',
+      description: 'Descubre nuestro enfoque único y diferenciador en el tratamiento',
+      icon: '🎯',
+      action: () => scrollToSection('diferencial')
+    },
+    {
+      id: 'articulos',
+      title: 'Artículos',
+      description: 'Lee artículos especializados sobre psicología y obesidad',
+      icon: '📚',
+      action: () => scrollToSection('articulos')
+    },
+    {
+      id: 'evaluacion',
+      title: 'Evaluación',
+      description: 'Realiza una evaluación inicial para conocer tu situación',
+      icon: '📋',
+      action: () => scrollToSection('evaluacion')
+    },
+    {
+      id: 'recursos',
+      title: 'Recursos',
+      description: 'Accede a recursos descargables y herramientas útiles',
+      icon: '📁',
+      action: () => scrollToSection('recursos')
+    },
+    {
+      id: 'prices',
+      title: 'Precios',
+      description: 'Consulta nuestros planes y tarifas de terapia',
+      icon: '💰',
+      action: () => scrollToSection('prices')
+    },
+    {
+      id: 'payment-methods',
+      title: 'Medios de Pago',
+      description: 'Conoce las formas de pago disponibles',
+      icon: '💳',
+      action: () => scrollToSection('payment-methods')
+    },
+    {
+      id: 'agendar',
+      title: 'Agendar Sesión',
+      description: 'Reserva tu sesión de terapia online',
+      icon: '📅',
+      action: handleScheduleClick
+    }
+  ];
+
   return (
     <header id="hero" className="hero">
+      <h1 className="hero-title">PsicoNutriciónOnline</h1>
+      
       <img 
         src={logo}
         alt="Logo Psicología de la Obesidad"
         className="hero-logo"
       />
-      <div className="hero-content">
-        <h1>Psicología Especializada en Obesidad</h1>
-        <p className="hero-description">
-          Construyamos juntos el equilibrio que buscás para tu mente y tu cuerpo
-        </p>
-        <nav className="hero-buttons">
-          <button className="primary-button" onClick={handleScheduleClick}>
-            Agendar Sesión
-          </button>
-          <button className="secondary-button" onClick={scrollToServices}>
-            Saber más
-          </button>
-        </nav>
+      
+      {/* Tarjetas del menú */}
+      <div className="hero-menu-cards">
+        <div className="menu-cards-grid">
+          {menuCards.map((card) => (
+            <div key={card.id} className="menu-card" onClick={card.action}>
+              <div className="menu-card-icon">{card.icon}</div>
+              <h3 className="menu-card-title">{card.title}</h3>
+              <p className="menu-card-description">{card.description}</p>
+            </div>
+          ))}
+        </div>
       </div>
+
       {videos.map((video, index) => (
         <OptimizedVideo
           key={index}

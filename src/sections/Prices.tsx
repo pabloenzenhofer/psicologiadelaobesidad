@@ -11,37 +11,94 @@ const Prices = () => {
           </p>
         </div>
 
-        <div className="prices-grid">
-          <article className="price-card main">
-            <h3>Valor Internacional</h3>
-            <div className="price">
-              <span className="currency">U$S</span>
-              <span className="amount">35</span>
-              <span className="period">/sesión</span>
+        <div className="packs-grid">
+          {/* Pack 1 Sesión */}
+          <article className="pack-card">
+            <div className="pack-header">
+              <h3>1 Sesión</h3>
+              <div className="pack-price">
+                <span className="currency">🇺🇸 U$S</span>
+                <span className="amount">40</span>
+              </div>
+            </div>
+            <div className="local-equivalents">
+              <div className="equivalent">
+                <span className="country">Argentina</span>
+                <span className="price">$40.000</span>
+              </div>
+              <div className="equivalent">
+                <span className="country">Chile</span>
+                <span className="price">$37.700</span>
+              </div>
+              <div className="equivalent">
+                <span className="country">Uruguay</span>
+                <span className="price">$1.600</span>
+              </div>
+              <div className="equivalent">
+                <span className="country">Perú</span>
+                <span className="price">S/135</span>
+              </div>
             </div>
           </article>
 
-          <div className="local-prices">
-            <h3>Equivalencias Locales</h3>
-            <div className="local-prices-grid">
-              <div className="price-card local">
-                <div className="country">Argentina</div>
-                <div className="price">$35.000</div>
-              </div>
-              <div className="price-card local">
-                <div className="country">Chile</div>
-                <div className="price">$33.500</div>
-              </div>
-              <div className="price-card local">
-                <div className="country">Perú</div>
-                <div className="price">$120</div>
-              </div>
-              <div className="price-card local">
-                <div className="country">Uruguay</div>
-                <div className="price">$1.4000</div>
+          {/* Pack 2 Sesiones */}
+          <article className="pack-card featured">
+            <div className="pack-badge">Recomendado</div>
+            <div className="pack-header">
+              <h3>2 Sesiones/mes</h3>
+              <div className="pack-price">
+                <span className="currency">🇺🇸 U$S</span>
+                <span className="amount">70</span>
               </div>
             </div>
-          </div>
+            <div className="local-equivalents">
+              <div className="equivalent">
+                <span className="country">Argentina</span>
+                <span className="price">$70.000</span>
+              </div>
+              <div className="equivalent">
+                <span className="country">Chile</span>
+                <span className="price">$66.000</span>
+              </div>
+              <div className="equivalent">
+                <span className="country">Uruguay</span>
+                <span className="price">$2.800</span>
+              </div>
+              <div className="equivalent">
+                <span className="country">Perú</span>
+                <span className="price">S/237</span>
+              </div>
+            </div>
+          </article>
+
+          {/* Pack 4 Sesiones */}
+          <article className="pack-card">
+            <div className="pack-header">
+              <h3>4 Sesiones/mes</h3>
+              <div className="pack-price">
+                <span className="currency">🇺🇸 U$S</span>
+                <span className="amount">120</span>
+              </div>
+            </div>
+            <div className="local-equivalents">
+              <div className="equivalent">
+                <span className="country">Argentina</span>
+                <span className="price">$120.000</span>
+              </div>
+              <div className="equivalent">
+                <span className="country">Chile</span>
+                <span className="price">$113.200</span>
+              </div>
+              <div className="equivalent">
+                <span className="country">Uruguay</span>
+                <span className="price">$4.800</span>
+              </div>
+              <div className="equivalent">
+                <span className="country">Perú</span>
+                <span className="price">S/406</span>
+              </div>
+            </div>
+          </article>
         </div>
       </div>
     </section>
