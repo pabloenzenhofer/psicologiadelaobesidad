@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { IoMenu, IoClose } from 'react-icons/io5'
+import logo from '../assets/logo.png'
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -29,6 +30,15 @@ const Navbar = () => {
 
   return (
     <nav className="main-navbar">
+      {/* Logo izquierdo */}
+      <div className="navbar-logo left">
+        <img 
+          src={logo}
+          alt="Logo Psicología de la Obesidad"
+          className="navbar-logo-img"
+        />
+      </div>
+
       <button 
         className="menu-button" 
         onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -68,6 +78,15 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
+      </div>
+
+      {/* Logo derecho */}
+      <div className="navbar-logo right">
+        <img 
+          src={logo}
+          alt="Logo Psicología de la Obesidad"
+          className="navbar-logo-img"
+        />
       </div>
     </nav>
   )

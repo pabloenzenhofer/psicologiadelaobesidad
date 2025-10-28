@@ -97,16 +97,16 @@ const Articles = () => {
     <section id="articulos" className="articles-section">
       <div className="articles-container">
         <h2>Artículos</h2>
-        <div className="articles-list">
+        <div className="articles-grid">
           {articles.map((article, index) => (
             <a 
               key={index}
               href={article.url}
-              className="article-row"
+              className="article-card"
               onClick={() => trackArticleClick(article.title)}
               style={{ textDecoration: 'none', color: 'inherit', cursor: 'pointer' }}
             >
-              <div className="article-content">
+              <div className="article-card-content">
                 <span className="article-category">{article.category}</span>
                 <h3>{article.title}</h3>
                 <p>{article.description}</p>

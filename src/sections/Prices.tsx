@@ -1,4 +1,8 @@
 const Prices = () => {
+  const handleScheduleClick = () => {
+    window.open('https://calendly.com/psicologiadelaobesidad/agendarsesion?month=2024-12', '_blank')
+  }
+
   return (
     <section id="prices" className="prices-section" aria-labelledby="prices-title">
       <div className="prices-container">
@@ -39,11 +43,13 @@ const Prices = () => {
                 <span className="price">S/135</span>
               </div>
             </div>
+            <button className="pack-button" onClick={handleScheduleClick}>
+              Agendar
+            </button>
           </article>
 
           {/* Pack 2 Sesiones */}
           <article className="pack-card featured">
-            <div className="pack-badge">Recomendado</div>
             <div className="pack-header">
               <h3>2 Sesiones/mes</h3>
               <div className="pack-price">
@@ -69,6 +75,9 @@ const Prices = () => {
                 <span className="price">S/237</span>
               </div>
             </div>
+            <button className="pack-button" onClick={handleScheduleClick}>
+              Agendar
+            </button>
           </article>
 
           {/* Pack 4 Sesiones */}
@@ -98,6 +107,9 @@ const Prices = () => {
                 <span className="price">S/406</span>
               </div>
             </div>
+            <button className="pack-button" onClick={handleScheduleClick}>
+              Agendar
+            </button>
           </article>
         </div>
       </div>

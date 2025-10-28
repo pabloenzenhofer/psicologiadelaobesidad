@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react'
-import logo from '../assets/LOGO.png'
 import salad from '../assets/Salad.mp4'
 import gym from '../assets/gym.mp4'
 import mujerterapia from '../assets/mujerterapia.mp4'
@@ -173,12 +172,6 @@ const Hero = () => {
   return (
     <header id="hero" className="hero">
       <h1 className="hero-title">PsicoNutriciónOnline</h1>
-      
-      <img 
-        src={logo}
-        alt="Logo Psicología de la Obesidad"
-        className="hero-logo"
-      />
       
       {/* Tarjetas del menú */}
       <div className="hero-menu-cards">
