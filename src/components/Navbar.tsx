@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { IoMenu, IoClose } from 'react-icons/io5'
-import logo from '../assets/logo.png'
+import logo from '../assets/LOGO.png'
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
