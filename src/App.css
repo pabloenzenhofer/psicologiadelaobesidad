@@ -2150,13 +2150,13 @@ html, body {
   }
 
   .packs-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0.8rem;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 
   .pack-card {
-    padding: 1rem 0.8rem;
-    min-height: 280px;
+    padding: 1.5rem 1.6rem;
+    min-height: 300px;
   }
 
   .pack-card.featured {
