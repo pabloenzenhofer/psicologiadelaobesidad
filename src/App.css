@@ -1997,10 +1997,10 @@ html, body {
 
 .packs-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
   margin-top: 2rem;
-  max-width: 900px;
+  max-width: 600px;
   margin-left: auto;
   margin-right: auto;
   justify-items: center;
@@ -2083,7 +2083,7 @@ html, body {
 .local-equivalents {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 0.5rem;
+  gap: 0.35rem;
   flex: 1;
   margin-bottom: 0.8rem;
 }
@@ -2092,11 +2092,11 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.4rem 0.6rem;
+  padding: 0.25rem 0.5rem;
   background: rgba(255, 255, 255, 0.05);
   border-radius: var(--border-radius-sm);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  gap: 0.5rem;
+  gap: 0.4rem;
 }
 
 .equivalent .country {
@@ -2171,8 +2171,9 @@ html, body {
 
 @media (max-width: 1200px) and (min-width: 769px) {
   .packs-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
+    max-width: 600px;
   }
   
   .pack-card {

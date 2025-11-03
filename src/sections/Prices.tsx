@@ -22,57 +22,25 @@ const Prices = () => {
               <h3>1 Sesión</h3>
               <div className="pack-price">
                 <span className="currency">🇺🇸 U$S</span>
-                <span className="amount">40</span>
+                <span className="amount">35</span>
               </div>
             </div>
             <div className="local-equivalents">
               <div className="equivalent">
                 <span className="country">Argentina</span>
-                <span className="price">$40.000</span>
+                <span className="price">$35.000</span>
               </div>
               <div className="equivalent">
                 <span className="country">Chile</span>
-                <span className="price">$37.700</span>
+                <span className="price">$33.000</span>
               </div>
               <div className="equivalent">
                 <span className="country">Uruguay</span>
-                <span className="price">$1.600</span>
+                <span className="price">$1.400</span>
               </div>
               <div className="equivalent">
                 <span className="country">Perú</span>
-                <span className="price">S/135</span>
-              </div>
-            </div>
-            <button className="pack-button" onClick={handleScheduleClick}>
-              Agendar
-            </button>
-          </article>
-
-          {/* Pack 2 Sesiones */}
-          <article className="pack-card featured">
-            <div className="pack-header">
-              <h3>2 Sesiones/mes</h3>
-              <div className="pack-price">
-                <span className="currency">🇺🇸 U$S</span>
-                <span className="amount">70</span>
-              </div>
-            </div>
-            <div className="local-equivalents">
-              <div className="equivalent">
-                <span className="country">Argentina</span>
-                <span className="price">$70.000</span>
-              </div>
-              <div className="equivalent">
-                <span className="country">Chile</span>
-                <span className="price">$66.000</span>
-              </div>
-              <div className="equivalent">
-                <span className="country">Uruguay</span>
-                <span className="price">$2.800</span>
-              </div>
-              <div className="equivalent">
-                <span className="country">Perú</span>
-                <span className="price">S/237</span>
+                <span className="price">S/118</span>
               </div>
             </div>
             <button className="pack-button" onClick={handleScheduleClick}>
@@ -81,7 +49,7 @@ const Prices = () => {
           </article>
 
           {/* Pack 4 Sesiones */}
-          <article className="pack-card">
+          <article className="pack-card featured">
             <div className="pack-header">
               <h3>4 Sesiones/mes</h3>
               <div className="pack-price">
@@ -96,7 +64,7 @@ const Prices = () => {
               </div>
               <div className="equivalent">
                 <span className="country">Chile</span>
-                <span className="price">$113.200</span>
+                <span className="price">$113.000</span>
               </div>
               <div className="equivalent">
                 <span className="country">Uruguay</span>
@@ -104,7 +72,7 @@ const Prices = () => {
               </div>
               <div className="equivalent">
                 <span className="country">Perú</span>
-                <span className="price">S/406</span>
+                <span className="price">S/405</span>
               </div>
             </div>
             <button className="pack-button" onClick={handleScheduleClick}>
