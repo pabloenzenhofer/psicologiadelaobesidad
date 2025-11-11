@@ -706,12 +706,105 @@ html, body {
   transform: translateX(5px);
 }
 
+/* Estilos para medios de pago dentro de la tarjeta de servicio */
+.service-payment-methods {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  width: 100%;
+}
+
+.service-payment-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  padding: 0.5rem 0;
+}
+
+.service-payment-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.service-payment-icon img {
+  height: 24px;
+  width: auto;
+  transition: all 0.3s ease;
+  opacity: 0.8;
+}
+
+.service-payment-icon span {
+  color: var(--text-light);
+  font-size: 0.7rem;
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+.service-payment-icon:hover img,
+.service-payment-icon:hover span {
+  opacity: 1;
+}
+
+/* Estilos específicos para cada logo dentro de la tarjeta */
+.service-payment-icon.paypal img {
+  filter: none;
+  height: 24px;
+}
+
+.service-payment-icon.global66 img {
+  filter: none;
+  height: 26px;
+  background-color: white;
+  padding: 2px;
+  border-radius: 4px;
+}
+
+.service-payment-icon.binance img {
+  filter: none;
+  height: 24px;
+}
+
+.service-payment-icon.mercado img {
+  filter: none;
+  height: 28px;
+  opacity: 1;
+}
+
+.service-payment-icon.prex img {
+  filter: none;
+  opacity: 1;
+}
+
 /* Mantener los estilos responsivos existentes */
 @media (max-width: 768px) {
   .service-card,
   .diferencial-card,
   .article-card {
     padding: 1.5rem;
+  }
+
+  .service-payment-icons {
+    gap: 0.6rem;
+  }
+
+  .service-payment-icon img {
+    height: 20px;
+  }
+
+  .service-payment-icon span {
+    font-size: 0.65rem;
+  }
+
+  .service-payment-icon.mercado img {
+    height: 24px;
+  }
+
+  .service-payment-icon.global66 img {
+    height: 22px;
   }
 }
 

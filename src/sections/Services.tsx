@@ -1,4 +1,11 @@
+import mercado from '../assets/mercado.png'
+import paypal from '../assets/paypal.png'
+import global from '../assets/global.png'
+import prex from '../assets/prex.png'
+import binance from '../assets/binance.png'
+
 const Services = () => {
+  // Función para obtener la URL base según el dominio
   const getBaseUrl = () => {
     if (typeof window !== 'undefined') {
       // Si estamos en el dominio de GitHub Pages
@@ -11,12 +18,23 @@ const Services = () => {
     return '';
   };
 
+  const paymentMethods = [
+    { name: "Mercado Pago", icon: mercado, className: "mercado" },
+    { name: "PayPal", icon: paypal, className: "paypal" },
+    { name: "Global 66", icon: global, className: "global66" },
+    { name: "Prex", icon: prex, className: "prex" },
+    { name: "Binance", icon: binance, className: "binance" }
+  ]
+
   const services = [
     {
       title: "Atención online",
       description: "Terapia al alcance de todos, sin importar la ubicación geográfica. Apoyo profesional sin fronteras.",
       icon: "🧠",
-      url: `${getBaseUrl()}/articulos/atencion-virtual.html`
+      url: `${getBaseUrl()}/articulos/atencion-virtual.html`,
+      buttonText: "Agendar Sesión",
+      buttonUrl: "https://calendly.com/psicologiadelaobesidad/agendarsesion",
+      showPaymentMethods: true
     },
     {
       title: "Mindful Eating",
@@ -65,6 +83,21 @@ const Services = () => {
                   >
                     {service.buttonText}
                   </button>
+                )}
+                {service.showPaymentMethods && (
+                  <div className="service-payment-methods">
+                    <div className="service-payment-icons">
+                      {paymentMethods.map((payment, idx) => (
+                        <div 
+                          key={idx} 
+                          className={`service-payment-icon ${payment.className}`}
+                        >
+                          <img src={payment.icon} alt={payment.name} />
+                          <span>{payment.name}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
                 )}
               </div>
             ) : (
