@@ -1,9 +1,3 @@
-import mercado from '../assets/mercado.png'
-import paypal from '../assets/paypal.png'
-import global from '../assets/global.png'
-import prex from '../assets/prex.png'
-import binance from '../assets/binance.png'
-
 const Services = () => {
   // Función para obtener la URL base según el dominio
   const getBaseUrl = () => {
@@ -18,14 +12,6 @@ const Services = () => {
     return '';
   };
 
-  const paymentMethods = [
-    { name: "Mercado Pago", icon: mercado, className: "mercado" },
-    { name: "PayPal", icon: paypal, className: "paypal" },
-    { name: "Global 66", icon: global, className: "global66" },
-    { name: "Prex", icon: prex, className: "prex" },
-    { name: "Binance", icon: binance, className: "binance" }
-  ]
-
   const services = [
     {
       title: "Atención online",
@@ -33,8 +19,7 @@ const Services = () => {
       icon: "🧠",
       url: `${getBaseUrl()}/articulos/atencion-virtual.html`,
       buttonText: "Agendar Sesión",
-      buttonUrl: "https://calendly.com/psicologiadelaobesidad/agendarsesion",
-      showPaymentMethods: true
+      buttonUrl: "https://calendly.com/psicologiadelaobesidad/agendarsesion"
     },
     {
       title: "Mindful Eating",
@@ -83,21 +68,6 @@ const Services = () => {
                   >
                     {service.buttonText}
                   </button>
-                )}
-                {service.showPaymentMethods && (
-                  <div className="service-payment-methods">
-                    <div className="service-payment-icons">
-                      {paymentMethods.map((payment, idx) => (
-                        <div 
-                          key={idx} 
-                          className={`service-payment-icon ${payment.className}`}
-                        >
-                          <img src={payment.icon} alt={payment.name} />
-                          <span>{payment.name}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
                 )}
               </div>
             ) : (
