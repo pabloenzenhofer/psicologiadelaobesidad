@@ -52,3 +52,26 @@ src/main/resources/application-local.properties
 src/main/resources/application-local.properties
 
 .vercel
+
+# Cursor IDE
+.cursor/
+
+# Gradle
+.gradle/
+
+# Maven
+.m2/
+
+# System files
+.lesshst
+.redhat/
+AndroidStudioProjects/
+AppData/
+Documents/
+Downloads/
+OneDrive/
+anaconda3/
+ntuser.dat*
+*.log
+hs_err_pid*.log
+replay_pid*.log
