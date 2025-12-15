@@ -2089,14 +2089,13 @@ html, body {
 }
 
 .packs-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-top: 2rem;
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
-  justify-items: center;
 }
 
 .pack-card {
