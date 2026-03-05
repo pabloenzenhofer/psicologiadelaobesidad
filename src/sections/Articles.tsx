@@ -82,6 +82,12 @@ const Articles = () => {
       category: "Mindfulness",
       url: "./articulos/mindful-eating-piloto-automatico.html",
       date: "2024-12-20"
+    },
+    {
+      title: "¿Por qué el azúcar es tan difícil de manejar?",
+      description: "Entiende por qué el azúcar genera tantos antojos, qué pasa en tu cerebro y cómo salir de la \"montaña rusa\" del azúcar sin culpas.",
+      category: "Hábitos Saludables",
+      url: "./articulos/por-que-el-azucar-es-tan-dificil-de-manejar.html"
     }
   ]
 
