@@ -27,7 +27,7 @@ const Prices = () => {
             <div className="local-equivalents">
               <div className="equivalent">
                 <span className="country">Argentina</span>
-                <span className="price">$35.000</span>
+                <span className="price">$40.000</span>
               </div>
               <div className="equivalent">
                 <span className="country">Chile</span>
