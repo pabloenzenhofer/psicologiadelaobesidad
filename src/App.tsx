@@ -6,6 +6,7 @@ import Navbar from './components/Navbar'
 import Hero from './sections/Hero'
 import WhatsAppButton from './components/WhatsAppButton'
 import Analytics from './components/Analytics'
+import Footer from './components/Footer'
 import { Analytics as VercelAnalytics } from '@vercel/analytics/react'
 import { Helmet } from 'react-helmet'
 
@@ -59,6 +60,7 @@ function App() {
         <Resources />
         <PaymentMethods />
       </Suspense>
+      <Footer />
     </>
   )
 }

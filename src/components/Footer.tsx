@@ -1,18 +1,6 @@
 import ReactGA from 'react-ga4'
 
 const Footer = () => {
-  const getBaseUrl = () => {
-    if (typeof window !== 'undefined') {
-      // Si estamos en el dominio de GitHub Pages
-      if (window.location.hostname === 'pabloenzenhofer.github.io') {
-        return '/psicologiadelaobesidad'
-      }
-      // Si estamos en el dominio personalizado o localhost
-      return ''
-    }
-    return ''
-  }
-
   const handlePrivacyClick = () => {
     ReactGA.event({
       category: 'Navigation',
@@ -22,15 +10,16 @@ const Footer = () => {
   }
 
   return (
-    <footer className="footer">
+    <footer className="footer" style={{ padding: '2rem 0', textAlign: 'center', color: 'var(--celeste-apagada)' }}>
       <div className="footer-container">
         <div className="footer-content">
           <p>&copy; {new Date().getFullYear()} Psicología de la Obesidad. Todos los derechos reservados.</p>
-          <div className="footer-links">
+          <div className="footer-links" style={{ marginTop: '1rem' }}>
             <a 
-              href={`${getBaseUrl()}/articulos/politica-privacidad.html`}
+              href="/politica-de-privacidad"
               onClick={handlePrivacyClick}
               className="footer-link"
+              style={{ color: 'var(--primary-color)', textDecoration: 'none' }}
             >
               Política de Privacidad
             </a>
@@ -42,4 +31,3 @@ const Footer = () => {
 }
 
 export default Footer
-
