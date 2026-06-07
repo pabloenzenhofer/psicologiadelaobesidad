@@ -11,6 +11,7 @@ import { Analytics as VercelAnalytics } from '@vercel/analytics/react'
 import { Helmet } from 'react-helmet'
 
 // Imports lazy (carga diferida)
+const IntroCarousel = lazy(() => import('./sections/IntroCarousel'))
 const Services = lazy(() => import('./sections/Services'))
 const Diferencial = lazy(() => import('./sections/Diferencial'))
 const Articles = lazy(() => import('./sections/Articles'))
@@ -52,6 +53,7 @@ function App() {
       <Hero />
       <WhatsAppButton />
       <Suspense fallback={<div style={{ padding: '20px', color: 'white' }}>Loading...</div>}>
+        <IntroCarousel />
         <Services />
         <Diferencial />
         <Prices />
