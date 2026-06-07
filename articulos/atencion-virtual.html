@@ -3,11 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atención Virtual</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/webp" href="../img/logo.webp">
+    <title>Psicología de la Obesidad - Artículos</title>
+    <link rel="stylesheet" href="../assets/index.css">
+    <link rel="stylesheet" href="../assets/articles.css">
+   
     <style>
+       
+        @font-face {
+            font-family: 'Inter';
+            src: url('../assets/fonts/Inter/Inter-Regular.ttf');
+            font-weight: 400;
+        }
+        @font-face {
+            font-family: 'Inter';
+            src: url('../assets/fonts/Inter/Inter-Medium.ttf');
+            font-weight: 500;
+        }
+        @font-face {
+            font-family: 'Inter';
+            src: url('../assets/fonts/Inter/Inter-SemiBold.ttf');
+            font-weight: 600;
+        }
+        @font-face {
+            font-family: 'Poppins';
+            src: url('../assets/fonts/Poppins/Poppins-Regular.ttf');
+            font-weight: 400;
+        }
+        @font-face {
+            font-family: 'Poppins';
+            src: url('../assets/fonts/Poppins/Poppins-Medium.ttf');
+            font-weight: 500;
+        }
+        @font-face {
+            font-family: 'Poppins';
+            src: url('../assets/fonts/Poppins/Poppins-SemiBold.ttf');
+            font-weight: 600;
+        }
+        @font-face {
+            font-family: 'Poppins';
+            src: url('../assets/fonts/Poppins/Poppins-Bold.ttf');
+            font-weight: 700;
+        }
+    
         :root {
             --primary-color: #00E6E6;
             --dark-bg: #1A1B26;
@@ -129,49 +167,367 @@
             opacity: 0.9;
         }
 
-        .whatsapp-button {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            z-index: 1000;
-            width: 120px !important;
-            height: 120px !important;
-            background-color: #25D366;
-            border-radius: 50%;
+        /* Estilos para tarjetas de precios */
+        .prices-section {
+            margin: 4rem 0;
+            padding: 2rem 0;
+        }
+
+        .prices-section h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+        }
+
+        .packs-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            max-width: 700px;
+            margin: 2rem auto;
+            align-items: stretch;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .pack-card {
+            background: var(--dark-bg);
+            border: 2px solid rgba(0, 230, 230, 0.2);
+            border-radius: 16px;
+            padding: 1.2rem;
+            color: var(--text-light);
+            text-align: center;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 300px;
+            width: 100%;
+            box-sizing: border-box;
+            gap: 0.5rem;
+        }
+
+        .pack-card:hover {
+            border-color: var(--primary-color);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 230, 230, 0.2);
+        }
+
+        .pack-card.featured {
+            border-color: var(--primary-color);
+            background: var(--dark-bg);
+            box-shadow: 0 4px 20px rgba(0, 230, 230, 0.3);
+        }
+
+        .pack-header {
+            margin-bottom: 0.5rem;
+        }
+
+        .pack-header h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.4rem;
+            color: var(--text-light);
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        .pack-price {
+            display: flex;
+            align-items: baseline;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .pack-price .currency {
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        .pack-price .amount {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .local-equivalents {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.25rem;
+            flex: 1;
+            margin-bottom: 0.5rem;
+        }
+
+        .equivalent {
             display: flex;
             align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-            transition: all 0.3s ease;
+            justify-content: space-between;
+            padding: 0.25rem 0.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            gap: 0.4rem;
+            line-height: 1.3;
+        }
+
+        .equivalent .country {
+            font-size: 0.75rem;
+            color: var(--text-light);
+            opacity: 0.9;
+            flex: 1;
+            line-height: 1.2;
+        }
+
+        .equivalent .price {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            flex-shrink: 0;
+            line-height: 1.2;
+        }
+
+        .pack-button {
+            background: var(--primary-color);
+            color: var(--dark-bg);
+            border: none;
+            padding: 0.7rem 1.5rem;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 600;
             cursor: pointer;
-        }
-
-        .whatsapp-button:hover {
-            transform: scale(1.05);
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
-        }
-
-        .whatsapp-button img {
+            transition: all 0.3s ease;
+            margin-top: auto;
             width: 100%;
-            height: 100%;
-            padding: 20px;
-            filter: brightness(0) invert(1);
+        }
+
+        .pack-button:hover {
+            background: rgba(0, 230, 230, 0.8);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0, 230, 230, 0.3);
         }
 
         @media (max-width: 768px) {
-            .whatsapp-button {
-                width: 120px !important;
-                height: 120px !important;
+            .packs-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .pack-card {
+                min-height: 300px;
+                padding: 1.2rem;
+            }
+
+            .pack-card.featured {
+                transform: none;
+            }
+
+            .local-equivalents {
+                grid-template-columns: 1fr;
+                gap: 0.4rem;
             }
         }
+
+        /* Contenedor para las dos secciones lado a lado */
+        .sections-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin: 3rem 0;
+            width: 100%;
+        }
+
+        /* Estilos para las nuevas secciones */
+        .situations-section,
+        .work-section {
+            margin: 0;
+            padding: 1.5rem;
+            background: rgba(26, 27, 38, 0.03);
+            border-radius: 16px;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .situations-section h2,
+        .work-section h2 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: var(--dark-bg);
+            line-height: 1.3;
+        }
+
+        .situations-list,
+        .work-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .situations-list li,
+        .work-list li {
+            padding: 0.4rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            margin-bottom: 0.3rem;
+            color: var(--text-dark);
+            line-height: 1.4;
+            font-size: 0.9rem;
+        }
+
+        .situations-list li::before {
+            content: '✗';
+            position: absolute;
+            left: 0;
+            color: #ff4444;
+            font-weight: bold;
+            font-size: 1.2rem;
+            line-height: 1;
+        }
+
+        .work-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #44ff44;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .sections-container {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .situations-section,
+            .work-section {
+                padding: 1.5rem;
+            }
+
+            .situations-section h2,
+            .work-section h2 {
+                font-size: 1.3rem;
+            }
+        }
+
+        /* Estilos para barra de medios de pago */
+        .payment-methods-bar {
+            background: rgba(26, 27, 38, 0.05);
+            padding: 2rem 1.5rem;
+            margin: 4rem -2rem -2rem;
+            border-top: 2px solid rgba(0, 230, 230, 0.2);
+            border-radius: 16px 16px 0 0;
+        }
+
+        .payment-methods-bar h3 {
+            text-align: center;
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-dark);
+            font-weight: 600;
+        }
+
+        .payment-methods-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 1.5rem;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .payment-methods-list li {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 0.8rem 1rem;
+            background: var(--light-bg);
+            border: 1px solid rgba(0, 230, 230, 0.2);
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--text-dark);
+            transition: all 0.3s ease;
+            min-width: 100px;
+            gap: 0.3rem;
+        }
+
+        .payment-methods-list li:hover {
+            border-color: var(--primary-color);
+            background: rgba(0, 230, 230, 0.05);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 230, 230, 0.15);
+        }
+
+        .payment-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .payment-icon img {
+            height: 28px;
+            width: auto;
+            transition: all 0.3s ease;
+        }
+
+        .payment-icon.mercado img {
+            height: 35px;
+        }
+
+        .payment-icon.global66 img {
+            height: 30px;
+            background-color: white;
+            padding: 2px;
+            border-radius: 4px;
+        }
+
+        .payment-icon.paypal img {
+            height: 28px;
+        }
+
+        .payment-icon.binance img {
+            height: 28px;
+        }
+
+        @media (max-width: 768px) {
+            .payment-methods-bar {
+                margin: 4rem -2rem -2rem;
+                padding: 1.5rem 1rem;
+            }
+
+            .payment-methods-list {
+                gap: 1rem;
+            }
+
+            .payment-methods-list li {
+                font-size: 0.85rem;
+                padding: 0.6rem 0.8rem;
+                min-width: 80px;
+            }
+
+            .payment-icon img {
+                height: 20px;
+            }
+
+            .payment-icon.mercado img {
+                height: 24px;
+            }
+
+            .payment-icon.global66 img {
+                height: 22px;
+            }
+        }
+
     </style>
 </head>
 <body>
     <img 
-        src="/psicologiadelaobesidad/assets/logo.png" 
-        alt="Logo Psicología de la Obesidad" 
-        class="site-logo"
-        onclick="window.location.href='/psicologiadelaobesidad/'"
+    src="../assets/logo.png"
+    alt="Logo Psicología de la Obesidad" 
+    class="site-logo"
+    onclick="window.location.href='../'"
     />
     <article>
         <div class="article-header">
@@ -179,46 +535,167 @@
             <h1>Atención Virtual: Una Conexión Sin Fronteras</h1>
         </div>
 
-        <p class="intro">
-            Los impresionantes avances en las tecnologías de la comunicación han transformado nuestra forma de conectarnos. Durante el aislamiento obligatorio del COVID-19, fuimos testigos de un cambio sin precedentes: la adopción masiva de herramientas de videollamadas nos permitió superar las barreras físicas y repensar la terapia desde nuevos horizontes.
-        </p>
+        <div class="sections-container">
+            <section class="situations-section">
+                <h2>Si estás acá, quizá te pasen estas cosas</h2>
+                <ul class="situations-list">
+                    <li>Probaste mil dietas y sentís que nada te funciona.</li>
+                    <li>Venís "bien" y a la tarde/noche te gana la ansiedad.</li>
+                    <li>Caés en el ciclo atracón → culpa → restricción.</li>
+                    <li>Te agarra craving fuerte por pan, dulces o harinas.</li>
+                    <li>Te decís "mañana arranco".</li>
+                    <li>Semanas perfectas vs. derrapes.</li>
+                    <li>Improvisás, no planificás y decidís con hambre.</li>
+                    <li>No distinguís hambre real de hambre emocional.</li>
+                    <li>Eventos, delivery y reuniones te desbordan.</li>
+                    <li>La balanza te maneja el humor; culpa/vergüenza.</li>
+                </ul>
+            </section>
 
-        <section>
-            <p>
-                Este cambio histórico no solo abrió puertas, sino que demostró, con abundante evidencia, que la atención virtual es una alternativa efectiva y accesible.
-            </p>
-        </section>
+            <section class="work-section">
+                <h2>¿Qué trabajamos juntos?</h2>
+                <ul class="work-list">
+                    <li>Regulación emocional</li>
+                    <li>Plan de estabilización alimentaria</li>
+                    <li>Estrategias anti-craving</li>
+                    <li>Plan semanal simple, batching y opciones por contexto.</li>
+                    <li>Alfabetización de señales: hambre, saciedad, antojo.</li>
+                    <li>Uso de Inteligencia Artificial para acompañar el proceso</li>
+                    <li>Alfabetización nutricional y psicoeducación</li>
+                    <li>Estrategias de reorganización contextual</li>
+                    <li>Restructuración congitiva y reencuadre compasivo</li>
+                </ul>
+            </section>
+        </div>
 
-        <section>
-            <h2>Accesibilidad sin límites</h2>
-            <p>
-                Hoy, la terapia puede estar al alcance de todos, sin importar la ubicación geográfica. Solo se necesita una conexión básica a internet y un espacio cómodo e íntimo para construir un vínculo terapéutico significativo. Desde la comodidad de tu hogar, puedes acceder a apoyo profesional sin que las distancias, fronteras o limitaciones físicas sean un impedimento.
-            </p>
-        </section>
+        <section class="prices-section">
+            <h2>Precios</h2>
+            <div class="packs-grid">
+                <!-- Pack 1 Sesión -->
+                <article class="pack-card">
+                    <div class="pack-header">
+                        <h3>1 Sesión</h3>
+                        <div class="pack-price">
+                            <span class="currency">🇺🇸 U$S</span>
+                            <span class="amount">35</span>
+                        </div>
+                    </div>
+                    <div class="local-equivalents">
+                        <div class="equivalent">
+                            <span class="country">Argentina</span>
+                            <span class="price">$35.000</span>
+                        </div>
+                        <div class="equivalent">
+                            <span class="country">Chile</span>
+                            <span class="price">$33.000</span>
+                        </div>
+                        <div class="equivalent">
+                            <span class="country">Uruguay</span>
+                            <span class="price">$1.400</span>
+                        </div>
+                        <div class="equivalent">
+                            <span class="country">Perú</span>
+                            <span class="price">S/118</span>
+                        </div>
+                        <div class="equivalent">
+                            <span class="country">México</span>
+                            <span class="price">$650</span>
+                        </div>
+                        <div class="equivalent">
+                            <span class="country">Euro</span>
+                            <span class="price">€30</span>
+                        </div>
+                    </div>
+                    <button 
+                        class="pack-button"
+                        onclick="window.open('https://calendly.com/psicologiadelaobesidad/agendarsesion?month=2024-12', '_blank')"
+                    >
+                        Agendar
+                    </button>
+                </article>
 
-        <section>
-            <h2>Redefiniendo la cercanía</h2>
-            <p>
-                Hemos aprovechado esta oportunidad única en la historia para derribar los muros que separan a las personas del apoyo que necesitan. Con la atención virtual, redefinimos el concepto de cercanía, demostrando que el verdadero acompañamiento trasciende lo físico.
-            </p>
-        </section>
-
-        <section class="call-to-action-section">
-            <div class="cta-container">
-                <h2>¿Estás listo para cruzar las fronteras hacia un bienestar integral?</h2>
-                <p>La terapia virtual está aquí para conectarte, apoyarte y transformar tu vida, sin importar dónde estés.</p>
-                <button 
-                    class="cta-button"
-                    onclick="window.open('https://calendly.com/psicologiadelaobesidad/agendarsesion?month=2024-12', '_blank')"
-                >
-                    Agendar Primera Sesión
-                </button>
+                <!-- Pack 4 Sesiones -->
+                <article class="pack-card featured">
+                    <div class="pack-header">
+                        <h3>4 Sesiones/mes</h3>
+                        <div class="pack-price">
+                            <span class="currency">🇺🇸 U$S</span>
+                            <span class="amount">30</span>
+                        </div>
+                    </div>
+                    <div class="local-equivalents">
+                        <div class="equivalent">
+                            <span class="country">Argentina</span>
+                            <span class="price">$30.000</span>
+                        </div>
+                        <div class="equivalent">
+                            <span class="country">Chile</span>
+                            <span class="price">$28.000</span>
+                        </div>
+                        <div class="equivalent">
+                            <span class="country">Uruguay</span>
+                            <span class="price">$1.200</span>
+                        </div>
+                        <div class="equivalent">
+                            <span class="country">Perú</span>
+                            <span class="price">S/101</span>
+                        </div>
+                        <div class="equivalent">
+                            <span class="country">México</span>
+                            <span class="price">$557</span>
+                        </div>
+                        <div class="equivalent">
+                            <span class="country">Euro</span>
+                            <span class="price">€26</span>
+                        </div>
+                    </div>
+                    <button 
+                        class="pack-button"
+                        onclick="window.open('https://calendly.com/psicologiadelaobesidad/agendarsesion?month=2024-12', '_blank')"
+                    >
+                        Agendar
+                    </button>
+                </article>
             </div>
         </section>
     </article>
 
-    <div class="whatsapp-button" onclick="window.open('https://wa.me/59894045441', '_blank')">
-        <img src="/psicologiadelaobesidad/assets/whatsapp.png" alt="WhatsApp" />
-    </div>
+    <section class="payment-methods-bar">
+        <h3>Medios de Pago Aceptados</h3>
+        <ul class="payment-methods-list">
+            <li>
+                <div class="payment-icon mercado">
+                    <img src="../assets/mercado.png" alt="Mercado Pago" />
+                </div>
+                <span>Mercado Pago</span>
+            </li>
+            <li>
+                <div class="payment-icon paypal">
+                    <img src="../assets/paypal.png" alt="PayPal" />
+                </div>
+                <span>PayPal</span>
+            </li>
+            <li>
+                <div class="payment-icon global66">
+                    <img src="../assets/global.png" alt="Global 66" />
+                </div>
+                <span>Global 66</span>
+            </li>
+            <li>
+                <div class="payment-icon prex">
+                    <img src="../assets/prex.png" alt="Prex" />
+                </div>
+                <span>Prex</span>
+            </li>
+            <li>
+                <div class="payment-icon binance">
+                    <img src="../assets/binance.png" alt="Binance" />
+                </div>
+                <span>Binance</span>
+            </li>
+        </ul>
+    </section>
+
+   
 </body>
 </html> 

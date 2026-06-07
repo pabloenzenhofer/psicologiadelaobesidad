@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>El Impacto de las Emociones en la Alimentación</title>
+    <link rel="icon" type="image/webp" href="../img/logo.webp">
+    <title>Psicología de la Obesidad - Artículos</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -109,6 +110,24 @@
             opacity: 0.9;
         }
 
+        .back-link {
+            display: inline-block;
+            margin-top: 3rem;
+            padding: 0.8rem 1.5rem;
+            background: var(--primary-color);
+            color: var(--dark-bg);
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .back-link:hover {
+            background: var(--dark-bg);
+            color: var(--light-bg);
+            transform: translateY(-2px);
+        }
+
         @media (max-width: 768px) {
             body {
                 padding: 1.5rem;
@@ -146,10 +165,10 @@
 </head>
 <body>
     <img 
-        src="/psicologiadelaobesidad/assets/logo.png" 
-        alt="Logo Psicología de la Obesidad" 
-        class="site-logo"
-        onclick="window.location.href='/psicologiadelaobesidad/'"
+    src="../assets/logo.png"
+    alt="Logo Psicología de la Obesidad" 
+    class="site-logo"
+    onclick="window.location.href='/'"
     />
     <article>
         <div class="article-header">
@@ -248,6 +267,8 @@
                 </button>
             </div>
         </section>
+
+        <a href="../index.html" class="back-link">← Volver al inicio</a>
     </article>
 </body>
 </html>
