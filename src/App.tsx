@@ -4,6 +4,7 @@ import { lazy, Suspense } from 'react'
 // Imports críticos (carga inmediata)
 import Navbar from './components/Navbar'
 import Hero from './sections/Hero'
+import IntroVideo from './sections/IntroVideo'
 import WhatsAppButton from './components/WhatsAppButton'
 import Analytics from './components/Analytics'
 import Footer from './components/Footer'
@@ -50,6 +51,7 @@ function App() {
       </Helmet>
       <Navbar />
       <Hero />
+      <IntroVideo />
       <WhatsAppButton />
       <Suspense fallback={<div style={{ padding: '20px', color: 'white' }}>Loading...</div>}>
         <Services />
