@@ -22,14 +22,6 @@ const Services = () => {
       buttonUrl: "https://calendly.com/psicologiadelaobesidad/agendarsesion"
     },
     {
-      title: "Mindful Eating",
-      description: "Aprende a reconectar con tus señales de hambre y saciedad, desarrollando una relación consciente con la alimentación.",
-      icon: "🍃",
-      url: `${getBaseUrl()}/articulos/mindfuleating.html`,
-      buttonText: "Unite gratis",
-      buttonUrl: "https://chat.whatsapp.com/Brzv3kkWfq45EdOFjuHxDx"
-    },
-    {
       title: "Talleres y Workshops",
       description: "Actividades educativas para desarrollar habilidades de autocuidado y gestión emocional.",
       icon: "🌟"
