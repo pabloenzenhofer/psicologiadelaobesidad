@@ -19,7 +19,7 @@ const Navbar = () => {
 
   const menuItems = [
     { text: 'Inicio', href: '/#hero' },
-    { text: 'Servicios', href: '/#servicios' },
+    { text: 'Sobre mí', href: '/#sobre-mi' },
     { text: 'Enfoque', href: '/#diferencial' },
     { text: 'Artículos', href: '/#articulos' },
     { text: 'Evaluación', href: '/#evaluacion' },
@@ -30,33 +30,30 @@ const Navbar = () => {
 
   return (
     <nav className="main-navbar">
-      {/* Logo izquierdo */}
       <div className="navbar-logo left">
-        <img 
+        <img
           src={logo}
           alt="Logo Psicología de la Obesidad"
           className="navbar-logo-img"
         />
       </div>
 
-      <button 
-        className="menu-button" 
+      <button
+        className="menu-button"
         onClick={() => setIsMenuOpen(!isMenuOpen)}
         aria-label={isMenuOpen ? 'Cerrar menú' : 'Abrir menú'}
       >
-        {isMenuOpen ? 
-          <IoClose className="close-icon" /> : 
+        {isMenuOpen ?
+          <IoClose className="close-icon" /> :
           <IoMenu />
         }
       </button>
-      
-      {/* Overlay */}
-      <div 
+
+      <div
         className={`menu-overlay ${isMenuOpen ? 'open' : ''}`}
         onClick={closeMenu}
       />
-      
-      {/* Menú móvil */}
+
       <div className={`navbar-menu mobile ${isMenuOpen ? 'open' : ''}`}>
         <ul>
           {menuItems.map((item, index) => (
@@ -69,7 +66,6 @@ const Navbar = () => {
         </ul>
       </div>
 
-      {/* Menú desktop */}
       <div className="navbar-container">
         <ul className="navbar-menu">
           {menuItems.map((item, index) => (
@@ -80,9 +76,8 @@ const Navbar = () => {
         </ul>
       </div>
 
-      {/* Logo derecho */}
       <div className="navbar-logo right">
-        <img 
+        <img
           src={logo}
           alt="Logo Psicología de la Obesidad"
           className="navbar-logo-img"
@@ -92,4 +87,4 @@ const Navbar = () => {
   )
 }
 
-export default Navbar 
+export default Navbar

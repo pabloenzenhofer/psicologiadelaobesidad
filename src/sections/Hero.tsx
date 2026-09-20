@@ -112,11 +112,11 @@ const Hero = () => {
 
   const menuCards = [
     {
-      id: 'servicios',
-      title: 'Servicios',
-      description: 'Conoce nuestros servicios de terapia psicológica especializada en obesidad',
-      icon: '🛠️',
-      action: () => scrollToSection('servicios')
+      id: 'sobre-mi',
+      title: 'Sobre mí',
+      description: 'Conocé quién soy y cómo trabajo en terapia',
+      icon: '🧠',
+      action: () => scrollToSection('sobre-mi')
     },
     {
       id: 'diferencial',

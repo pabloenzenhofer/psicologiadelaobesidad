@@ -2499,3 +2499,248 @@ html, body {
     box-shadow: 0 14px 35px rgba(58, 92, 114, 0.18);
   }
 }
+
+
+/* Presentación profesional */
+.about-pablo-section {
+  width: 100%;
+  padding: 5rem 1rem;
+  background: var(--fondo-claro);
+  scroll-margin-top: 72px;
+}
+
+.about-pablo-container {
+  width: min(100%, 1080px);
+  margin: 0 auto;
+}
+
+.about-pablo-grid {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.8fr) minmax(0, 1.35fr);
+  gap: clamp(2rem, 6vw, 5rem);
+  align-items: center;
+}
+
+.about-pablo-photo-card {
+  overflow: hidden;
+  margin: 0;
+  border-radius: var(--border-radius-lg);
+  background: #ffffff;
+  box-shadow: 0 24px 60px rgba(58, 92, 114, 0.16);
+}
+
+.about-pablo-photo {
+  display: block;
+  width: 100%;
+  aspect-ratio: 0.76;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.about-pablo-photo-card figcaption {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 1.15rem 1.3rem 1.3rem;
+}
+
+.about-pablo-photo-card figcaption strong {
+  color: var(--text-dark);
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+}
+
+.about-pablo-photo-card figcaption span {
+  color: var(--celeste-apagada);
+  font-size: 0.88rem;
+}
+
+.about-pablo-kicker,
+.therapy-intro-label {
+  display: inline-block;
+  margin-bottom: 0.65rem;
+  color: var(--carmesi);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.about-pablo-content h2 {
+  margin-bottom: 1.2rem;
+  color: var(--text-dark);
+  font-family: var(--font-heading);
+  font-size: clamp(2.3rem, 6vw, 4.4rem);
+  line-height: 1;
+}
+
+.about-pablo-content p {
+  margin-bottom: 1rem;
+  color: var(--celeste-apagada);
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.about-pablo-content .about-pablo-lead {
+  color: var(--text-dark);
+  font-size: clamp(1.05rem, 2vw, 1.22rem);
+  line-height: 1.7;
+}
+
+.about-pablo-credentials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1.5rem;
+}
+
+.about-pablo-credentials span {
+  padding: 0.55rem 0.8rem;
+  border: 1px solid rgba(95, 178, 193, 0.35);
+  border-radius: 999px;
+  background: rgba(95, 178, 193, 0.08);
+  color: var(--text-dark);
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.therapy-intro {
+  display: grid;
+  grid-template-columns: 0.95fr 1.25fr;
+  gap: clamp(1.5rem, 5vw, 4rem);
+  margin: 4.5rem 0 2rem;
+  padding: clamp(1.7rem, 4vw, 2.8rem);
+  border-radius: var(--border-radius-lg);
+  background: var(--dark-bg);
+  color: var(--text-light);
+}
+
+.therapy-intro h3 {
+  color: var(--text-light);
+  font-family: var(--font-heading);
+  font-size: clamp(1.55rem, 3vw, 2.2rem);
+  line-height: 1.25;
+}
+
+.therapy-intro p {
+  color: rgba(255, 255, 255, 0.84);
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.therapy-focus-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.therapy-focus-card {
+  padding: clamp(1.4rem, 3vw, 2rem);
+  border: 1px solid rgba(58, 92, 114, 0.12);
+  border-radius: var(--border-radius-md);
+  background: #ffffff;
+  box-shadow: 0 10px 30px rgba(58, 92, 114, 0.07);
+}
+
+.therapy-focus-card > span {
+  display: block;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.therapy-focus-card h3 {
+  margin-bottom: 0.65rem;
+  color: var(--text-dark);
+  font-family: var(--font-heading);
+  font-size: 1.18rem;
+}
+
+.therapy-focus-card p {
+  color: var(--celeste-apagada);
+  font-size: 0.93rem;
+  line-height: 1.65;
+}
+
+.about-pablo-cta {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  border-radius: var(--border-radius-lg);
+  background: linear-gradient(135deg, rgba(95, 178, 193, 0.18), rgba(199, 122, 141, 0.13));
+}
+
+.about-pablo-cta h3 {
+  margin-bottom: 0.45rem;
+  color: var(--text-dark);
+  font-family: var(--font-heading);
+  font-size: clamp(1.3rem, 3vw, 1.75rem);
+}
+
+.about-pablo-cta p {
+  max-width: 680px;
+  color: var(--celeste-apagada);
+  line-height: 1.6;
+}
+
+.about-pablo-cta button {
+  flex-shrink: 0;
+  padding: 0.9rem 1.25rem;
+  border: 0;
+  border-radius: var(--border-radius-md);
+  background: var(--primary-color);
+  color: #ffffff;
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: 0.94rem;
+  font-weight: 700;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.about-pablo-cta button:hover {
+  transform: translateY(-2px);
+  background: var(--carmesi);
+}
+
+@media (max-width: 768px) {
+  .about-pablo-section {
+    padding: 3.5rem 1rem;
+  }
+
+  .about-pablo-grid,
+  .therapy-intro {
+    grid-template-columns: 1fr;
+  }
+
+  .about-pablo-photo-card {
+    width: min(100%, 390px);
+    margin: 0 auto;
+  }
+
+  .about-pablo-content {
+    text-align: left;
+  }
+
+  .therapy-intro {
+    margin-top: 3rem;
+  }
+
+  .therapy-focus-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-pablo-cta {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .about-pablo-cta button {
+    width: 100%;
+  }
+}
