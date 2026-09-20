@@ -55,10 +55,10 @@ function App() {
       <WhatsAppButton />
       <Suspense fallback={<div style={{ padding: '20px', color: 'white' }}>Loading...</div>}>
         <Services />
+        <Evaluation />
         <Diferencial />
         <Prices />
         <Articles />
-        <Evaluation />
         <Resources />
         <PaymentMethods />
       </Suspense>

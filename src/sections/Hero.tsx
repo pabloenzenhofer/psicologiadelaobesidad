@@ -119,51 +119,51 @@ const Hero = () => {
       action: () => scrollToSection('sobre-mi')
     },
     {
-      id: 'diferencial',
-      title: 'Enfoque',
-      description: 'Descubre nuestro enfoque único y diferenciador en el tratamiento',
-      icon: '🎯',
-      action: () => scrollToSection('diferencial')
-    },
-    {
-      id: 'articulos',
-      title: 'Artículos',
-      description: 'Lee artículos especializados sobre psicología y obesidad',
-      icon: '📚',
-      action: () => scrollToSection('articulos')
-    },
-    {
       id: 'evaluacion',
       title: 'Evaluación',
-      description: 'Realiza una evaluación inicial para conocer tu situación',
+      description: 'Realizá una evaluación inicial para conocer tu situación',
       icon: '📋',
       action: () => scrollToSection('evaluacion')
     },
     {
-      id: 'recursos',
-      title: 'Recursos',
-      description: 'Accede a recursos descargables y herramientas útiles',
-      icon: '📁',
-      action: () => scrollToSection('recursos')
+      id: 'diferencial',
+      title: 'Enfoque',
+      description: 'Descubrí nuestro enfoque de trabajo basado en evidencia',
+      icon: '🎯',
+      action: () => scrollToSection('diferencial')
     },
     {
       id: 'prices',
       title: 'Precios',
-      description: 'Consulta nuestros planes y tarifas de terapia',
+      description: 'Consultá los valores de las sesiones online',
       icon: '💰',
       action: () => scrollToSection('prices')
     },
     {
+      id: 'articulos',
+      title: 'Artículos',
+      description: 'Leé artículos especializados sobre psicología y obesidad',
+      icon: '📚',
+      action: () => scrollToSection('articulos')
+    },
+    {
+      id: 'recursos',
+      title: 'Recursos',
+      description: 'Accedé a recursos descargables y herramientas útiles',
+      icon: '📁',
+      action: () => scrollToSection('recursos')
+    },
+    {
       id: 'payment-methods',
       title: 'Medios de Pago',
-      description: 'Conoce las formas de pago disponibles',
+      description: 'Conocé las formas de pago disponibles',
       icon: '💳',
       action: () => scrollToSection('payment-methods')
     },
     {
       id: 'agendar',
       title: 'Agendar Sesión',
-      description: 'Reserva tu sesión de terapia online',
+      description: 'Reservá tu sesión de terapia online',
       icon: '📅',
       action: handleScheduleClick
     }

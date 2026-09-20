@@ -1,12 +1,4 @@
 const Services = () => {
-  const handleScheduleClick = () => {
-    window.open(
-      'https://calendly.com/psicologiadelaobesidad/agendarsesion',
-      '_blank',
-      'noopener,noreferrer'
-    )
-  }
-
   return (
     <section id="sobre-mi" className="about-pablo-section" aria-labelledby="about-pablo-title">
       <div className="about-pablo-container">
@@ -98,18 +90,6 @@ const Services = () => {
           </article>
         </div>
 
-        <div className="about-pablo-cta">
-          <div>
-            <h3>La primera sesión es para entender tu situación</h3>
-            <p>
-              Revisamos qué te está pasando, qué intentaste hasta ahora y cuál puede
-              ser el mejor punto de partida. Sin promesas mágicas y sin juicios.
-            </p>
-          </div>
-          <button type="button" onClick={handleScheduleClick}>
-            Agendar una sesión
-          </button>
-        </div>
       </div>
     </section>
   )

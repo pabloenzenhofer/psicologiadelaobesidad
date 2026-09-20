@@ -20,11 +20,11 @@ const Navbar = () => {
   const menuItems = [
     { text: 'Inicio', href: '/#hero' },
     { text: 'Sobre mí', href: '/#sobre-mi' },
-    { text: 'Enfoque', href: '/#diferencial' },
-    { text: 'Artículos', href: '/#articulos' },
     { text: 'Evaluación', href: '/#evaluacion' },
-    { text: 'Recursos', href: '/#recursos' },
+    { text: 'Enfoque', href: '/#diferencial' },
     { text: 'Precios', href: '/#prices' },
+    { text: 'Artículos', href: '/#articulos' },
+    { text: 'Recursos', href: '/#recursos' },
     { text: 'Medios de Pago', href: '/#payment-methods' }
   ]
 
